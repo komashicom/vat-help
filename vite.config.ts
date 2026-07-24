@@ -5,6 +5,7 @@ import tailwind from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [react(), tailwind()],
+  base: '/vat-help/',
   resolve: {
     alias: { "@": fileURLToPath(new URL("./src", import.meta.url)) },
   },
