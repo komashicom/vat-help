@@ -1,10 +1,10 @@
-/* The project's Gitea repo — for contributions, bug reports, editing. */
-export const REPO_URL = "https://git.h1v3.com/komashi/VAT-calc";
+/* The project's GitHub repo — for contributions, bug reports, editing. */
+export const REPO_URL = "https://github.com/komashicom/vat-help";
 
-/** Gitea's built-in web editor — on save it automatically creates a
+/** GitHub's built-in web editor — on save it automatically creates a
  *  branch + pull request under the editor's name. */
 export const editCountryUrl = (code: string): string =>
-  `${REPO_URL}/_edit/main/countries/${code}/country.json`;
+  `${REPO_URL}/edit/main/countries/${code}/country.json`;
 
 /* Eurozone members — EUR is their default currency. */
 const EUROZONE = new Set([
