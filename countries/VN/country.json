@@ -1,0 +1,103 @@
+{
+  "_comments": [
+    "GUIDE FOR THE TAX EXPERT — full details in countries/README.md.",
+    "Edit only this file; review.md and generated.json next to it are generated and read-only.",
+    "country.std = standard rate %; country.reduced = reduced rates % (descending); reducedCategories says which reduced rate applies to what (same rate values as `reduced`).",
+    "threshold = the FOREIGN seller's registration threshold (free text, amount + currency). vatPattern = VAT-number regex (EU countries only). subRegions = state/province rates (state-based systems only).",
+    "rules = the explanations the app shows when THIS country taxes the transaction: edit name/detail freely, but keep the {{from}}/{{to}}/{{loc}}/{{buyerRate}} placeholders — the app fills them in.",
+    "Do NOT change country.code (it must match the folder name); eu and system drive the engine's logic — only fix them if they are actually wrong.",
+    "When you approve the data, set meta.status to \"reviewed\" and fill in meta.reviewedBy, meta.reviewedAt and meta.sources."
+  ],
+  "meta": {
+    "status": "draft",
+    "reviewedBy": null,
+    "reviewedAt": null,
+    "validFrom": "2026-01",
+    "sources": [],
+    "notes": ""
+  },
+  "country": {
+    "code": "VN",
+    "name": "Vietnam",
+    "flag": "🇻🇳",
+    "std": 10,
+    "reduced": [
+      8
+    ],
+    "reducedCategories": [
+      {
+        "rate": 8,
+        "items": [
+          "most goods and services otherwise taxed at the standard rate",
+          "transportation and logistics services",
+          "information technology goods and services",
+          "retail goods"
+        ]
+      }
+    ],
+    "eu": false,
+    "system": "vat",
+    "rules": {
+      "P-B2B-3-3": {
+        "name": "Cross-border goods — destination country",
+        "detail": "Taxed under the destination country's ({{to}}) rules."
+      },
+      "P-B2B-EU-3": {
+        "name": "Export of goods — 0%",
+        "detail": "Exempt export from {{from}}. Import VAT and customs duty are collected by {{to}} (consignments ≤ €150: by the seller via IOSS)."
+      },
+      "P-B2B-STAY": {
+        "name": "Domestic sale — the goods do not leave the country",
+        "detail": "The goods do not physically move to another country, so it is a domestic sale within {{from}}. The foreign buyer pays the seller's domestic VAT and can typically reclaim it via a VAT refund."
+      },
+      "P-B2C-3-3": {
+        "name": "B2C goods — place of purchase",
+        "detail": "The consumer is taxed at the place of purchase ({{from}})."
+      },
+      "P-B2C-STAY": {
+        "name": "B2C purchase in the seller's country — the goods do not leave",
+        "detail": "The buyer purchases locally (or carries the goods away themselves), so it is a domestic sale in the seller's country ({{from}}): {{from}}'s rate applies and the distance-selling threshold is irrelevant."
+      },
+      "P-DOM-B2B": {
+        "name": "Domestic sale (B2B)",
+        "detail": "Ordinary domestic sale of goods, taxed by {{to}}."
+      },
+      "P-DOM-B2C": {
+        "name": "Domestic sale (B2C)",
+        "detail": "Ordinary domestic sale of goods, taxed by {{to}}."
+      },
+      "S-B2B-3-X-RC": {
+        "name": "Service export — per the seller's country (typically 0%)",
+        "detail": "The seller invoices under their own country's ({{from}}) export rule: B2B services to non-resident businesses are 0% / GST-free in most countries — but that is decided by {{from}}, not {{to}}. On the buyer's side ({{to}}), ~{{buyerRate}}% arises via reverse charge."
+      },
+      "S-B2B-EU-3": {
+        "name": "B2B service — outside EU VAT",
+        "detail": "The place of supply is {{to}} (outside the EU). No EU VAT; the buyer follows local rules."
+      },
+      "S-B2C-DIG-3-3": {
+        "name": "Digital service (B2C) — destination",
+        "detail": "Taxed under the destination country's ({{to}}) digital rules."
+      },
+      "S-B2C-DIG-EU-3": {
+        "name": "Digital service (B2C) — outside EU VAT",
+        "detail": "0% EU VAT; the place of supply is {{to}}, under the destination country's digital rules (registration may be required there)."
+      },
+      "S-B2C-GEN-3": {
+        "name": "B2C service — supplier's country (local)",
+        "detail": "The place of supply is the foreign supplier's country ({{from}}); no EU VAT."
+      },
+      "S-DOM-B2B": {
+        "name": "Domestic service (B2B)",
+        "detail": "Ordinary domestic service, taxed by {{to}}."
+      },
+      "S-DOM-B2C": {
+        "name": "Domestic service (B2C)",
+        "detail": "Ordinary domestic service, taxed by {{to}}."
+      },
+      "S-ONSITE": {
+        "name": "Location-bound service — by place of performance",
+        "detail": "Real-estate-related / event admission / restaurant / on-site service: taxed where it physically takes place ({{loc}}) — even for B2B, with no reverse charge. Local tax registration is typically required."
+      }
+    }
+  }
+}

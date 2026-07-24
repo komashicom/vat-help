@@ -1,0 +1,10 @@
+node_modules
+dist
+*.log
+.DS_Store
+
+# GENERATED files — `npm run generate` always rebuilds them
+public/data
+countries/*/generated.json
+countries/*/review.md
+tsconfig.tsbuildinfo
