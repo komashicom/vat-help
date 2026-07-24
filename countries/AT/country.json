@@ -6,7 +6,7 @@
     "threshold = the FOREIGN seller's registration threshold (free text, amount + currency). vatPattern = VAT-number regex (EU countries only). subRegions = state/province rates (state-based systems only).",
     "rules = the explanations the app shows when THIS country taxes the transaction: edit name/detail freely, but keep the {{from}}/{{to}}/{{loc}}/{{buyerRate}} placeholders — the app fills them in.",
     "Do NOT change country.code (it must match the folder name); eu and system drive the engine's logic — only fix them if they are actually wrong.",
-    "When you approve the data, set meta.status to \"reviewed\" and fill in meta.reviewedBy, meta.reviewedAt and meta.sources.",
+    "When you approve the data, set meta.status to \"reviewed\" and fill in meta.reviewedBy, meta.reviewedAt and meta.sources."
   ],
   "meta": {
     "status": "draft",
