@@ -69,6 +69,18 @@
     "chooseBuyer": "Choose a buyer",
     "choose": "Choose…"
   },
+  "supplyVat": {
+    "sellerTag": "Seller VAT",
+    "buyerTag": "Buyer VAT",
+    "rcTag": "0% · reverse charge",
+    "exportTag": "Export · 0%",
+    "outsideTag": "0%",
+    "calcLine": "VAT calculated in",
+    "rcLine": "You invoice 0% — buyer self-accounts",
+    "exportLine": "You invoice 0% — import VAT in",
+    "outsideEuLine": "You invoice 0% — outside EU VAT",
+    "noTaxLine": "You invoice 0% — no general VAT in"
+  },
   "footer": {
     "line1": "This is a free, open source project. It is quite a challenge to handle all the VATs in the world.",
     "line2": "If something is not correct, help us fix it.",

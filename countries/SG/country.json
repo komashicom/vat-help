@@ -1,12 +1,13 @@
 {
   "_comments": [
-    "GUIDE FOR THE TAX EXPERT — full details in countries/README.md.",
-    "Edit only this file; review.md and generated.json next to it are generated and read-only.",
-    "country.std = standard rate %; country.reduced = reduced rates % (descending); reducedCategories says which reduced rate applies to what (same rate values as `reduced`).",
-    "threshold = the FOREIGN seller's registration threshold (free text, amount + currency). vatPattern = VAT-number regex (EU countries only). subRegions = state/province rates (state-based systems only).",
-    "rules = the explanations the app shows when THIS country taxes the transaction: edit name/detail freely, but keep the {{from}}/{{to}}/{{loc}}/{{buyerRate}} placeholders — the app fills them in.",
-    "Do NOT change country.code (it must match the folder name); eu and system drive the engine's logic — only fix them if they are actually wrong.",
-    "When you approve the data, set meta.status to \"reviewed\" and fill in meta.reviewedBy, meta.reviewedAt and meta.sources."
+    "PROMPT — You are an AI updating one country's VAT/tax profile. Treat this block as your task brief; the full spec is in countries/README.md. Work carefully: this data drives the calculator's answers, so accuracy matters more than speed.",
+    "If anything below is ambiguous, or you are not confident a value is correct, STOP and ask the maintainer a specific question instead of guessing. Never invent a rate, threshold or rule you cannot back with a reliable source.",
+    "Edit ONLY this file. review.md and generated.json beside it are generated and read-only — do not touch them.",
+    "country.std = standard rate %. country.reduced = reduced rates %, in descending order. reducedCategories maps each reduced rate to the goods/services it covers (its rate values must match entries in `reduced`).",
+    "threshold = the FOREIGN seller's registration threshold (free text: amount + currency). vatPattern = the VAT-number regex (EU countries only). subRegions = state/province rates (state-based systems only).",
+    "rules = the explanations shown when THIS country taxes the transaction. Rewrite name/detail to be accurate and clear, but KEEP the {{from}}/{{to}}/{{loc}}/{{buyerRate}} placeholders — the app substitutes them.",
+    "Do NOT change country.code (it must equal the folder name). eu and system drive the engine's logic — change them only if they are genuinely wrong.",
+    "When you have verified the data, set meta.status to \"reviewed\", fill in meta.reviewedBy, meta.reviewedAt and meta.sources, and cite official/primary sources."
   ],
   "meta": {
     "status": "draft",

@@ -28,9 +28,14 @@ export function Hint({ text, className }: { text: ReactNode; className?: string 
 }
 
 export function ChoiceCard({
-  active, onClick, icon, title, desc, badge, hint,
+  active, onClick, icon, title, desc, badge, hint, tag, footer,
 }: {
-  active: boolean; onClick: () => void; icon?: ReactNode; title: string; desc?: string; badge?: ReactNode; hint?: string;
+  active: boolean; onClick: () => void; icon?: ReactNode; title: string; desc?: string;
+  badge?: ReactNode; hint?: string;
+  /** Right-aligned chip on the title row (e.g. "Seller VAT" — whose VAT applies). */
+  tag?: ReactNode;
+  /** A line under the description, below a faint divider (e.g. "VAT calculated in 🇭🇺 Hungary"). */
+  footer?: ReactNode;
 }) {
   return (
     <button onClick={onClick}
@@ -45,13 +50,18 @@ export function ChoiceCard({
         </span>
       )}
       <span className="min-w-0 flex-1">
-        {/* Stays on ONE line: the title truncates, the badges don't wrap */}
-        <span className="flex items-center gap-2 whitespace-nowrap">
-          <span className="truncate font-semibold text-foreground">{title}</span>
-          {badge &&<Badge variant="secondary" className="shrink-0 text-[11px]">{badge}</Badge>}
-          {hint && <Hint text={hint} />}
+        {/* Title + inline badge/hint on the left (wraps if long, e.g. an on-site
+            title carrying a country name), with the tag pinned to the top-right. */}
+        <span className="flex items-start gap-2">
+          <span className="min-w-0 flex-1 font-semibold text-foreground">
+            {title}
+            {badge && <Badge variant="secondary" className="ml-2 align-middle text-[11px]">{badge}</Badge>}
+            {hint && <span className="ml-1 inline-flex translate-y-0.5 align-middle"><Hint text={hint} /></span>}
+          </span>
+          {tag && <span className="shrink-0">{tag}</span>}
         </span>
         {desc && <span className="mt-0.5 block text-xs leading-relaxed text-muted-foreground">{desc}</span>}
+        {footer && <span className="mt-2 block border-t border-border/60 pt-1.5">{footer}</span>}
       </span>
       {/* No checkmark — the border + background indicate the selection. */}
     </button>
