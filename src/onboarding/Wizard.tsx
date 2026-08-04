@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import type { ReactNode } from "react";
+import type { TFunction } from "i18next";
 import { useTranslation } from "react-i18next";
 import {
   Building2, User, UserX, Package, Home, Wrench, Store, MapPin, Loader2,
@@ -75,12 +77,92 @@ type ViesState =
   | { status: "idle" | "loading" | "error" }
   | { status: "done"; result: ViesResult };
 
+/* ------------------------------------------------------------------
+ * "Whose VAT applies" — shown ON each option in the What-are-you-selling
+ * popup (like the B2B/B2C badge on the buyer options). Both a short chip on
+ * the title row and a line at the bottom: which country the VAT lands in.
+ * Computed live from the pre-built record for the CURRENT seller/buyer/
+ * B2B-B2C scenario — so e.g. "Digital → Seller VAT" for a B2C sale below the
+ * threshold, but "Reverse charge" once the buyer is a VAT-registered business.
+ * ------------------------------------------------------------------ */
+type SupplyOpt = {
+  id: string; supply: Supply; serviceKind?: ServiceKind; goodsLeave?: boolean; onsiteLocation?: OnsiteLocation;
+};
+
+/** The options the popup shows for the current relation (cross-border splits
+ *  goods into leave/stay and on-site into seller/buyer). */
+function supplyOptionsFor(crossBorder: boolean): SupplyOpt[] {
+  const goods: SupplyOpt[] = crossBorder
+    ? [{ id: "product-leave", supply: "product", goodsLeave: true },
+       { id: "product-stay", supply: "product", goodsLeave: false }]
+    : [{ id: "product", supply: "product", goodsLeave: true }];
+  const onsite: SupplyOpt[] = crossBorder
+    ? [{ id: "onsite-seller", supply: "service", serviceKind: "onsite", onsiteLocation: "seller" },
+       { id: "onsite-customer", supply: "service", serviceKind: "onsite", onsiteLocation: "customer" }]
+    : [{ id: "onsite", supply: "service", serviceKind: "onsite", onsiteLocation: "seller" }];
+  return [
+    ...goods,
+    { id: "digital", supply: "service", serviceKind: "digital" },
+    { id: "general", supply: "service", serviceKind: "general" },
+    ...onsite,
+  ];
+}
+
+/** Build the full scenario key for one supply option, reusing the current
+ *  seller/buyer/buyer-type and the estimated threshold. */
+function optScenario(s: WizState, o: SupplyOpt, over: boolean): ScenarioKey {
+  return {
+    from: s.from, to: s.to, supply: o.supply,
+    b2b: s.buyerType === "vat",
+    serviceKind: o.supply === "service" ? (o.serviceKind ?? "general") : "na",
+    goodsLeave: o.supply === "product" ? (o.goodsLeave ?? true) : "na",
+    overThreshold: over,
+    onsiteLocation: o.supply === "service" && o.serviceKind === "onsite" ? (o.onsiteLocation ?? "seller") : "na",
+  };
+}
+
+const chipAmber = "inline-flex shrink-0 items-center rounded border border-amber-200 bg-amber-50 px-1.5 py-0.5 text-[10px] font-semibold text-amber-700";
+const chipNeutral = "inline-flex shrink-0 items-center rounded bg-muted px-1.5 py-0.5 text-[10px] font-semibold text-muted-foreground";
+
+/** Flag + localized country name, e.g. "🇭🇺 Hungary". */
+function flagged(code: string): string {
+  return `${byCode(code)?.flag ?? ""} ${countryName(code)}`.trim();
+}
+
+/** From a finished record, derive the whose-VAT chip + bottom line. */
+function supplyVat(rec: ResultRecord, t: TFunction): { tag: ReactNode; footer: ReactNode } {
+  const line = (text: ReactNode) => <span className="text-[11px] leading-relaxed text-muted-foreground">{text}</span>;
+  const strong = (code: string) => <span className="font-semibold text-foreground">{flagged(code)}</span>;
+
+  // Reverse charge / export / outside-scope: the seller invoices 0%.
+  if (rec.reverseCharge)
+    return { tag: <span className={chipAmber}>{t("supplyVat.rcTag")}</span>, footer: line(t("supplyVat.rcLine")) };
+  if (rec.exportZero)
+    return { tag: <span className={chipAmber}>{t("supplyVat.exportTag")}</span>, footer: line(<>{t("supplyVat.exportLine")} {strong(rec.scenario.to)}</>) };
+  if (rec.outsideScope)
+    return {
+      tag: <span className={chipAmber}>{t("supplyVat.outsideTag")}</span>,
+      footer: line(rec.badge === "outsideEuVat" ? t("supplyVat.outsideEuLine") : <>{t("supplyVat.noTaxLine")} {strong(rec.scenario.to)}</>),
+    };
+
+  // Normal case: the VAT is calculated in the jurisdiction country (the
+  // seller's or the buyer's — always one of the two).
+  const juris = rec.jurisdiction.country;
+  const seller = juris === rec.scenario.from;
+  return {
+    tag: <span className={chipNeutral}>{t(seller ? "supplyVat.sellerTag" : "supplyVat.buyerTag")}</span>,
+    footer: line(<>{t("supplyVat.calcLine")} {strong(juris)}</>),
+  };
+}
+
 export function Wizard() {
   const { t } = useTranslation();
   const [s, setS] = useState<WizState>(makeInitial);
   const [buyerOpen, setBuyerOpen] = useState(false);
   const [supplyOpen, setSupplyOpen] = useState(false);
   const [rec, setRec] = useState<ResultRecord | null>(null);
+  /** Per-option records for the What-are-you-selling popup (whose-VAT chips). */
+  const [optRecs, setOptRecs] = useState<Record<string, ResultRecord>>({});
   const [vies, setVies] = useState<ViesState>({ status: "idle" });
   const set = (d: Partial<WizState>) => setS((x) => ({ ...x, ...d }));
 
@@ -111,6 +193,21 @@ export function Wizard() {
   const vat = s.buyerType === "vat" && s.to ? checkVatId(s.to, s.vatId) : { ok: true, error: null as null };
   const vatMsg = vat.error ? t(`vatCheck.${vat.error}`, { country: toName, sample: vat.sample }) : "";
   const crossBorder = Boolean(s.to && s.from !== s.to);
+
+  /* Whose-VAT chips: look up every supply option's record for the current
+   * scenario, so each option in the popup can show where its VAT lands.
+   * The index is preloaded, so these resolve instantly. */
+  useEffect(() => {
+    if (!s.to || !s.buyerType) { setOptRecs({}); return; }
+    let live = true;
+    const opts = supplyOptionsFor(crossBorder);
+    Promise.all(opts.map((o) => lookup(optScenario(s, o, overThreshold)).then((r) => [o.id, r] as const)))
+      .then((entries) => {
+        if (live) setOptRecs(Object.fromEntries(entries.filter((e): e is [string, ResultRecord] => e[1] != null)));
+      });
+    return () => { live = false; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [s.from, s.to, s.buyerType, crossBorder, overThreshold]);
 
   /* State-taxed country (US/CA/BR): ask for the state RIGHT AFTER the country
    * is picked, show it below the country, and don't forget it — the next step
@@ -181,6 +278,10 @@ export function Wizard() {
                 { country: s.onsiteLocation === "customer" ? toFlagged : fromFlagged })
             : `${t("wizard.supplyService")} — ${t("service.onsite.title")}`)
         : `${t("wizard.supplyService")} — ${t(`service.${s.serviceKind}.title`)}`;
+
+  /* Whose-VAT chip + bottom line for a given supply option (undefined until
+   * the record is looked up). */
+  const ind = (id: string) => (optRecs[id] ? supplyVat(optRecs[id], t) : undefined);
 
   return (
     <div className="mx-auto w-full max-w-md sm:max-w-2xl">
@@ -332,7 +433,9 @@ export function Wizard() {
           {/* WHAT popup — goods + services in ONE list with section headers;
               a click selects AND closes; no X or OK button */}
           <Dialog open={supplyOpen} onOpenChange={setSupplyOpen}>
-            <DialogContent className="sm:max-w-md" showCloseButton={false}>
+            {/* wider than the buyer popup: on-site titles carry a country name
+                ("On-site — at the buyer (🇦🇪 United Arab Emirates)") plus a tag */}
+            <DialogContent className="sm:max-w-lg" showCloseButton={false}>
               <DialogHeader>
                 <DialogTitle>{t("wizard.what")}</DialogTitle>
                 <DialogDescription className="sr-only">{t("steps.supply.hint")}</DialogDescription>
@@ -344,29 +447,34 @@ export function Wizard() {
                     <ChoiceCard active={s.supply === "product" && s.goodsLeave}
                       onClick={() => pickSupply({ supply: "product", goodsLeave: true })}
                       icon={<Package className="h-5 w-5" />} title={t("wizard.goodsLeaveTitle")}
-                      desc={t("wizard.goodsLeaveDesc")} />
+                      desc={t("wizard.goodsLeaveDesc")}
+                      tag={ind("product-leave")?.tag} footer={ind("product-leave")?.footer} />
                     <ChoiceCard active={s.supply === "product" && !s.goodsLeave}
                       onClick={() => pickSupply({ supply: "product", goodsLeave: false })}
                       icon={<Home className="h-5 w-5" />} title={t("wizard.goodsStayTitle")}
-                      desc={t("wizard.goodsStayDesc")} />
+                      desc={t("wizard.goodsStayDesc")}
+                      tag={ind("product-stay")?.tag} footer={ind("product-stay")?.footer} />
                   </>
                 ) : (
                   <ChoiceCard active={s.supply === "product"}
                     onClick={() => pickSupply({ supply: "product", goodsLeave: true })}
                     icon={<Package className="h-5 w-5" />} title={t("wizard.supplyProduct")}
-                    desc={t("wizard.supplyProductDesc")} />
+                    desc={t("wizard.supplyProductDesc")}
+                    tag={ind("product")?.tag} footer={ind("product")?.footer} />
                 )}
                 <SectionLabel className="pt-2">{t("wizard.sectionServices")}</SectionLabel>
                 <ChoiceCard active={s.supply === "service" && s.serviceKind === "digital"}
                   onClick={() => pickSupply({ supply: "service", serviceKind: "digital" })}
                   icon={<Store className="h-5 w-5" />} title={t("service.digital.title")}
                   desc={t("service.digital.desc")}
-                  hint={`${t("wizard.examplesLabel")} ${t("service.digital.examples")}`} />
+                  hint={`${t("wizard.examplesLabel")} ${t("service.digital.examples")}`}
+                  tag={ind("digital")?.tag} footer={ind("digital")?.footer} />
                 <ChoiceCard active={s.supply === "service" && s.serviceKind === "general"}
                   onClick={() => pickSupply({ supply: "service", serviceKind: "general" })}
                   icon={<Wrench className="h-5 w-5" />} title={t("service.general.title")}
                   desc={t("service.general.desc")}
-                  hint={`${t("wizard.examplesLabel")} ${t("service.general.examples")}`} />
+                  hint={`${t("wizard.examplesLabel")} ${t("service.general.examples")}`}
+                  tag={ind("general")?.tag} footer={ind("general")?.footer} />
                 {/* On-site split in two: the place of supply (seller's / buyer's country)
                     IS the choice — no separate radio-button sub-step */}
                 {crossBorder ? (
@@ -375,19 +483,22 @@ export function Wizard() {
                       onClick={() => pickSupply({ supply: "service", serviceKind: "onsite", onsiteLocation: "seller" })}
                       icon={<MapPin className="h-5 w-5" />} title={t("wizard.onsiteSeller", { country: fromFlagged })}
                       desc={t("service.onsite.desc")}
-                      hint={`${t("wizard.examplesLabel")} ${t("service.onsite.examples")}`} />
+                      hint={`${t("wizard.examplesLabel")} ${t("service.onsite.examples")}`}
+                      tag={ind("onsite-seller")?.tag} footer={ind("onsite-seller")?.footer} />
                     <ChoiceCard active={s.supply === "service" && s.serviceKind === "onsite" && s.onsiteLocation === "customer"}
                       onClick={() => pickSupply({ supply: "service", serviceKind: "onsite", onsiteLocation: "customer" })}
                       icon={<MapPin className="h-5 w-5" />} title={t("wizard.onsiteCustomer", { country: toFlagged })}
                       desc={t("service.onsite.desc")}
-                      hint={`${t("wizard.examplesLabel")} ${t("service.onsite.examples")}`} />
+                      hint={`${t("wizard.examplesLabel")} ${t("service.onsite.examples")}`}
+                      tag={ind("onsite-customer")?.tag} footer={ind("onsite-customer")?.footer} />
                   </>
                 ) : (
                   <ChoiceCard active={s.supply === "service" && s.serviceKind === "onsite"}
                     onClick={() => pickSupply({ supply: "service", serviceKind: "onsite", onsiteLocation: "seller" })}
                     icon={<MapPin className="h-5 w-5" />} title={t("service.onsite.title")}
                     desc={t("service.onsite.desc")}
-                    hint={`${t("wizard.examplesLabel")} ${t("service.onsite.examples")}`} />
+                    hint={`${t("wizard.examplesLabel")} ${t("service.onsite.examples")}`}
+                    tag={ind("onsite")?.tag} footer={ind("onsite")?.footer} />
                 )}
               </div>
             </DialogContent>
@@ -422,23 +533,29 @@ export function Wizard() {
       {/* BELOW THE CARD, on the grey background: reset in the middle, flanked by
           the edit links (country.json Gitea editor): seller's country on the left,
           buyer's on the right. The row follows the middle column's width. */}
-      <div className="mx-auto mt-4 grid w-full max-w-sm grid-cols-[1fr_auto_1fr] items-center gap-2 px-4 pb-6">
+      {/* Mobile: stack the three items, each centered on its own line, so long
+          country names never overflow or collide with Reset. Desktop (sm+): a
+          3-column grid with Reset in the centered "auto" column, links flanking.
+          Each link is an unbreakable unit so the pencil never orphans. */}
+      <div className="mx-auto mt-4 flex w-full max-w-md flex-col items-center gap-1.5 px-4 pb-6 sm:grid sm:grid-cols-[1fr_auto_1fr] sm:items-center sm:gap-x-4">
         <a href={editCountryUrl(s.from)} target="_blank" rel="noreferrer"
           title={`${t("result.editAria")} — ${fromName}`}
-          className="inline-flex items-center gap-1 justify-self-start text-xs font-medium text-primary underline underline-offset-2 hover:text-primary/80">
-          <Pencil className="h-3 w-3" /> {fromName.toUpperCase()}
+          className="inline-flex max-w-full items-center gap-1 whitespace-nowrap text-xs font-medium text-primary hover:text-primary/80 sm:justify-self-start">
+          <Pencil className="h-3 w-3 shrink-0" />
+          <span className="min-w-0 truncate underline underline-offset-2">{fromName.toUpperCase()}</span>
         </a>
         <button type="button" onClick={restart}
-          className="inline-flex cursor-pointer items-center gap-1.5 text-xs font-medium text-muted-foreground/70 transition-colors hover:text-foreground">
-          <RotateCcw className="h-3 w-3" /> {t("wizard.restart")}
+          className="inline-flex cursor-pointer items-center gap-1.5 whitespace-nowrap text-xs font-medium text-muted-foreground/70 transition-colors hover:text-foreground sm:justify-self-center">
+          <RotateCcw className="h-3 w-3 shrink-0" /> {t("wizard.restart")}
         </button>
         {s.to && s.to !== s.from ? (
           <a href={editCountryUrl(s.to)} target="_blank" rel="noreferrer"
             title={`${t("result.editAria")} — ${toName}`}
-            className="inline-flex items-center gap-1 justify-self-end text-xs font-medium text-primary underline underline-offset-2 hover:text-primary/80">
-            {toName.toUpperCase()} <Pencil className="h-3 w-3" />
+            className="inline-flex max-w-full items-center gap-1 whitespace-nowrap text-xs font-medium text-primary hover:text-primary/80 sm:justify-self-end">
+            <span className="min-w-0 truncate underline underline-offset-2">{toName.toUpperCase()}</span>
+            <Pencil className="h-3 w-3 shrink-0" />
           </a>
-        ) : <span />}
+        ) : <span className="hidden sm:block" />}
       </div>
     </div>
   );
