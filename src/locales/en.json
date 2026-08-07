@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "Global VAT Calculator",
+    "title": "Global VAT Help",
     "openSource": "Open source"
   },
   "steps": {
@@ -289,7 +289,8 @@
     "dialogTitle": "Select a country",
     "dialogDesc": "Search and pick a country from the list.",
     "searchPlaceholder": "Search countries…",
-    "noResults": "No results"
+    "noResults": "No results",
+    "missing": "Can't find your country? Let us know"
   },
   "thresholds": {
     "AU": "AUD 75,000 / year",

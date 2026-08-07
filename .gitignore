@@ -10,3 +10,6 @@ public/data
 countries/*/generated.json
 countries/*/review.md
 tsconfig.tsbuildinfo
+
+# one-time translation cache
+scripts/.translate-cache.json

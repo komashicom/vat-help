@@ -6,6 +6,12 @@ export const REPO_URL = "https://github.com/komashicom/vat-help";
 export const editCountryUrl = (code: string): string =>
   `${REPO_URL}/edit/main/countries/${code}/country.json`;
 
+/** Opens a pre-filled GitHub issue to request a country that isn't in the
+ *  dataset — the fallback when a user can't find their country in the list. */
+export const requestCountryUrl = (): string =>
+  `${REPO_URL}/issues/new?title=${encodeURIComponent("Missing country: ")}` +
+  `&labels=${encodeURIComponent("country request")}`;
+
 /* Eurozone members — EUR is their default currency. */
 const EUROZONE = new Set([
   "AT", "BE", "CY", "DE", "EE", "ES", "FI", "FR", "GR", "HR", "IE",

@@ -1,0 +1,305 @@
+{
+  "app": {
+    "title": "Globalna pomoč pri DDV",
+    "openSource": "Odprta koda"
+  },
+  "steps": {
+    "supply": {
+      "hint": "Blago in storitve sledijo različnim pravilom kraja dobave – zato je to prvo vprašanje."
+    },
+    "buyer_type": {
+      "subtitle": "To odloča, ali je B2B ali B2C."
+    }
+  },
+  "buyer": {
+    "vat": "Z DDV številko",
+    "novat": "Brez DDV številke",
+    "individual": "Zasebnik"
+  },
+  "service": {
+    "digital": {
+      "title": "Digitalno",
+      "desc": "Avtomatizirana storitev, dostavljena prek interneta brez človeškega sodelovanja.",
+      "examples": "SaaS, pretakanje, e-knjiga/prenos, mobilna aplikacija, gostovanje, vnaprej posneti spletni tečaj."
+    },
+    "general": {
+      "title": "Splošno",
+      "desc": "Človeško delo/strokovno znanje – tudi na spletu, vendar NE »digitalno« v smislu DDV.",
+      "examples": "Računovodstvo, pravo, marketing, prevajanje, programiranje po meri, spletna lekcija V ŽIVO."
+    },
+    "onsite": {
+      "title": "Na kraju samem",
+      "desc": "Storitev, vezana na fizično lokacijo – odloča kraj, tudi za B2B.",
+      "examples": "Restavracija, vstopnina na prireditve, delo na nepremičninah, montaža na lokaciji, nočitev v hotelu."
+    }
+  },
+  "wizard": {
+    "seller": "Prodajalec",
+    "sellerHint": "Prodajalec je vedno obdavčljivo podjetje – njegova država je izhodišče.",
+    "buyer": "Kupec",
+    "buyerHint": "Država kupca določi večino čezmejnih pravil — npr. kamor spada kraj dobave.",
+    "supplyService": "Storitev",
+    "supplyProduct": "Blago",
+    "supplyProductDesc": "Fizično blago.",
+    "sectionGoods": "Blago",
+    "sectionServices": "Storitve",
+    "goodsLeaveTitle": "Blago — zapustite državo",
+    "goodsLeaveDesc": "Blago je fizično poslano iz države prodajalca.",
+    "goodsStayTitle": "Blago — ostanite v državi",
+    "goodsStayDesc": "Lokalni nakup — blago ne zapusti države prodajalca, zato velja DDV prodajalca.",
+    "buyerVatHint": "Poslovanje z DDV številko → B2B pravila. Znotraj EU obrnjena davčna obveznost: fakturirate po 0 % in kupec obračuna sam.",
+    "buyerNovatHint": "Kupec je podjetje, vendar brez številke za DDV tega ni mogoče dokazati — zato se za namene DDV obravnava kot B2C.",
+    "buyerIndividualHint": "Končni potrošnik — vedno B2C, DDV morate obračunati na računu.",
+    "vatIdLabel": "Kupčeva številka za DDV ({{country}})",
+    "vatIdHint": "Za kupca iz EU 0 % zahteva veljavno številko za DDV. Format se takoj preveri; gumb Verify poizveduje uradno zbirko podatkov VIES za pristnost.",
+    "vatIdPlaceholder": "DDV številka…",
+    "viesButton": "Preveri",
+    "viesValid": "VIES: veljavna številka za DDV.",
+    "viesRegisteredName": "Registrirano ime:",
+    "viesInvalid": "VIES: neveljavna številka za DDV — razjasnite s kupcem, preden izdate račun pri 0%.",
+    "viesError": "VIES trenutno ni na voljo — za zdaj se lahko zanesete le na preverjanje formata.",
+    "onsiteSeller": "Na kraju samem — pri prodajalcu ({{country}})",
+    "onsiteCustomer": "Na kraju samem — pri kupcu ({{country}})",
+    "examplesLabel": "Primeri:",
+    "searching": "Iskanje ...",
+    "restart": "Ponastavi",
+    "helpAria": "pomoč",
+    "toWhom": "Kupec?",
+    "what": "Kaj prodajaš?",
+    "chooseBuyer": "Izberite kupca",
+    "choose": "Izberite ..."
+  },
+  "supplyVat": {
+    "sellerTag": "DDV prodajalca",
+    "buyerTag": "DDV kupca",
+    "rcTag": "0 % · obrnjena davčna obveznost",
+    "exportTag": "Izvoz · 0%",
+    "outsideTag": "0 %",
+    "calcLine": "DDV obračunan v",
+    "rcLine": "Vi fakturirate 0% — kupec samoobračuna",
+    "exportLine": "Izdate račun 0 % — uvozni DDV",
+    "outsideEuLine": "Izdate račun 0 % — zunaj EU DDV",
+    "noTaxLine": "Izdate račun 0 % — brez splošnega DDV-ja"
+  },
+  "footer": {
+    "line1": "To je brezplačen, odprtokodni projekt. Obvladati vse DDV-je na svetu je kar velik izziv.",
+    "line2": "Če nekaj ni v redu, nam pomagajte popraviti.",
+    "disclaimer": "Ni davčni nasvet, samo v izobraževalne namene."
+  },
+  "vatCheck": {
+    "unknownCountry": "Neznana država.",
+    "empty": "Vnesite davčno številko kupca.",
+    "format": "Neveljavna oblika {{country}} (primer: {{sample}}). Samo preverjanje formata — prava veljavnost prihaja iz VIES."
+  },
+  "result": {
+    "explanation": "Razlaga",
+    "editAria": "Predlagajte popravek — uredite pravila te države",
+    "taxPlace": "Kraj obdavčitve",
+    "taxPlaceHint": "DDV se ne plača tam, kjer je prodajalec, ampak tam, kjer veljajo pravila za \"kraj dobave\", kar je odločilno vprašanje pri vsaki čezmejni transakciji.",
+    "net": "Net",
+    "netHint": "Kliknite številko, da jo uredite, in valuto, da jo spremenite.",
+    "netAria": "Neto znesek",
+    "vat": "DDV davek",
+    "vatHint": "Davek izračunan na neto znesek po veljavni stopnji.",
+    "gross": "Gross",
+    "grossHint": "Neto + DDV — skupaj plača kupec.",
+    "statePlaceholder": "Izberite državo ...",
+    "regThreshold": "Prag registracije",
+    "regThresholdHint": "Poleg tega se mora prodajalec registrirati za davek v državi kupca.",
+    "rcTitle": "Obrnjena davčna obveznost — kdo obračuna DDV",
+    "rcHint": "Za B2B se davčna obveznost \"obrne\" na kupca: vi fakturirate po stopnji 0%, oni jo prijavijo po stopnji svoje države (in jo običajno tudi odbijejo).",
+    "youInvoice": "Vi račun",
+    "buyerSelf": "Lastni računi kupca ({{country}})",
+    "viesZeroWarning": "0 % zahteva veljavno številko VIES. Brez tega velja vaša domača tarifa.",
+    "amountEntered": "Vneseni znesek ({{amount}})",
+    "thresholdOver": "preseže prag {{limit}} EU za prodajo na daljavo/OSS — velja stopnja ciljne države.",
+    "thresholdUnder": "ne doseže praga {{limit}} EU za prodajo na daljavo/OSS — velja stopnja države prodajalca.",
+    "thresholdCaveat": "Opomba: prag dejansko velja za vašo skupno letno prodajo B2C v EU, ne za posamezno transakcijo{{approx}}.",
+    "thresholdApprox": ", pretvorba pa je približna"
+  },
+  "badges": {
+    "domestic": "Domača prodaja",
+    "reverseCharge": "Obrnjena bremenitev",
+    "exportZero": "Izvoz · 0%",
+    "outsideEuVat": "Zunaj EU DDV",
+    "importVat": "Uvozni DDV",
+    "destination": "Destinacija",
+    "destinationOss": "Destinacija · OSS",
+    "origin": "Izvorna stopnja",
+    "originLocal": "Izvor (lokalno)",
+    "onsite": "Po lokaciji"
+  },
+  "jurisdiction": {
+    "state": "{{country}} (po državi)",
+    "province": "{{country}} (po provinci)",
+    "import": "{{country}} (uvoz)",
+    "importVat": "{{country}} (uvozni DDV)"
+  },
+  "notes": {
+    "brModel": "Brazil: simplified federal + state (ICMS) model; the CBS+IBS reform goes live from 2027.",
+    "pickState": "Choose a state/province for the exact combined rate.",
+    "viesCheck": "Verify the buyer's VAT number in VIES; both numbers + \"reverse charge\" on the invoice.",
+    "exportDocs": "Keep the export evidence (customs/freight documents) to support the 0%.",
+    "sellerExportRule": "The 0% depends on the seller's ({{from}}) export rule (e.g. Australian GST: services to non-residents are GST-free). Not every country exempts it — verify.",
+    "noEuThreshold": "A non-EU seller has no threshold — registration is required from the first sale."
+  },
+  "rules": {
+    "P-DOM-B2B": {
+      "name": "Domestic sale (B2B)",
+      "detail": "Ordinary domestic sale of goods, taxed by {{to}}."
+    },
+    "P-DOM-B2C": {
+      "name": "Domestic sale (B2C)",
+      "detail": "Ordinary domestic sale of goods, taxed by {{to}}."
+    },
+    "P-B2B-STAY": {
+      "name": "Domestic sale — the goods do not leave the country",
+      "detail": "The goods do not physically move to another country, so it is a domestic sale within {{from}}. The foreign buyer pays the seller's domestic VAT and can typically reclaim it via a VAT refund."
+    },
+    "P-B2B-EU-EU": {
+      "name": "Intra-Community supply (B2B)",
+      "detail": "Exempt intra-Community supply. The {{to}} buyer accounts for it via reverse charge (intra-Community acquisition). Both VAT numbers go on the invoice."
+    },
+    "P-B2B-EU-3": {
+      "name": "Export of goods — 0%",
+      "detail": "Exempt export from {{from}}. Import VAT and customs duty are collected by {{to}} (consignments ≤ €150: by the seller via IOSS)."
+    },
+    "P-B2B-3-EU": {
+      "name": "Import of goods into the EU",
+      "detail": "Import VAT at the {{to}} rate upon entry; customs duty may also apply."
+    },
+    "P-B2B-3-3": {
+      "name": "Cross-border goods — destination country",
+      "detail": "Taxed under the destination country's ({{to}}) rules."
+    },
+    "P-B2C-STAY": {
+      "name": "B2C purchase in the seller's country — the goods do not leave",
+      "detail": "The buyer purchases locally (or carries the goods away themselves), so it is a domestic sale in the seller's country ({{from}}): {{from}}'s rate applies and the distance-selling threshold is irrelevant."
+    },
+    "P-B2C-EU-EU-OVER": {
+      "name": "Distance selling (B2C) — destination",
+      "detail": "Genuine distance selling (the seller ships) above the €10,000 EU threshold: {{to}}'s rate, declared via OSS."
+    },
+    "P-B2C-EU-EU-UNDER": {
+      "name": "B2C goods — place of purchase (origin)",
+      "detail": "The individual is taxed at the place of purchase ({{from}}). If they carry the goods across themselves, the place of taxation still doesn't change. Destination applies only to distance selling by the seller, above the €10,000 threshold."
+    },
+    "P-B2C-EU-3": {
+      "name": "B2C goods — place of purchase (origin)",
+      "detail": "The individual is taxed at the place of purchase ({{from}}). For goods taken out of the EU, a tax-free refund can be claimed afterwards with export proof."
+    },
+    "P-B2C-3-EU": {
+      "name": "Import of goods — buyer on entry",
+      "detail": "Incoming goods: the consumer pays import VAT at the {{to}} rate (≤ €150: the seller via IOSS)."
+    },
+    "P-B2C-3-3": {
+      "name": "B2C goods — place of purchase",
+      "detail": "The consumer is taxed at the place of purchase ({{from}})."
+    },
+    "S-DOM-B2B": {
+      "name": "Domestic service (B2B)",
+      "detail": "Ordinary domestic service, taxed by {{to}}."
+    },
+    "S-DOM-B2C": {
+      "name": "Domestic service (B2C)",
+      "detail": "Ordinary domestic service, taxed by {{to}}."
+    },
+    "S-ONSITE": {
+      "name": "Location-bound service — by place of performance",
+      "detail": "Real-estate-related / event admission / restaurant / on-site service: taxed where it physically takes place ({{loc}}) — even for B2B, with no reverse charge. Local tax registration is typically required."
+    },
+    "S-B2B-EU-EU": {
+      "name": "B2B service — reverse charge (Art. 44)",
+      "detail": "General rule: the place of supply is the buyer's country ({{to}}). The buyer accounts for it via reverse charge."
+    },
+    "S-B2B-EU-3": {
+      "name": "B2B service — outside EU VAT",
+      "detail": "The place of supply is {{to}} (outside the EU). No EU VAT; the buyer follows local rules."
+    },
+    "S-B2B-3-X-RC": {
+      "name": "Service export — per the seller's country (typically 0%)",
+      "detail": "The seller invoices under their own country's ({{from}}) export rule: B2B services to non-resident businesses are 0% / GST-free in most countries — but that is decided by {{from}}, not {{to}}. On the buyer's side ({{to}}), ~{{buyerRate}}% arises via reverse charge."
+    },
+    "S-B2B-3-X-NOTAX": {
+      "name": "Service export — per the seller's country (typically 0%)",
+      "detail": "The seller invoices under their own country's ({{from}}) export rule (typically 0% / GST-free). {{to}} levies no general consumption tax, so there is no self-assessment on the buyer's side either."
+    },
+    "S-B2C-DIG-EU-EU-OVER": {
+      "name": "Digital service (B2C) — destination",
+      "detail": "The place of supply is the buyer's member state ({{to}}). The seller declares via OSS. (Live online events are also included, from 2025.)"
+    },
+    "S-B2C-DIG-EU-EU-UNDER": {
+      "name": "Digital service (B2C) — origin (below €10,000)",
+      "detail": "Below the €10,000 EU-wide threshold you may keep your own ({{from}}) rate."
+    },
+    "S-B2C-DIG-EU-3": {
+      "name": "Digital service (B2C) — outside EU VAT",
+      "detail": "0% EU VAT; the place of supply is {{to}}, under the destination country's digital rules (registration may be required there)."
+    },
+    "S-B2C-DIG-3-EU": {
+      "name": "Digital service to an EU consumer — destination",
+      "detail": "The foreign seller charges EU VAT ({{to}}'s rate) and declares via non-Union OSS (the \"Netflix tax\")."
+    },
+    "S-B2C-DIG-3-3": {
+      "name": "Digital service (B2C) — destination",
+      "detail": "Taxed under the destination country's ({{to}}) digital rules."
+    },
+    "S-B2C-GEN-EU-EU": {
+      "name": "B2C service — supplier's country (Art. 45)",
+      "detail": "General rule: the place of supply is the supplier's country ({{from}}). The seller invoices."
+    },
+    "S-B2C-GEN-EU-3": {
+      "name": "B2C service — supplier's country (Art. 45)",
+      "detail": "The place of supply is the supplier's country ({{from}}). For certain listed services the place of effective use ({{to}}) governs — verify."
+    },
+    "S-B2C-GEN-3": {
+      "name": "B2C service — supplier's country (local)",
+      "detail": "The place of supply is the foreign supplier's country ({{from}}); no EU VAT."
+    }
+  },
+  "countrySelect": {
+    "country": "Država",
+    "choose": "Izberite ...",
+    "rates": "Davčne stopnje",
+    "euMember": "članica EU",
+    "system": {
+      "vat": "DDV davek",
+      "us": "Prometni davek (država)",
+      "ca": "GST + deželni",
+      "br": "Zvezni + ICMS",
+      "au": "GST",
+      "none": "Brez splošnega davka"
+    },
+    "noGeneralTax": "Davek na splošno potrošnjo",
+    "none": "nič",
+    "noTaxHint": "Ta država nima splošnega davka na promet/porabo.",
+    "stdShort": "standard",
+    "stdRate": "Standardna stopnja",
+    "stdRateHint": "Splošna stopnja — velja za večino blaga in storitev.",
+    "reducedRate": "Znižana stopnja",
+    "reducedRateHint": "Velja samo za določene kategorije (npr. hrana, knjige, zdravila) - katere so od države.",
+    "federalBr": "Zvezna (BR)",
+    "federalBrHint": "V Braziliji je zvezna stopnja NA VRHU državne (ICMS) stopnje.",
+    "reducedShort": "zmanjšano",
+    "regions": "Država / provinca",
+    "regionsHint": "Stopnja ni nacionalna, ampak se razlikuje glede na zvezno državo/provinco – na voljo za celoten seznam.",
+    "regionsSummary": "{{count}} regij, {{min}}–{{max}} %",
+    "threshold": "Prag registracije",
+    "thresholdHint": "Nad tem se mora tuji prodajalec prijaviti za davek lokalno - pod tem mu tam običajno ni treba plačati davka.",
+    "dialogTitle": "Izberite državo",
+    "dialogDesc": "Poiščite in izberite državo s seznama.",
+    "searchPlaceholder": "Iskanje držav ...",
+    "noResults": "Brez rezultatov",
+    "missing": "Ne najdete svoje države? Sporočite nam"
+  },
+  "thresholds": {
+    "AU": "AUD 75,000 / year",
+    "CA": "CAD 30,000 / 12 months",
+    "CH": "CHF 100,000 global turnover",
+    "GB": "GBP 90,000 / year",
+    "JP": "JPY 10,000,000 / base period",
+    "NO": "NOK 50,000 / 12 months",
+    "NZ": "NZD 60,000 / 12 months",
+    "SG": "SGD 1,000,000 global + SGD 100,000 local"
+  }
+}

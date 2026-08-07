@@ -1,4 +1,4 @@
-# Global VAT Calculator — TypeScript, pre-built dataset
+# Global VAT Help — TypeScript, pre-built dataset
 
 A mobile-first, step-by-step (onboarding-style) VAT calculator.
 **The app doesn't calculate anything itself** — the rule engine runs at

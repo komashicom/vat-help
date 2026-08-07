@@ -1,0 +1,305 @@
+{
+  "app": {
+    "title": "Maailmanlaajuinen ALV-apu",
+    "openSource": "Avoin lähdekoodi"
+  },
+  "steps": {
+    "supply": {
+      "hint": "Tavarat ja palvelut noudattavat erilaisia ​​toimituspaikkasääntöjä – siksi tämä on ensimmäinen kysymys."
+    },
+    "buyer_type": {
+      "subtitle": "Tämä päättää, onko kyseessä B2B vai B2C."
+    }
+  },
+  "buyer": {
+    "vat": "ALV-numerolla",
+    "novat": "Ilman ALV-numeroa",
+    "individual": "Yksityinen henkilö"
+  },
+  "service": {
+    "digital": {
+      "title": "Digitaalinen",
+      "desc": "Automaattinen palvelu Internetin kautta ilman ihmisen osallistumista.",
+      "examples": "SaaS, suoratoisto, e-kirja/lataus, mobiilisovellus, isännöinti, valmiiksi tallennettu verkkokurssi."
+    },
+    "general": {
+      "title": "Kenraali",
+      "desc": "Inhimillinen työ / asiantuntemus – jopa verkossa, mutta EI \"digitaalista\" alv:n kannalta.",
+      "examples": "Kirjanpito, lakiasiat, markkinointi, käännös, mukautettu ohjelmointi, LIVE online-tunti."
+    },
+    "onsite": {
+      "title": "Paikan päällä",
+      "desc": "Palvelu sidottu fyysiseen sijaintiin – paikka päättää, jopa B2B:lle.",
+      "examples": "Ravintola, tapahtuman sisäänpääsy, kiinteistötyöt, asennus paikan päällä, hotelliyö."
+    }
+  },
+  "wizard": {
+    "seller": "Myyjä",
+    "sellerHint": "Myyjä on aina verollinen yritys – lähtökohtana on heidän maansa.",
+    "buyer": "Ostaja",
+    "buyerHint": "Ostajan maa päättää useimmat rajat ylittävät säännöt – mm. missä toimituspaikka on.",
+    "supplyService": "Palvelu",
+    "supplyProduct": "Tavarat",
+    "supplyProductDesc": "Fyysiset tavarat.",
+    "sectionGoods": "Tavarat",
+    "sectionServices": "Palvelut",
+    "goodsLeaveTitle": "Tavarat - poistu maasta",
+    "goodsLeaveDesc": "Tavarat lähetetään fyysisesti pois myyjän maasta.",
+    "goodsStayTitle": "Tavarat - pysy maassa",
+    "goodsStayDesc": "Paikallinen osto — tavarat eivät poistu myyjän maasta, joten myyjän arvonlisäveroa sovelletaan.",
+    "buyerVatHint": "Yritys, jolla on ALV-numero → B2B-säännöt. EU:n sisällä käännetty verotus: laskut 0 % ja ostaja itse tilittää.",
+    "buyerNovatHint": "Ostaja on yritys, mutta ilman ALV-numeroa tätä ei voida todistaa – joten arvonlisäverotuksessa sitä käsitellään B2C:nä.",
+    "buyerIndividualHint": "Loppukuluttaja — aina B2C, laskusta tulee laskuttaa ALV.",
+    "vatIdLabel": "Ostajan ALV-numero ({{country}})",
+    "vatIdHint": "EU-ostajalta 0 % edellyttää voimassa olevan ALV-numeron. Muoto tarkistetaan välittömästi; Vahvista-painike kysyy aitoutta virallisesta VIES-tietokannasta.",
+    "vatIdPlaceholder": "ALV-numero…",
+    "viesButton": "Vahvista",
+    "viesValid": "VIES: voimassa oleva ALV-numero.",
+    "viesRegisteredName": "Rekisteröity nimi:",
+    "viesInvalid": "VIES: virheellinen ALV-numero – selvitä ostajalle ennen laskutusta 0%.",
+    "viesError": "VIES ei ole tällä hetkellä käytettävissä – voit toistaiseksi luottaa vain muodon tarkistukseen.",
+    "onsiteSeller": "Paikan päällä – myyjällä ({{country}})",
+    "onsiteCustomer": "Paikan päällä – ostajalla ({{country}})",
+    "examplesLabel": "Esimerkkejä:",
+    "searching": "Haetaan…",
+    "restart": "Nollaa",
+    "helpAria": "Auttaa",
+    "toWhom": "Ostaja?",
+    "what": "Mitä sinä myyt?",
+    "chooseBuyer": "Valitse ostaja",
+    "choose": "Valita…"
+  },
+  "supplyVat": {
+    "sellerTag": "Myyjän ALV",
+    "buyerTag": "Ostajan ALV",
+    "rcTag": "0% · käänteinen maksu",
+    "exportTag": "Vienti · 0 %",
+    "outsideTag": "0 %",
+    "calcLine": "ALV laskettu v",
+    "rcLine": "Laskut 0 % — ostajan omat tilit",
+    "exportLine": "Laskut 0 % — tuonti ALV sisään",
+    "outsideEuLine": "Laskut 0 % – EU:n ALV:n ulkopuolella",
+    "noTaxLine": "Laskut 0 % – ei yleistä arvonlisäveroa"
+  },
+  "footer": {
+    "line1": "Tämä on ilmainen avoimen lähdekoodin projekti. On melkoinen haaste käsitellä kaikkia maailman arvonlisäveroja.",
+    "line2": "Jos jokin ei ole oikein, auta meitä korjaamaan se.",
+    "disclaimer": "Ei veroneuvontaa, vain koulutustarkoituksiin."
+  },
+  "vatCheck": {
+    "unknownCountry": "Tuntematon maa.",
+    "empty": "Syötä ostajan ALV-numero.",
+    "format": "Ei kelvollinen {{country}}-muoto (esimerkki: {{sample}}). Vain muototarkistus – todellinen kelpoisuus tulee VIES:ltä."
+  },
+  "result": {
+    "explanation": "Selitys",
+    "editAria": "Ehdota korjausta – muokkaa tämän maan sääntöjä",
+    "taxPlace": "Verotuspaikka",
+    "taxPlaceHint": "Arvonlisäveroa ei makseta siellä, missä myyjä on, vaan siellä, missä \"luovutuspaikka\" kuuluu sääntöjen piiriin. Tämä on ratkaiseva kysymys jokaisessa rajat ylittävässä liiketoimessa.",
+    "net": "Net",
+    "netHint": "Napsauta numeroa muokataksesi sitä ja valuuttaa vaihtaaksesi sitä.",
+    "netAria": "Nettomäärä",
+    "vat": "ALV vero",
+    "vatHint": "Vero lasketaan nettomäärästä sovellettavan verokannan mukaan.",
+    "gross": "Törkeää",
+    "grossHint": "Netto + ALV – ostajan maksama summa.",
+    "statePlaceholder": "Valitse osavaltio…",
+    "regThreshold": "Rekisteröinnin kynnys",
+    "regThresholdHint": "Tämän lisäksi myyjän tulee rekisteröityä verovelvolliseksi ostajan maassa.",
+    "rcTitle": "Käänteinen verotus – kuka maksaa arvonlisäveron",
+    "rcHint": "B2B:n verovelvollisuus \"kääntyy\" ostajalle: laskutat 0 %:lla, hän ilmoittaa sen oman maansa mukaan (ja yleensä myös vähentää sen).",
+    "youInvoice": "Sinä laskut",
+    "buyerSelf": "Ostajan omat tilit ({{country}})",
+    "viesZeroWarning": "0 % edellyttää kelvollista VIES-numeroa. Ilman sitä sovelletaan omaa kotimaan hintaa.",
+    "amountEntered": "Syötetty summa ({{amount}})",
+    "thresholdOver": "ylittää {{limit}} EU:n etämyynti/OSS-kynnyksen – kohdemaan hintaa sovelletaan.",
+    "thresholdUnder": "ei saavuta {{limit}} EU:n etämyynnin/OSS:n kynnystä – sovelletaan myyjän maan hintaa.",
+    "thresholdCaveat": "Huomaa: kynnys koskee itse asiassa EU:n vuotuista B2C-myyntiäsi, ei yhtä tapahtumaa{{approx}}.",
+    "thresholdApprox": ", ja muunnos on likimääräinen"
+  },
+  "badges": {
+    "domestic": "Kotimainen myynti",
+    "reverseCharge": "Käänteinen maksu",
+    "exportZero": "Vienti · 0 %",
+    "outsideEuVat": "EU:n alv:n ulkopuolella",
+    "importVat": "Tuo ALV",
+    "destination": "Kohde",
+    "destinationOss": "Kohde · OSS",
+    "origin": "Alkuperäprosentti",
+    "originLocal": "Alkuperä (paikallinen)",
+    "onsite": "Sijainnin mukaan"
+  },
+  "jurisdiction": {
+    "state": "{{country}} (osavaltioittain)",
+    "province": "{{country}} (provinssin mukaan)",
+    "import": "{{country}} (tuonti)",
+    "importVat": "{{country}} (tuonnin ALV)"
+  },
+  "notes": {
+    "brModel": "Brazil: simplified federal + state (ICMS) model; the CBS+IBS reform goes live from 2027.",
+    "pickState": "Choose a state/province for the exact combined rate.",
+    "viesCheck": "Verify the buyer's VAT number in VIES; both numbers + \"reverse charge\" on the invoice.",
+    "exportDocs": "Keep the export evidence (customs/freight documents) to support the 0%.",
+    "sellerExportRule": "The 0% depends on the seller's ({{from}}) export rule (e.g. Australian GST: services to non-residents are GST-free). Not every country exempts it — verify.",
+    "noEuThreshold": "A non-EU seller has no threshold — registration is required from the first sale."
+  },
+  "rules": {
+    "P-DOM-B2B": {
+      "name": "Domestic sale (B2B)",
+      "detail": "Ordinary domestic sale of goods, taxed by {{to}}."
+    },
+    "P-DOM-B2C": {
+      "name": "Domestic sale (B2C)",
+      "detail": "Ordinary domestic sale of goods, taxed by {{to}}."
+    },
+    "P-B2B-STAY": {
+      "name": "Domestic sale — the goods do not leave the country",
+      "detail": "The goods do not physically move to another country, so it is a domestic sale within {{from}}. The foreign buyer pays the seller's domestic VAT and can typically reclaim it via a VAT refund."
+    },
+    "P-B2B-EU-EU": {
+      "name": "Intra-Community supply (B2B)",
+      "detail": "Exempt intra-Community supply. The {{to}} buyer accounts for it via reverse charge (intra-Community acquisition). Both VAT numbers go on the invoice."
+    },
+    "P-B2B-EU-3": {
+      "name": "Export of goods — 0%",
+      "detail": "Exempt export from {{from}}. Import VAT and customs duty are collected by {{to}} (consignments ≤ €150: by the seller via IOSS)."
+    },
+    "P-B2B-3-EU": {
+      "name": "Import of goods into the EU",
+      "detail": "Import VAT at the {{to}} rate upon entry; customs duty may also apply."
+    },
+    "P-B2B-3-3": {
+      "name": "Cross-border goods — destination country",
+      "detail": "Taxed under the destination country's ({{to}}) rules."
+    },
+    "P-B2C-STAY": {
+      "name": "B2C purchase in the seller's country — the goods do not leave",
+      "detail": "The buyer purchases locally (or carries the goods away themselves), so it is a domestic sale in the seller's country ({{from}}): {{from}}'s rate applies and the distance-selling threshold is irrelevant."
+    },
+    "P-B2C-EU-EU-OVER": {
+      "name": "Distance selling (B2C) — destination",
+      "detail": "Genuine distance selling (the seller ships) above the €10,000 EU threshold: {{to}}'s rate, declared via OSS."
+    },
+    "P-B2C-EU-EU-UNDER": {
+      "name": "B2C goods — place of purchase (origin)",
+      "detail": "The individual is taxed at the place of purchase ({{from}}). If they carry the goods across themselves, the place of taxation still doesn't change. Destination applies only to distance selling by the seller, above the €10,000 threshold."
+    },
+    "P-B2C-EU-3": {
+      "name": "B2C goods — place of purchase (origin)",
+      "detail": "The individual is taxed at the place of purchase ({{from}}). For goods taken out of the EU, a tax-free refund can be claimed afterwards with export proof."
+    },
+    "P-B2C-3-EU": {
+      "name": "Import of goods — buyer on entry",
+      "detail": "Incoming goods: the consumer pays import VAT at the {{to}} rate (≤ €150: the seller via IOSS)."
+    },
+    "P-B2C-3-3": {
+      "name": "B2C goods — place of purchase",
+      "detail": "The consumer is taxed at the place of purchase ({{from}})."
+    },
+    "S-DOM-B2B": {
+      "name": "Domestic service (B2B)",
+      "detail": "Ordinary domestic service, taxed by {{to}}."
+    },
+    "S-DOM-B2C": {
+      "name": "Domestic service (B2C)",
+      "detail": "Ordinary domestic service, taxed by {{to}}."
+    },
+    "S-ONSITE": {
+      "name": "Location-bound service — by place of performance",
+      "detail": "Real-estate-related / event admission / restaurant / on-site service: taxed where it physically takes place ({{loc}}) — even for B2B, with no reverse charge. Local tax registration is typically required."
+    },
+    "S-B2B-EU-EU": {
+      "name": "B2B service — reverse charge (Art. 44)",
+      "detail": "General rule: the place of supply is the buyer's country ({{to}}). The buyer accounts for it via reverse charge."
+    },
+    "S-B2B-EU-3": {
+      "name": "B2B service — outside EU VAT",
+      "detail": "The place of supply is {{to}} (outside the EU). No EU VAT; the buyer follows local rules."
+    },
+    "S-B2B-3-X-RC": {
+      "name": "Service export — per the seller's country (typically 0%)",
+      "detail": "The seller invoices under their own country's ({{from}}) export rule: B2B services to non-resident businesses are 0% / GST-free in most countries — but that is decided by {{from}}, not {{to}}. On the buyer's side ({{to}}), ~{{buyerRate}}% arises via reverse charge."
+    },
+    "S-B2B-3-X-NOTAX": {
+      "name": "Service export — per the seller's country (typically 0%)",
+      "detail": "The seller invoices under their own country's ({{from}}) export rule (typically 0% / GST-free). {{to}} levies no general consumption tax, so there is no self-assessment on the buyer's side either."
+    },
+    "S-B2C-DIG-EU-EU-OVER": {
+      "name": "Digital service (B2C) — destination",
+      "detail": "The place of supply is the buyer's member state ({{to}}). The seller declares via OSS. (Live online events are also included, from 2025.)"
+    },
+    "S-B2C-DIG-EU-EU-UNDER": {
+      "name": "Digital service (B2C) — origin (below €10,000)",
+      "detail": "Below the €10,000 EU-wide threshold you may keep your own ({{from}}) rate."
+    },
+    "S-B2C-DIG-EU-3": {
+      "name": "Digital service (B2C) — outside EU VAT",
+      "detail": "0% EU VAT; the place of supply is {{to}}, under the destination country's digital rules (registration may be required there)."
+    },
+    "S-B2C-DIG-3-EU": {
+      "name": "Digital service to an EU consumer — destination",
+      "detail": "The foreign seller charges EU VAT ({{to}}'s rate) and declares via non-Union OSS (the \"Netflix tax\")."
+    },
+    "S-B2C-DIG-3-3": {
+      "name": "Digital service (B2C) — destination",
+      "detail": "Taxed under the destination country's ({{to}}) digital rules."
+    },
+    "S-B2C-GEN-EU-EU": {
+      "name": "B2C service — supplier's country (Art. 45)",
+      "detail": "General rule: the place of supply is the supplier's country ({{from}}). The seller invoices."
+    },
+    "S-B2C-GEN-EU-3": {
+      "name": "B2C service — supplier's country (Art. 45)",
+      "detail": "The place of supply is the supplier's country ({{from}}). For certain listed services the place of effective use ({{to}}) governs — verify."
+    },
+    "S-B2C-GEN-3": {
+      "name": "B2C service — supplier's country (local)",
+      "detail": "The place of supply is the foreign supplier's country ({{from}}); no EU VAT."
+    }
+  },
+  "countrySelect": {
+    "country": "Maa",
+    "choose": "Valita…",
+    "rates": "Veroprosentit",
+    "euMember": "EU:n jäsen",
+    "system": {
+      "vat": "ALV vero",
+      "us": "Liikevaihtovero (osavaltio)",
+      "ca": "GST + maakunta",
+      "br": "Liittovaltio + ICMS",
+      "au": "GST",
+      "none": "Ei yleistä veroa"
+    },
+    "noGeneralTax": "Yleinen kulutusvero",
+    "none": "ei yhtään",
+    "noTaxHint": "Tässä maassa ei ole yleistä myynti-/kulutusveroa.",
+    "stdShort": "standardi",
+    "stdRate": "Vakiohinta",
+    "stdRateHint": "Yleinen verokanta – se koskee useimpia tavaroita ja palveluita.",
+    "reducedRate": "Alennettu korko",
+    "reducedRateHint": "Koskee vain tiettyjä luokkia (esim. ruoka, kirjat, lääkkeet) – kukin maa päättää itse.",
+    "federalBr": "Liittovaltio (BR)",
+    "federalBrHint": "Brasiliassa liittovaltion korko nousee osavaltion (ICMS) koron päälle.",
+    "reducedShort": "vähennetty",
+    "regions": "Osavaltio / maakunta",
+    "regionsHint": "Hinta ei ole kansallinen, mutta vaihtelee osavaltioittain/provinssien mukaan – avoinna koko luettelolle.",
+    "regionsSummary": "{{count}} aluetta, {{min}}–{{max}} %",
+    "threshold": "Rekisteröinnin kynnys",
+    "thresholdHint": "Tämän yläpuolella ulkomaisen myyjän on rekisteröidyttävä verovelvolliseksi paikallisesti – sen alapuolella hänen ei yleensä tarvitse maksaa veroa sinne.",
+    "dialogTitle": "Valitse maa",
+    "dialogDesc": "Hae ja valitse maa luettelosta.",
+    "searchPlaceholder": "Hae maita…",
+    "noResults": "Ei tuloksia",
+    "missing": "Etkö löydä maatasi? Kerro meille"
+  },
+  "thresholds": {
+    "AU": "AUD 75,000 / year",
+    "CA": "CAD 30,000 / 12 months",
+    "CH": "CHF 100,000 global turnover",
+    "GB": "GBP 90,000 / year",
+    "JP": "JPY 10,000,000 / base period",
+    "NO": "NOK 50,000 / 12 months",
+    "NZ": "NZD 60,000 / 12 months",
+    "SG": "SGD 1,000,000 global + SGD 100,000 local"
+  }
+}

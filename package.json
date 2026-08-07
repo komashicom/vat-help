@@ -12,6 +12,7 @@
     "predev": "npm run generate",
     "prebuild": "npm run generate",
     "merge": "tsx scripts/merge-countries.ts",
+    "translate": "tsx scripts/translate.ts",
     "reports": "tsx scripts/report.ts"
   },
   "dependencies": {

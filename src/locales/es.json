@@ -1,0 +1,305 @@
+{
+  "app": {
+    "title": "Ayuda global sobre IVA",
+    "openSource": "Código abierto"
+  },
+  "steps": {
+    "supply": {
+      "hint": "Los bienes y servicios siguen diferentes reglas de lugar de suministro; por eso esta es la primera pregunta."
+    },
+    "buyer_type": {
+      "subtitle": "Esto decide si es B2B o B2C."
+    }
+  },
+  "buyer": {
+    "vat": "Con número de IVA",
+    "novat": "Sin número de IVA",
+    "individual": "particular"
+  },
+  "service": {
+    "digital": {
+      "title": "Digital",
+      "desc": "Servicio automatizado entregado a través de Internet sin participación humana.",
+      "examples": "SaaS, streaming, libros electrónicos/descarga, aplicación móvil, hosting, curso online pregrabado."
+    },
+    "general": {
+      "title": "General",
+      "desc": "Trabajo humano/experiencia, incluso en línea, pero NO \"digital\" en términos de IVA.",
+      "examples": "Contabilidad, legal, marketing, traducción, programación personalizada, lección online EN VIVO."
+    },
+    "onsite": {
+      "title": "In situ",
+      "desc": "Servicio vinculado a una ubicación física: el lugar decide, incluso para B2B.",
+      "examples": "Restaurante, entrada a eventos, trabajos en inmuebles, instalación en sitio, noche de hotel."
+    }
+  },
+  "wizard": {
+    "seller": "Vendedor",
+    "sellerHint": "El vendedor es siempre una empresa sujeta a impuestos: su país es el punto de partida.",
+    "buyer": "Comprador",
+    "buyerHint": "El país del comprador decide la mayoría de las normas transfronterizas (p. ej. donde cae el lugar de suministro.",
+    "supplyService": "Servicio",
+    "supplyProduct": "Bienes",
+    "supplyProductDesc": "Bienes físicos.",
+    "sectionGoods": "Bienes",
+    "sectionServices": "Servicios",
+    "goodsLeaveTitle": "Bienes – salir del país",
+    "goodsLeaveDesc": "Los productos se envían físicamente fuera del país del vendedor.",
+    "goodsStayTitle": "Bienes – permanecer en el país",
+    "goodsStayDesc": "Compra local: la mercancía no sale del país del vendedor, por lo que se aplica el IVA del vendedor.",
+    "buyerVatHint": "Empresa con NIF → Normas B2B. Dentro de la UE, inversión del sujeto pasivo: tú facturas al 0% y el comprador autocuenta.",
+    "buyerNovatHint": "El comprador es una empresa, pero sin un número de IVA esto no se puede probar, por lo que, a efectos del IVA, se trata como B2C.",
+    "buyerIndividualHint": "Consumidor final — siempre B2C, deberás cobrar el IVA en la factura.",
+    "vatIdLabel": "Número de IVA del comprador ({{country}})",
+    "vatIdHint": "Para un comprador de la UE, el 0% requiere un número de IVA válido. El formato se comprueba al instante; el botón Verificar consulta la base de datos oficial VIES para verificar su autenticidad.",
+    "vatIdPlaceholder": "Número de IVA…",
+    "viesButton": "Verificar",
+    "viesValid": "VIES: número de IVA válido.",
+    "viesRegisteredName": "Nombre registrado:",
+    "viesInvalid": "VIES: CIF no válido – aclarar con el comprador antes de facturar al 0%.",
+    "viesError": "VIES no está disponible actualmente; por ahora sólo puedes confiar en la verificación de formato.",
+    "onsiteSeller": "En el sitio: en el vendedor ({{country}})",
+    "onsiteCustomer": "En el sitio — en el comprador ({{country}})",
+    "examplesLabel": "Ejemplos:",
+    "searching": "Búsqueda…",
+    "restart": "Reiniciar",
+    "helpAria": "Ayuda",
+    "toWhom": "¿Comprador?",
+    "what": "¿Qué estás vendiendo?",
+    "chooseBuyer": "Elige un comprador",
+    "choose": "Elegir…"
+  },
+  "supplyVat": {
+    "sellerTag": "IVA del vendedor",
+    "buyerTag": "IVA del comprador",
+    "rcTag": "0% · cargo invertido",
+    "exportTag": "Exportación · 0%",
+    "outsideTag": "0%",
+    "calcLine": "IVA calculado en",
+    "rcLine": "Facturas 0% – cuentas propias del comprador",
+    "exportLine": "Facturas 0% — importa IVA en",
+    "outsideEuLine": "Facturas al 0%, fuera del IVA de la UE",
+    "noTaxLine": "Facturas al 0%, sin IVA general en"
+  },
+  "footer": {
+    "line1": "Este es un proyecto gratuito y de código abierto. Es todo un desafío manejar todos los IVA del mundo.",
+    "line2": "Si algo no está correcto, ayúdanos a solucionarlo.",
+    "disclaimer": "No es un asesoramiento fiscal, solo con fines educativos."
+  },
+  "vatCheck": {
+    "unknownCountry": "País desconocido.",
+    "empty": "Introduzca el número de IVA del comprador.",
+    "format": "No es un formato {{country}} válido (ejemplo: {{sample}}). Sólo verificación de formato: la validez real proviene de VIES."
+  },
+  "result": {
+    "explanation": "Explicación",
+    "editAria": "Sugerir una solución: editar las reglas de este país",
+    "taxPlace": "Lugar de tributación",
+    "taxPlaceHint": "El IVA no se paga donde está el vendedor, sino donde el \"lugar de entrega\" está sujeto a las normas: la cuestión decisiva en toda transacción transfronteriza.",
+    "net": "Neto",
+    "netHint": "Haga clic en el número para editarlo y en la moneda para cambiarlo.",
+    "netAria": "Importe neto",
+    "vat": "impuesto IVA",
+    "vatHint": "Impuesto computado sobre el importe neto a la tasa aplicable.",
+    "gross": "Bruto",
+    "grossHint": "Neto + IVA: el total que paga el comprador.",
+    "statePlaceholder": "Elige un estado…",
+    "regThreshold": "Umbral de registro",
+    "regThresholdHint": "Por encima de esto, el vendedor debe registrarse a efectos fiscales en el país del comprador.",
+    "rcTitle": "Inversión del sujeto pasivo: quién contabiliza el IVA",
+    "rcHint": "Para B2B, la obligación tributaria \"cambia\" al comprador: usted factura al 0%, él lo declara a la tasa de su propio país (y normalmente también lo deduce).",
+    "youInvoice": "usted factura",
+    "buyerSelf": "Cuentas propias del comprador ({{country}})",
+    "viesZeroWarning": "0% requiere un número VIES válido. Sin él, se aplica su propia tarifa nacional.",
+    "amountEntered": "El importe introducido ({{amount}})",
+    "thresholdOver": "supera el umbral {{limit}} de venta a distancia/OSS de la UE: se aplica la tarifa del país de destino.",
+    "thresholdUnder": "no alcanza el umbral {{limit}} de venta a distancia/OSS de la UE: se aplica la tarifa del país del vendedor.",
+    "thresholdCaveat": "Nota: el umbral en realidad se aplica a sus ventas B2C anuales totales en la UE, no a una sola transacción{{approx}}.",
+    "thresholdApprox": ", y la conversión es aproximada"
+  },
+  "badges": {
+    "domestic": "Venta nacional",
+    "reverseCharge": "carga inversa",
+    "exportZero": "Exportación · 0%",
+    "outsideEuVat": "IVA fuera de la UE",
+    "importVat": "IVA de importación",
+    "destination": "Destino",
+    "destinationOss": "Destino · OSS",
+    "origin": "Tasa de origen",
+    "originLocal": "Origen (local)",
+    "onsite": "Por ubicación"
+  },
+  "jurisdiction": {
+    "state": "{{country}} (por estado)",
+    "province": "{{country}} (por provincia)",
+    "import": "{{country}} (importación)",
+    "importVat": "{{country}} (IVA de importación)"
+  },
+  "notes": {
+    "brModel": "Brazil: simplified federal + state (ICMS) model; the CBS+IBS reform goes live from 2027.",
+    "pickState": "Choose a state/province for the exact combined rate.",
+    "viesCheck": "Verify the buyer's VAT number in VIES; both numbers + \"reverse charge\" on the invoice.",
+    "exportDocs": "Keep the export evidence (customs/freight documents) to support the 0%.",
+    "sellerExportRule": "The 0% depends on the seller's ({{from}}) export rule (e.g. Australian GST: services to non-residents are GST-free). Not every country exempts it — verify.",
+    "noEuThreshold": "A non-EU seller has no threshold — registration is required from the first sale."
+  },
+  "rules": {
+    "P-DOM-B2B": {
+      "name": "Domestic sale (B2B)",
+      "detail": "Ordinary domestic sale of goods, taxed by {{to}}."
+    },
+    "P-DOM-B2C": {
+      "name": "Domestic sale (B2C)",
+      "detail": "Ordinary domestic sale of goods, taxed by {{to}}."
+    },
+    "P-B2B-STAY": {
+      "name": "Domestic sale — the goods do not leave the country",
+      "detail": "The goods do not physically move to another country, so it is a domestic sale within {{from}}. The foreign buyer pays the seller's domestic VAT and can typically reclaim it via a VAT refund."
+    },
+    "P-B2B-EU-EU": {
+      "name": "Intra-Community supply (B2B)",
+      "detail": "Exempt intra-Community supply. The {{to}} buyer accounts for it via reverse charge (intra-Community acquisition). Both VAT numbers go on the invoice."
+    },
+    "P-B2B-EU-3": {
+      "name": "Export of goods — 0%",
+      "detail": "Exempt export from {{from}}. Import VAT and customs duty are collected by {{to}} (consignments ≤ €150: by the seller via IOSS)."
+    },
+    "P-B2B-3-EU": {
+      "name": "Import of goods into the EU",
+      "detail": "Import VAT at the {{to}} rate upon entry; customs duty may also apply."
+    },
+    "P-B2B-3-3": {
+      "name": "Cross-border goods — destination country",
+      "detail": "Taxed under the destination country's ({{to}}) rules."
+    },
+    "P-B2C-STAY": {
+      "name": "B2C purchase in the seller's country — the goods do not leave",
+      "detail": "The buyer purchases locally (or carries the goods away themselves), so it is a domestic sale in the seller's country ({{from}}): {{from}}'s rate applies and the distance-selling threshold is irrelevant."
+    },
+    "P-B2C-EU-EU-OVER": {
+      "name": "Distance selling (B2C) — destination",
+      "detail": "Genuine distance selling (the seller ships) above the €10,000 EU threshold: {{to}}'s rate, declared via OSS."
+    },
+    "P-B2C-EU-EU-UNDER": {
+      "name": "B2C goods — place of purchase (origin)",
+      "detail": "The individual is taxed at the place of purchase ({{from}}). If they carry the goods across themselves, the place of taxation still doesn't change. Destination applies only to distance selling by the seller, above the €10,000 threshold."
+    },
+    "P-B2C-EU-3": {
+      "name": "B2C goods — place of purchase (origin)",
+      "detail": "The individual is taxed at the place of purchase ({{from}}). For goods taken out of the EU, a tax-free refund can be claimed afterwards with export proof."
+    },
+    "P-B2C-3-EU": {
+      "name": "Import of goods — buyer on entry",
+      "detail": "Incoming goods: the consumer pays import VAT at the {{to}} rate (≤ €150: the seller via IOSS)."
+    },
+    "P-B2C-3-3": {
+      "name": "B2C goods — place of purchase",
+      "detail": "The consumer is taxed at the place of purchase ({{from}})."
+    },
+    "S-DOM-B2B": {
+      "name": "Domestic service (B2B)",
+      "detail": "Ordinary domestic service, taxed by {{to}}."
+    },
+    "S-DOM-B2C": {
+      "name": "Domestic service (B2C)",
+      "detail": "Ordinary domestic service, taxed by {{to}}."
+    },
+    "S-ONSITE": {
+      "name": "Location-bound service — by place of performance",
+      "detail": "Real-estate-related / event admission / restaurant / on-site service: taxed where it physically takes place ({{loc}}) — even for B2B, with no reverse charge. Local tax registration is typically required."
+    },
+    "S-B2B-EU-EU": {
+      "name": "B2B service — reverse charge (Art. 44)",
+      "detail": "General rule: the place of supply is the buyer's country ({{to}}). The buyer accounts for it via reverse charge."
+    },
+    "S-B2B-EU-3": {
+      "name": "B2B service — outside EU VAT",
+      "detail": "The place of supply is {{to}} (outside the EU). No EU VAT; the buyer follows local rules."
+    },
+    "S-B2B-3-X-RC": {
+      "name": "Service export — per the seller's country (typically 0%)",
+      "detail": "The seller invoices under their own country's ({{from}}) export rule: B2B services to non-resident businesses are 0% / GST-free in most countries — but that is decided by {{from}}, not {{to}}. On the buyer's side ({{to}}), ~{{buyerRate}}% arises via reverse charge."
+    },
+    "S-B2B-3-X-NOTAX": {
+      "name": "Service export — per the seller's country (typically 0%)",
+      "detail": "The seller invoices under their own country's ({{from}}) export rule (typically 0% / GST-free). {{to}} levies no general consumption tax, so there is no self-assessment on the buyer's side either."
+    },
+    "S-B2C-DIG-EU-EU-OVER": {
+      "name": "Digital service (B2C) — destination",
+      "detail": "The place of supply is the buyer's member state ({{to}}). The seller declares via OSS. (Live online events are also included, from 2025.)"
+    },
+    "S-B2C-DIG-EU-EU-UNDER": {
+      "name": "Digital service (B2C) — origin (below €10,000)",
+      "detail": "Below the €10,000 EU-wide threshold you may keep your own ({{from}}) rate."
+    },
+    "S-B2C-DIG-EU-3": {
+      "name": "Digital service (B2C) — outside EU VAT",
+      "detail": "0% EU VAT; the place of supply is {{to}}, under the destination country's digital rules (registration may be required there)."
+    },
+    "S-B2C-DIG-3-EU": {
+      "name": "Digital service to an EU consumer — destination",
+      "detail": "The foreign seller charges EU VAT ({{to}}'s rate) and declares via non-Union OSS (the \"Netflix tax\")."
+    },
+    "S-B2C-DIG-3-3": {
+      "name": "Digital service (B2C) — destination",
+      "detail": "Taxed under the destination country's ({{to}}) digital rules."
+    },
+    "S-B2C-GEN-EU-EU": {
+      "name": "B2C service — supplier's country (Art. 45)",
+      "detail": "General rule: the place of supply is the supplier's country ({{from}}). The seller invoices."
+    },
+    "S-B2C-GEN-EU-3": {
+      "name": "B2C service — supplier's country (Art. 45)",
+      "detail": "The place of supply is the supplier's country ({{from}}). For certain listed services the place of effective use ({{to}}) governs — verify."
+    },
+    "S-B2C-GEN-3": {
+      "name": "B2C service — supplier's country (local)",
+      "detail": "The place of supply is the foreign supplier's country ({{from}}); no EU VAT."
+    }
+  },
+  "countrySelect": {
+    "country": "País",
+    "choose": "Elegir…",
+    "rates": "Tasas impositivas",
+    "euMember": "Miembro de la UE",
+    "system": {
+      "vat": "impuesto IVA",
+      "us": "Impuesto sobre las ventas (estado)",
+      "ca": "IVA + provincial",
+      "br": "Federal + ICMS",
+      "au": "GST",
+      "none": "Sin impuestos generales"
+    },
+    "noGeneralTax": "Impuesto general al consumo",
+    "none": "ninguno",
+    "noTaxHint": "Este país no tiene impuestos generales sobre las ventas/consumo.",
+    "stdShort": "estándar",
+    "stdRate": "Tarifa estándar",
+    "stdRateHint": "La tasa general se aplica a la mayoría de los bienes y servicios.",
+    "reducedRate": "Tarifa reducida",
+    "reducedRateHint": "Se aplica solo a categorías específicas (por ejemplo, alimentos, libros, medicamentos); cuáles dependen de cada país.",
+    "federalBr": "Federal (BR)",
+    "federalBrHint": "En Brasil, la tasa federal se sitúa ENCIMA de la tasa estatal (ICMS).",
+    "reducedShort": "reducido",
+    "regions": "Estado / provincia",
+    "regionsHint": "La tarifa no es nacional, pero varía según el estado/provincia; abierta para ver la lista completa.",
+    "regionsSummary": "Regiones {{count}}, {{min}}–{{max}}%",
+    "threshold": "Umbral de registro",
+    "thresholdHint": "Por encima de este límite, un vendedor extranjero debe registrarse para pagar impuestos localmente; por debajo de ese límite, normalmente no tiene que pagar impuestos allí.",
+    "dialogTitle": "Seleccione un país",
+    "dialogDesc": "Busque y elija un país de la lista.",
+    "searchPlaceholder": "Buscar países…",
+    "noResults": "Sin resultados",
+    "missing": "¿No encuentras tu país? Háganos saber"
+  },
+  "thresholds": {
+    "AU": "AUD 75,000 / year",
+    "CA": "CAD 30,000 / 12 months",
+    "CH": "CHF 100,000 global turnover",
+    "GB": "GBP 90,000 / year",
+    "JP": "JPY 10,000,000 / base period",
+    "NO": "NOK 50,000 / 12 months",
+    "NZ": "NZD 60,000 / 12 months",
+    "SG": "SGD 1,000,000 global + SGD 100,000 local"
+  }
+}
