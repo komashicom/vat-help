@@ -1,0 +1,305 @@
+{
+  "app": {
+    "title": "Bantuan PPN Global",
+    "openSource": "Sumber terbuka"
+  },
+  "steps": {
+    "supply": {
+      "hint": "Barang dan jasa mengikuti aturan tempat pasokan yang berbeda — itulah mengapa ini adalah pertanyaan pertama."
+    },
+    "buyer_type": {
+      "subtitle": "Ini memutuskan apakah itu B2B atau B2C."
+    }
+  },
+  "buyer": {
+    "vat": "Dengan nomor PPN",
+    "novat": "Tanpa nomor PPN",
+    "individual": "Individu pribadi"
+  },
+  "service": {
+    "digital": {
+      "title": "Digital",
+      "desc": "Layanan otomatis disampaikan melalui internet tanpa keterlibatan manusia.",
+      "examples": "SaaS, streaming, e-book/unduhan, aplikasi seluler, hosting, kursus online yang direkam sebelumnya."
+    },
+    "general": {
+      "title": "Umum",
+      "desc": "Pekerjaan/keahlian manusia — bahkan secara online, namun BUKAN \"digital\" dalam istilah PPN.",
+      "examples": "Akuntansi, hukum, pemasaran, penerjemahan, pemrograman khusus, pelajaran online LANGSUNG."
+    },
+    "onsite": {
+      "title": "Di tempat",
+      "desc": "Layanan terikat pada lokasi fisik — tempat menentukan, bahkan untuk B2B.",
+      "examples": "Restoran, tiket masuk acara, pengerjaan real estate, instalasi di tempat, malam hotel."
+    }
+  },
+  "wizard": {
+    "seller": "Penjual",
+    "sellerHint": "Penjual selalu merupakan bisnis yang kena pajak — negara mereka adalah titik awalnya.",
+    "buyer": "Pembeli",
+    "buyerHint": "Negara pembeli memutuskan sebagian besar peraturan lintas batas — misalnya. di mana tempat pasokan berada.",
+    "supplyService": "Melayani",
+    "supplyProduct": "Barang-barang",
+    "supplyProductDesc": "Barang fisik.",
+    "sectionGoods": "Barang-barang",
+    "sectionServices": "Layanan",
+    "goodsLeaveTitle": "Barang — meninggalkan negara itu",
+    "goodsLeaveDesc": "Barang dikirim secara fisik ke luar negara penjual.",
+    "goodsStayTitle": "Barang — tinggal di pedesaan",
+    "goodsStayDesc": "Pembelian lokal — barang tidak keluar dari negara penjual, sehingga dikenakan PPN penjual.",
+    "buyerVatHint": "Bisnis dengan nomor PPN → Aturan B2B. Di UE, tagihan balik: Anda menagih sebesar 0% dan pembeli memperhitungkan sendiri.",
+    "buyerNovatHint": "Pembelinya adalah sebuah bisnis, namun tanpa nomor PPN hal ini tidak dapat dibuktikan — jadi untuk keperluan PPN diperlakukan sebagai B2C.",
+    "buyerIndividualHint": "Konsumen akhir — selalu B2C, Anda harus membebankan PPN pada faktur.",
+    "vatIdLabel": "Nomor PPN pembeli ({{country}})",
+    "vatIdHint": "Untuk pembeli UE, 0% memerlukan nomor PPN yang valid. Formatnya diperiksa secara instan; tombol Verifikasi menanyakan keaslian database resmi VIES.",
+    "vatIdPlaceholder": "Nomor PPN…",
+    "viesButton": "Memeriksa",
+    "viesValid": "VIES: nomor PPN yang valid.",
+    "viesRegisteredName": "Nama terdaftar:",
+    "viesInvalid": "VIES: nomor PPN tidak valid — klarifikasi dengan pembeli sebelum membuat faktur sebesar 0%.",
+    "viesError": "VIES saat ini tidak tersedia — untuk saat ini Anda hanya dapat mengandalkan pemeriksaan format.",
+    "onsiteSeller": "Di tempat — di penjual ({{country}})",
+    "onsiteCustomer": "Di tempat — di pembeli ({{country}})",
+    "examplesLabel": "Contoh:",
+    "searching": "Mencari…",
+    "restart": "Mengatur ulang",
+    "helpAria": "Membantu",
+    "toWhom": "Pembeli?",
+    "what": "Apa yang kamu jual?",
+    "chooseBuyer": "Pilih pembeli",
+    "choose": "Memilih…"
+  },
+  "supplyVat": {
+    "sellerTag": "PPN Penjual",
+    "buyerTag": "PPN pembeli",
+    "rcTag": "0% · pengisian terbalik",
+    "exportTag": "Ekspor · 0%",
+    "outsideTag": "0%",
+    "calcLine": "PPN dihitung dalam",
+    "rcLine": "Anda menagih 0% — akun mandiri pembeli",
+    "exportLine": "Anda menagih 0% — mengimpor PPN masuk",
+    "outsideEuLine": "Anda menagih 0% — di luar PPN UE",
+    "noTaxLine": "Anda menagih 0% — tidak ada PPN umum"
+  },
+  "footer": {
+    "line1": "Ini adalah proyek sumber terbuka dan gratis. Merupakan tantangan yang cukup besar untuk menangani semua PPN di dunia.",
+    "line2": "Jika ada yang tidak benar, bantu kami memperbaikinya.",
+    "disclaimer": "Bukan nasihat perpajakan, hanya untuk tujuan pendidikan."
+  },
+  "vatCheck": {
+    "unknownCountry": "Negara tidak dikenal.",
+    "empty": "Masukkan nomor PPN pembeli.",
+    "format": "Bukan format {{country}} yang valid (contoh: {{sample}}). Hanya pemeriksaan format — validitas sebenarnya berasal dari VIES."
+  },
+  "result": {
+    "explanation": "Penjelasan",
+    "editAria": "Sarankan perbaikan — edit peraturan negara ini",
+    "taxPlace": "Tempat perpajakan",
+    "taxPlaceHint": "PPN tidak dibayarkan di tempat penjual berada, namun di tempat \"tempat penyediaan\" berada di bawah aturan — pertanyaan yang menentukan dalam setiap transaksi lintas batas.",
+    "net": "Bersih",
+    "netHint": "Klik nomor untuk mengeditnya, mata uang untuk mengubahnya.",
+    "netAria": "Jumlah bersih",
+    "vat": "pajak PPN",
+    "vatHint": "Pajak dihitung atas jumlah bersih dengan tarif yang berlaku.",
+    "gross": "Bruto",
+    "grossHint": "Bersih + PPN — total yang dibayar pembeli.",
+    "statePlaceholder": "Pilih negara bagian…",
+    "regThreshold": "Ambang pendaftaran",
+    "regThresholdHint": "Di atas itu, penjual harus mendaftar pajak di negara pembeli.",
+    "rcTitle": "Biaya terbalik — siapa yang bertanggung jawab atas PPN",
+    "rcHint": "Untuk B2B, kewajiban pajak \"beralih\" ke pembeli: Anda menagih sebesar 0%, mereka menyatakannya sesuai tarif negara mereka sendiri (dan biasanya memotongnya juga).",
+    "youInvoice": "Anda menagih",
+    "buyerSelf": "Akun mandiri pembeli ({{country}})",
+    "viesZeroWarning": "0% memerlukan nomor VIES yang valid. Tanpa itu, tarif domestik Anda sendiri yang berlaku.",
+    "amountEntered": "Jumlah yang dimasukkan ({{amount}})",
+    "thresholdOver": "melebihi ambang batas penjualan jarak jauh/OSS UE {{limit}} — tarif di negara tujuan berlaku.",
+    "thresholdUnder": "tidak mencapai ambang batas penjualan jarak jauh/OSS UE {{limit}} — tarif di negara penjual berlaku.",
+    "thresholdCaveat": "Catatan: ambang batas sebenarnya berlaku untuk total penjualan B2C UE tahunan Anda, bukan satu transaksi{{approx}}.",
+    "thresholdApprox": ", dan konversinya merupakan perkiraan"
+  },
+  "badges": {
+    "domestic": "Penjualan dalam negeri",
+    "reverseCharge": "Membalikkan biaya",
+    "exportZero": "Ekspor · 0%",
+    "outsideEuVat": "Di luar PPN UE",
+    "importVat": "Impor PPN",
+    "destination": "Tujuan",
+    "destinationOss": "Tujuan · OSS",
+    "origin": "Tingkat asal",
+    "originLocal": "Asal (lokal)",
+    "onsite": "Berdasarkan lokasi"
+  },
+  "jurisdiction": {
+    "state": "{{country}} (menurut negara bagian)",
+    "province": "{{country}} (menurut provinsi)",
+    "import": "{{country}} (impor)",
+    "importVat": "{{country}} (PPN impor)"
+  },
+  "notes": {
+    "brModel": "Brazil: simplified federal + state (ICMS) model; the CBS+IBS reform goes live from 2027.",
+    "pickState": "Choose a state/province for the exact combined rate.",
+    "viesCheck": "Verify the buyer's VAT number in VIES; both numbers + \"reverse charge\" on the invoice.",
+    "exportDocs": "Keep the export evidence (customs/freight documents) to support the 0%.",
+    "sellerExportRule": "The 0% depends on the seller's ({{from}}) export rule (e.g. Australian GST: services to non-residents are GST-free). Not every country exempts it — verify.",
+    "noEuThreshold": "A non-EU seller has no threshold — registration is required from the first sale."
+  },
+  "rules": {
+    "P-DOM-B2B": {
+      "name": "Domestic sale (B2B)",
+      "detail": "Ordinary domestic sale of goods, taxed by {{to}}."
+    },
+    "P-DOM-B2C": {
+      "name": "Domestic sale (B2C)",
+      "detail": "Ordinary domestic sale of goods, taxed by {{to}}."
+    },
+    "P-B2B-STAY": {
+      "name": "Domestic sale — the goods do not leave the country",
+      "detail": "The goods do not physically move to another country, so it is a domestic sale within {{from}}. The foreign buyer pays the seller's domestic VAT and can typically reclaim it via a VAT refund."
+    },
+    "P-B2B-EU-EU": {
+      "name": "Intra-Community supply (B2B)",
+      "detail": "Exempt intra-Community supply. The {{to}} buyer accounts for it via reverse charge (intra-Community acquisition). Both VAT numbers go on the invoice."
+    },
+    "P-B2B-EU-3": {
+      "name": "Export of goods — 0%",
+      "detail": "Exempt export from {{from}}. Import VAT and customs duty are collected by {{to}} (consignments ≤ €150: by the seller via IOSS)."
+    },
+    "P-B2B-3-EU": {
+      "name": "Import of goods into the EU",
+      "detail": "Import VAT at the {{to}} rate upon entry; customs duty may also apply."
+    },
+    "P-B2B-3-3": {
+      "name": "Cross-border goods — destination country",
+      "detail": "Taxed under the destination country's ({{to}}) rules."
+    },
+    "P-B2C-STAY": {
+      "name": "B2C purchase in the seller's country — the goods do not leave",
+      "detail": "The buyer purchases locally (or carries the goods away themselves), so it is a domestic sale in the seller's country ({{from}}): {{from}}'s rate applies and the distance-selling threshold is irrelevant."
+    },
+    "P-B2C-EU-EU-OVER": {
+      "name": "Distance selling (B2C) — destination",
+      "detail": "Genuine distance selling (the seller ships) above the €10,000 EU threshold: {{to}}'s rate, declared via OSS."
+    },
+    "P-B2C-EU-EU-UNDER": {
+      "name": "B2C goods — place of purchase (origin)",
+      "detail": "The individual is taxed at the place of purchase ({{from}}). If they carry the goods across themselves, the place of taxation still doesn't change. Destination applies only to distance selling by the seller, above the €10,000 threshold."
+    },
+    "P-B2C-EU-3": {
+      "name": "B2C goods — place of purchase (origin)",
+      "detail": "The individual is taxed at the place of purchase ({{from}}). For goods taken out of the EU, a tax-free refund can be claimed afterwards with export proof."
+    },
+    "P-B2C-3-EU": {
+      "name": "Import of goods — buyer on entry",
+      "detail": "Incoming goods: the consumer pays import VAT at the {{to}} rate (≤ €150: the seller via IOSS)."
+    },
+    "P-B2C-3-3": {
+      "name": "B2C goods — place of purchase",
+      "detail": "The consumer is taxed at the place of purchase ({{from}})."
+    },
+    "S-DOM-B2B": {
+      "name": "Domestic service (B2B)",
+      "detail": "Ordinary domestic service, taxed by {{to}}."
+    },
+    "S-DOM-B2C": {
+      "name": "Domestic service (B2C)",
+      "detail": "Ordinary domestic service, taxed by {{to}}."
+    },
+    "S-ONSITE": {
+      "name": "Location-bound service — by place of performance",
+      "detail": "Real-estate-related / event admission / restaurant / on-site service: taxed where it physically takes place ({{loc}}) — even for B2B, with no reverse charge. Local tax registration is typically required."
+    },
+    "S-B2B-EU-EU": {
+      "name": "B2B service — reverse charge (Art. 44)",
+      "detail": "General rule: the place of supply is the buyer's country ({{to}}). The buyer accounts for it via reverse charge."
+    },
+    "S-B2B-EU-3": {
+      "name": "B2B service — outside EU VAT",
+      "detail": "The place of supply is {{to}} (outside the EU). No EU VAT; the buyer follows local rules."
+    },
+    "S-B2B-3-X-RC": {
+      "name": "Service export — per the seller's country (typically 0%)",
+      "detail": "The seller invoices under their own country's ({{from}}) export rule: B2B services to non-resident businesses are 0% / GST-free in most countries — but that is decided by {{from}}, not {{to}}. On the buyer's side ({{to}}), ~{{buyerRate}}% arises via reverse charge."
+    },
+    "S-B2B-3-X-NOTAX": {
+      "name": "Service export — per the seller's country (typically 0%)",
+      "detail": "The seller invoices under their own country's ({{from}}) export rule (typically 0% / GST-free). {{to}} levies no general consumption tax, so there is no self-assessment on the buyer's side either."
+    },
+    "S-B2C-DIG-EU-EU-OVER": {
+      "name": "Digital service (B2C) — destination",
+      "detail": "The place of supply is the buyer's member state ({{to}}). The seller declares via OSS. (Live online events are also included, from 2025.)"
+    },
+    "S-B2C-DIG-EU-EU-UNDER": {
+      "name": "Digital service (B2C) — origin (below €10,000)",
+      "detail": "Below the €10,000 EU-wide threshold you may keep your own ({{from}}) rate."
+    },
+    "S-B2C-DIG-EU-3": {
+      "name": "Digital service (B2C) — outside EU VAT",
+      "detail": "0% EU VAT; the place of supply is {{to}}, under the destination country's digital rules (registration may be required there)."
+    },
+    "S-B2C-DIG-3-EU": {
+      "name": "Digital service to an EU consumer — destination",
+      "detail": "The foreign seller charges EU VAT ({{to}}'s rate) and declares via non-Union OSS (the \"Netflix tax\")."
+    },
+    "S-B2C-DIG-3-3": {
+      "name": "Digital service (B2C) — destination",
+      "detail": "Taxed under the destination country's ({{to}}) digital rules."
+    },
+    "S-B2C-GEN-EU-EU": {
+      "name": "B2C service — supplier's country (Art. 45)",
+      "detail": "General rule: the place of supply is the supplier's country ({{from}}). The seller invoices."
+    },
+    "S-B2C-GEN-EU-3": {
+      "name": "B2C service — supplier's country (Art. 45)",
+      "detail": "The place of supply is the supplier's country ({{from}}). For certain listed services the place of effective use ({{to}}) governs — verify."
+    },
+    "S-B2C-GEN-3": {
+      "name": "B2C service — supplier's country (local)",
+      "detail": "The place of supply is the foreign supplier's country ({{from}}); no EU VAT."
+    }
+  },
+  "countrySelect": {
+    "country": "Negara",
+    "choose": "Memilih…",
+    "rates": "Tarif pajak",
+    "euMember": "anggota UE",
+    "system": {
+      "vat": "pajak PPN",
+      "us": "Pajak penjualan (negara bagian)",
+      "ca": "GST + provinsi",
+      "br": "Federal + ICMS",
+      "au": "GST",
+      "none": "Tidak ada pajak umum"
+    },
+    "noGeneralTax": "Pajak konsumsi umum",
+    "none": "tidak ada",
+    "noTaxHint": "Negara ini tidak memiliki pajak penjualan/konsumsi umum.",
+    "stdShort": "standar",
+    "stdRate": "Tarif standar",
+    "stdRateHint": "Tarif umum — berlaku untuk sebagian besar barang dan jasa.",
+    "reducedRate": "Tarif berkurang",
+    "reducedRateHint": "Hanya berlaku untuk kategori tertentu (misalnya makanan, buku, obat-obatan) — yang mana tergantung pada masing-masing negara.",
+    "federalBr": "Federal (BR)",
+    "federalBrHint": "Di Brasil, tarif federal berada DI ATAS tarif negara bagian (ICMS).",
+    "reducedShort": "berkurang",
+    "regions": "Negara bagian/provinsi",
+    "regionsHint": "Tarifnya tidak bersifat nasional tetapi bervariasi menurut negara bagian/provinsi — terbuka untuk daftar lengkapnya.",
+    "regionsSummary": "{{count}} wilayah, {{min}}–{{max}}%",
+    "threshold": "Ambang pendaftaran",
+    "thresholdHint": "Di atas batas ini, penjual asing harus mendaftarkan pajak secara lokal — di bawahnya mereka biasanya tidak perlu membayar pajak di sana.",
+    "dialogTitle": "Pilih negara",
+    "dialogDesc": "Cari dan pilih negara dari daftar.",
+    "searchPlaceholder": "Telusuri negara…",
+    "noResults": "Tidak ada hasil",
+    "missing": "Tidak dapat menemukan negara Anda? Beri tahu kami"
+  },
+  "thresholds": {
+    "AU": "AUD 75,000 / year",
+    "CA": "CAD 30,000 / 12 months",
+    "CH": "CHF 100,000 global turnover",
+    "GB": "GBP 90,000 / year",
+    "JP": "JPY 10,000,000 / base period",
+    "NO": "NOK 50,000 / 12 months",
+    "NZ": "NZD 60,000 / 12 months",
+    "SG": "SGD 1,000,000 global + SGD 100,000 local"
+  }
+}

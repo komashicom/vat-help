@@ -1,0 +1,305 @@
+{
+  "app": {
+    "title": "Globaalne käibemaksuabi",
+    "openSource": "Avatud lähtekoodiga"
+  },
+  "steps": {
+    "supply": {
+      "hint": "Kaubad ja teenused järgivad erinevaid tarnekohareegleid – see on põhjus, miks see on esimene küsimus."
+    },
+    "buyer_type": {
+      "subtitle": "See otsustab, kas see on B2B või B2C."
+    }
+  },
+  "buyer": {
+    "vat": "KMKR numbriga",
+    "novat": "Ilma käibemaksukohuslase numbrita",
+    "individual": "Eraisik"
+  },
+  "service": {
+    "digital": {
+      "title": "Digitaalne",
+      "desc": "Automatiseeritud teenus, mida pakutakse Interneti kaudu ilma inimese osaluseta.",
+      "examples": "SaaS, voogesitus, e-raamat/allalaadimine, mobiilirakendus, hostimine, eelsalvestatud veebikursus."
+    },
+    "general": {
+      "title": "Kindral",
+      "desc": "Inimtöö / asjatundlikkus — isegi veebis, kuid MITTE \"digitaalne\" käibemaksu mõistes.",
+      "examples": "Raamatupidamine, juriidiline, turundus, tõlkimine, kohandatud programmeerimine, LIVE veebitund."
+    },
+    "onsite": {
+      "title": "Kohapeal",
+      "desc": "Füüsilise asukohaga seotud teenus – koht otsustab, isegi B2B puhul.",
+      "examples": "Restoran, sissepääs üritustele, tööd kinnisvaraga, paigaldus kohapeal, hotelliöö."
+    }
+  },
+  "wizard": {
+    "seller": "Müüja",
+    "sellerHint": "Müüja on alati maksukohustuslane – lähtepunkt on tema riik.",
+    "buyer": "Ostja",
+    "buyerHint": "Enamiku piiriüleste reeglite üle otsustab ostja riik — nt. kuhu tarnekoht langeb.",
+    "supplyService": "Teenindus",
+    "supplyProduct": "Kaubad",
+    "supplyProductDesc": "Füüsilised kaubad.",
+    "sectionGoods": "Kaubad",
+    "sectionServices": "Teenused",
+    "goodsLeaveTitle": "Kaup - lahkuge riigist",
+    "goodsLeaveDesc": "Kaup saadetakse füüsiliselt müüja riigist välja.",
+    "goodsStayTitle": "Kaup — jää maale",
+    "goodsStayDesc": "Kohalik ost — kaup ei välju müüja riigist, seega rakendub müüja käibemaks.",
+    "buyerVatHint": "KMKR-numbriga ettevõte → B2B reeglid. EL-is pöördmaksustamine: esitate arve 0% ja ostja ise arveldab.",
+    "buyerNovatHint": "Ostja on ettevõte, kuid ilma käibemaksukohustuslase numbrita ei saa seda tõestada – seega käsitletakse seda käibemaksukohustuslasena B2C-na.",
+    "buyerIndividualHint": "Lõpptarbija — alati B2C, arvel tuleb tasuda käibemaks.",
+    "vatIdLabel": "Ostja käibemaksukohustuslase number ({{country}})",
+    "vatIdHint": "EL-i ostja puhul nõuab 0% kehtivat käibemaksukohustuslasena numbrit. Vormingut kontrollitakse koheselt; nupp Kinnita küsib ametlikust VIES-i andmebaasist autentsust.",
+    "vatIdPlaceholder": "KMKR number…",
+    "viesButton": "Kinnitage",
+    "viesValid": "VIES: kehtiv KMKR number.",
+    "viesRegisteredName": "Registreeritud nimi:",
+    "viesInvalid": "VIES: kehtetu käibemaksukohuslase number — täpsustage ostjaga enne arve esitamist 0%.",
+    "viesError": "VIES pole praegu saadaval – praegu saate loota ainult vormingukontrollile.",
+    "onsiteSeller": "Kohapeal – müüja juures ({{country}})",
+    "onsiteCustomer": "Kohapeal – ostja juures ({{country}})",
+    "examplesLabel": "Näited:",
+    "searching": "Otsimine…",
+    "restart": "Lähtesta",
+    "helpAria": "Abi",
+    "toWhom": "Ostja?",
+    "what": "Mida sa müüd?",
+    "chooseBuyer": "Valige ostja",
+    "choose": "Vali…"
+  },
+  "supplyVat": {
+    "sellerTag": "Müüja käibemaks",
+    "buyerTag": "Ostja käibemaks",
+    "rcTag": "0% · pöördmaksustamine",
+    "exportTag": "Eksport · 0%",
+    "outsideTag": "0%",
+    "calcLine": "aastal arvestatud käibemaks",
+    "rcLine": "Arve esitate 0% — ostja omaarved",
+    "exportLine": "Esitate arve 0% — impordi käibemaks sisse",
+    "outsideEuLine": "Te esitate arve 0% — väljaspool EL-i käibemaksu",
+    "noTaxLine": "Esitate arve 0% — üldist käibemaksu ei ole"
+  },
+  "footer": {
+    "line1": "See on tasuta avatud lähtekoodiga projekt. Kõigi maailma käibemaksudega hakkama saamine on päris suur väljakutse.",
+    "line2": "Kui midagi pole õige, aidake meil see parandada.",
+    "disclaimer": "Mitte maksunõuanne, vaid hariduslikel eesmärkidel."
+  },
+  "vatCheck": {
+    "unknownCountry": "Tundmatu riik.",
+    "empty": "Sisestage ostja KMKR number.",
+    "format": "Kehtetu {{country}}-vorming (näide: {{sample}}). Ainult vormingu kontroll – tegelik kehtivus pärineb VIES-ist."
+  },
+  "result": {
+    "explanation": "Selgitus",
+    "editAria": "Soovitage lahendust – muutke selle riigi reegleid",
+    "taxPlace": "Maksustamiskoht",
+    "taxPlaceHint": "Käibemaksu ei maksta seal, kus asub müüja, vaid seal, kus kehtivad reeglid \"tarnekohale\", mis on iga piiriülese tehingu puhul otsustav küsimus.",
+    "net": "Net",
+    "netHint": "Klõpsake numbril selle muutmiseks ja valuutal selle muutmiseks.",
+    "netAria": "Netosumma",
+    "vat": "käibemaks",
+    "vatHint": "Maks, mis arvutatakse netosummalt kehtiva määra alusel.",
+    "gross": "jäme",
+    "grossHint": "Neto + käibemaks — kogusumma, mille ostja maksab.",
+    "statePlaceholder": "Valige osariik…",
+    "regThreshold": "Registreerimislävi",
+    "regThresholdHint": "Üle selle peab müüja end ostja riigis maksukohustuslaseks registreerima.",
+    "rcTitle": "Pöördmaksustamine — kes arvestab käibemaksu",
+    "rcHint": "B2B puhul läheb maksukohustus ostjale: esitate arve 0%, nad deklareerivad selle oma riigi määra alusel (ja tavaliselt arvavad selle ka maha).",
+    "youInvoice": "Sina arve",
+    "buyerSelf": "Ostja enda kontod ({{country}})",
+    "viesZeroWarning": "0% nõuab kehtivat VIES-numbrit. Ilma selleta kehtib teie siseriiklik tariif.",
+    "amountEntered": "Sisestatud summa ({{amount}})",
+    "thresholdOver": "ületab {{limit}} EL-i kaugmüügi/OSSi künnist – rakendub sihtriigi tariif.",
+    "thresholdUnder": "ei saavuta {{limit}} EL-i kaugmüügi/OSSi künnist – rakendub müüja riigi tariif.",
+    "thresholdCaveat": "Märkus: lävi kehtib tegelikult teie EL-i aastase B2C müügi kogusummale, mitte ühele tehingule{{approx}}.",
+    "thresholdApprox": ", ja teisendus on ligikaudne"
+  },
+  "badges": {
+    "domestic": "Siseriiklik müük",
+    "reverseCharge": "Pöördmaksustamine",
+    "exportZero": "Eksport · 0%",
+    "outsideEuVat": "Väljaspool EL-i käibemaksu",
+    "importVat": "Impordi käibemaks",
+    "destination": "Sihtkoht",
+    "destinationOss": "Sihtkoht · OSS",
+    "origin": "Päritolumäär",
+    "originLocal": "Päritolu (kohalik)",
+    "onsite": "Asukoha järgi"
+  },
+  "jurisdiction": {
+    "state": "{{country}} (osariigi järgi)",
+    "province": "{{country}} (provintsi järgi)",
+    "import": "{{country}} (import)",
+    "importVat": "{{country}} (impordi käibemaks)"
+  },
+  "notes": {
+    "brModel": "Brazil: simplified federal + state (ICMS) model; the CBS+IBS reform goes live from 2027.",
+    "pickState": "Choose a state/province for the exact combined rate.",
+    "viesCheck": "Verify the buyer's VAT number in VIES; both numbers + \"reverse charge\" on the invoice.",
+    "exportDocs": "Keep the export evidence (customs/freight documents) to support the 0%.",
+    "sellerExportRule": "The 0% depends on the seller's ({{from}}) export rule (e.g. Australian GST: services to non-residents are GST-free). Not every country exempts it — verify.",
+    "noEuThreshold": "A non-EU seller has no threshold — registration is required from the first sale."
+  },
+  "rules": {
+    "P-DOM-B2B": {
+      "name": "Domestic sale (B2B)",
+      "detail": "Ordinary domestic sale of goods, taxed by {{to}}."
+    },
+    "P-DOM-B2C": {
+      "name": "Domestic sale (B2C)",
+      "detail": "Ordinary domestic sale of goods, taxed by {{to}}."
+    },
+    "P-B2B-STAY": {
+      "name": "Domestic sale — the goods do not leave the country",
+      "detail": "The goods do not physically move to another country, so it is a domestic sale within {{from}}. The foreign buyer pays the seller's domestic VAT and can typically reclaim it via a VAT refund."
+    },
+    "P-B2B-EU-EU": {
+      "name": "Intra-Community supply (B2B)",
+      "detail": "Exempt intra-Community supply. The {{to}} buyer accounts for it via reverse charge (intra-Community acquisition). Both VAT numbers go on the invoice."
+    },
+    "P-B2B-EU-3": {
+      "name": "Export of goods — 0%",
+      "detail": "Exempt export from {{from}}. Import VAT and customs duty are collected by {{to}} (consignments ≤ €150: by the seller via IOSS)."
+    },
+    "P-B2B-3-EU": {
+      "name": "Import of goods into the EU",
+      "detail": "Import VAT at the {{to}} rate upon entry; customs duty may also apply."
+    },
+    "P-B2B-3-3": {
+      "name": "Cross-border goods — destination country",
+      "detail": "Taxed under the destination country's ({{to}}) rules."
+    },
+    "P-B2C-STAY": {
+      "name": "B2C purchase in the seller's country — the goods do not leave",
+      "detail": "The buyer purchases locally (or carries the goods away themselves), so it is a domestic sale in the seller's country ({{from}}): {{from}}'s rate applies and the distance-selling threshold is irrelevant."
+    },
+    "P-B2C-EU-EU-OVER": {
+      "name": "Distance selling (B2C) — destination",
+      "detail": "Genuine distance selling (the seller ships) above the €10,000 EU threshold: {{to}}'s rate, declared via OSS."
+    },
+    "P-B2C-EU-EU-UNDER": {
+      "name": "B2C goods — place of purchase (origin)",
+      "detail": "The individual is taxed at the place of purchase ({{from}}). If they carry the goods across themselves, the place of taxation still doesn't change. Destination applies only to distance selling by the seller, above the €10,000 threshold."
+    },
+    "P-B2C-EU-3": {
+      "name": "B2C goods — place of purchase (origin)",
+      "detail": "The individual is taxed at the place of purchase ({{from}}). For goods taken out of the EU, a tax-free refund can be claimed afterwards with export proof."
+    },
+    "P-B2C-3-EU": {
+      "name": "Import of goods — buyer on entry",
+      "detail": "Incoming goods: the consumer pays import VAT at the {{to}} rate (≤ €150: the seller via IOSS)."
+    },
+    "P-B2C-3-3": {
+      "name": "B2C goods — place of purchase",
+      "detail": "The consumer is taxed at the place of purchase ({{from}})."
+    },
+    "S-DOM-B2B": {
+      "name": "Domestic service (B2B)",
+      "detail": "Ordinary domestic service, taxed by {{to}}."
+    },
+    "S-DOM-B2C": {
+      "name": "Domestic service (B2C)",
+      "detail": "Ordinary domestic service, taxed by {{to}}."
+    },
+    "S-ONSITE": {
+      "name": "Location-bound service — by place of performance",
+      "detail": "Real-estate-related / event admission / restaurant / on-site service: taxed where it physically takes place ({{loc}}) — even for B2B, with no reverse charge. Local tax registration is typically required."
+    },
+    "S-B2B-EU-EU": {
+      "name": "B2B service — reverse charge (Art. 44)",
+      "detail": "General rule: the place of supply is the buyer's country ({{to}}). The buyer accounts for it via reverse charge."
+    },
+    "S-B2B-EU-3": {
+      "name": "B2B service — outside EU VAT",
+      "detail": "The place of supply is {{to}} (outside the EU). No EU VAT; the buyer follows local rules."
+    },
+    "S-B2B-3-X-RC": {
+      "name": "Service export — per the seller's country (typically 0%)",
+      "detail": "The seller invoices under their own country's ({{from}}) export rule: B2B services to non-resident businesses are 0% / GST-free in most countries — but that is decided by {{from}}, not {{to}}. On the buyer's side ({{to}}), ~{{buyerRate}}% arises via reverse charge."
+    },
+    "S-B2B-3-X-NOTAX": {
+      "name": "Service export — per the seller's country (typically 0%)",
+      "detail": "The seller invoices under their own country's ({{from}}) export rule (typically 0% / GST-free). {{to}} levies no general consumption tax, so there is no self-assessment on the buyer's side either."
+    },
+    "S-B2C-DIG-EU-EU-OVER": {
+      "name": "Digital service (B2C) — destination",
+      "detail": "The place of supply is the buyer's member state ({{to}}). The seller declares via OSS. (Live online events are also included, from 2025.)"
+    },
+    "S-B2C-DIG-EU-EU-UNDER": {
+      "name": "Digital service (B2C) — origin (below €10,000)",
+      "detail": "Below the €10,000 EU-wide threshold you may keep your own ({{from}}) rate."
+    },
+    "S-B2C-DIG-EU-3": {
+      "name": "Digital service (B2C) — outside EU VAT",
+      "detail": "0% EU VAT; the place of supply is {{to}}, under the destination country's digital rules (registration may be required there)."
+    },
+    "S-B2C-DIG-3-EU": {
+      "name": "Digital service to an EU consumer — destination",
+      "detail": "The foreign seller charges EU VAT ({{to}}'s rate) and declares via non-Union OSS (the \"Netflix tax\")."
+    },
+    "S-B2C-DIG-3-3": {
+      "name": "Digital service (B2C) — destination",
+      "detail": "Taxed under the destination country's ({{to}}) digital rules."
+    },
+    "S-B2C-GEN-EU-EU": {
+      "name": "B2C service — supplier's country (Art. 45)",
+      "detail": "General rule: the place of supply is the supplier's country ({{from}}). The seller invoices."
+    },
+    "S-B2C-GEN-EU-3": {
+      "name": "B2C service — supplier's country (Art. 45)",
+      "detail": "The place of supply is the supplier's country ({{from}}). For certain listed services the place of effective use ({{to}}) governs — verify."
+    },
+    "S-B2C-GEN-3": {
+      "name": "B2C service — supplier's country (local)",
+      "detail": "The place of supply is the foreign supplier's country ({{from}}); no EU VAT."
+    }
+  },
+  "countrySelect": {
+    "country": "Riik",
+    "choose": "Vali…",
+    "rates": "Maksumäärad",
+    "euMember": "EL liige",
+    "system": {
+      "vat": "käibemaks",
+      "us": "Müügimaks (osariik)",
+      "ca": "GST + maakondlik",
+      "br": "Föderaal + ICMS",
+      "au": "GST",
+      "none": "Üldist maksu pole"
+    },
+    "noGeneralTax": "Üldine tarbimismaks",
+    "none": "mitte ühtegi",
+    "noTaxHint": "Sellel riigil ei ole üldist müügi-/tarbimismaksu.",
+    "stdShort": "standard",
+    "stdRate": "Standardmäär",
+    "stdRateHint": "Üldine määr – see kehtib enamiku kaupade ja teenuste kohta.",
+    "reducedRate": "Vähendatud määr",
+    "reducedRateHint": "Kehtib ainult konkreetsetele kategooriatele (nt toit, raamatud, ravimid) – milline neist on iga riigi otsustada.",
+    "federalBr": "Föderaalne (BR)",
+    "federalBrHint": "Brasiilias on föderaalkurss osariigi (ICMS) määrast ÜLEM.",
+    "reducedShort": "vähendatud",
+    "regions": "Osariik/provints",
+    "regionsHint": "Maksumäär ei ole riiklik, kuid erineb osariigi/provintsiti – avatud on täielik loetelu.",
+    "regionsSummary": "{{count}} piirkonnad, {{min}}–{{max}}%",
+    "threshold": "Registreerimislävi",
+    "thresholdHint": "Üle selle peab välismaalasest müüja end kohapeal maksukohustuslaseks registreerima – allpool ei pea tavaliselt seal makse maksma.",
+    "dialogTitle": "Valige riik",
+    "dialogDesc": "Otsige ja valige loendist riik.",
+    "searchPlaceholder": "Otsi riike…",
+    "noResults": "Tulemusi pole",
+    "missing": "Kas te ei leia oma riiki? Andke meile teada"
+  },
+  "thresholds": {
+    "AU": "AUD 75,000 / year",
+    "CA": "CAD 30,000 / 12 months",
+    "CH": "CHF 100,000 global turnover",
+    "GB": "GBP 90,000 / year",
+    "JP": "JPY 10,000,000 / base period",
+    "NO": "NOK 50,000 / 12 months",
+    "NZ": "NZD 60,000 / 12 months",
+    "SG": "SGD 1,000,000 global + SGD 100,000 local"
+  }
+}

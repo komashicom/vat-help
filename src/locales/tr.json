@@ -1,0 +1,305 @@
+{
+  "app": {
+    "title": "Küresel KDV Yardımı",
+    "openSource": "Açık kaynak"
+  },
+  "steps": {
+    "supply": {
+      "hint": "Mallar ve hizmetler farklı tedarik yeri kurallarına tabidir; bu nedenle ilk soru budur."
+    },
+    "buyer_type": {
+      "subtitle": "Bu, B2B mi yoksa B2C mi olduğuna karar verir."
+    }
+  },
+  "buyer": {
+    "vat": "KDV numarası ile",
+    "novat": "KDV numarası olmadan",
+    "individual": "Özel şahıs"
+  },
+  "service": {
+    "digital": {
+      "title": "Dijital",
+      "desc": "Otomatik hizmet, insan müdahalesi olmadan internet üzerinden sağlanır.",
+      "examples": "SaaS, akış, e-kitap/indirme, mobil uygulama, barındırma, önceden kaydedilmiş çevrimiçi kurs."
+    },
+    "general": {
+      "title": "Genel",
+      "desc": "İnsan emeği/uzmanlığı - çevrimiçi bile olsa, ancak KDV açısından \"dijital\" DEĞİLDİR.",
+      "examples": "Muhasebe, hukuk, pazarlama, çeviri, özel programlama, CANLI çevrimiçi ders."
+    },
+    "onsite": {
+      "title": "Tesis içi",
+      "desc": "Hizmet fiziksel bir konuma bağlıdır; B2B için bile yer karar verir.",
+      "examples": "Restoran, etkinlik girişi, emlak işi, yerinde kurulum, otelde geceleme."
+    }
+  },
+  "wizard": {
+    "seller": "Satıcı",
+    "sellerHint": "Satıcı her zaman vergiye tabi bir iştir; ülkesi başlangıç ​​noktasıdır.",
+    "buyer": "Alıcı",
+    "buyerHint": "Sınır ötesi kuralların çoğuna alıcının ülkesi karar verir; arz yerinin düştüğü yer.",
+    "supplyService": "Hizmet",
+    "supplyProduct": "Mal",
+    "supplyProductDesc": "Fiziksel mallar.",
+    "sectionGoods": "Mal",
+    "sectionServices": "Hizmetler",
+    "goodsLeaveTitle": "Mallar — ülkeyi terk etmek",
+    "goodsLeaveDesc": "Mallar fiziksel olarak satıcının ülkesi dışına gönderilir.",
+    "goodsStayTitle": "Mallar — ülkede kalın",
+    "goodsStayDesc": "Yerel satın alma — mallar satıcının ülkesinden ayrılmaz, dolayısıyla satıcının KDV'si uygulanır.",
+    "buyerVatHint": "KDV numarasıyla işletme → B2B kuralları. AB içinde ters ödeme: %0 üzerinden fatura kesersiniz ve alıcı kendi hesabını tutar.",
+    "buyerNovatHint": "Alıcı bir işletmedir ancak KDV numarası olmadan bu kanıtlanamaz; dolayısıyla KDV açısından B2C olarak değerlendirilir.",
+    "buyerIndividualHint": "Nihai tüketici — her zaman B2C, faturada KDV tahsil etmeniz gerekir.",
+    "vatIdLabel": "Alıcının KDV numarası ({{country}})",
+    "vatIdHint": "AB'deki bir alıcı için %0 geçerli bir KDV numarası gerektirir. Format anında kontrol edilir; Doğrula düğmesi orijinallik açısından resmi VIES veritabanını sorgular.",
+    "vatIdPlaceholder": "KDV numarası…",
+    "viesButton": "Doğrulamak",
+    "viesValid": "VIES: geçerli KDV numarası.",
+    "viesRegisteredName": "Kayıtlı isim:",
+    "viesInvalid": "VIES: geçersiz KDV numarası — %0 oranında faturalandırmadan önce alıcıyla görüşün.",
+    "viesError": "VIES şu anda kullanılamıyor; şimdilik yalnızca format kontrolüne güvenebilirsiniz.",
+    "onsiteSeller": "Yerinde — satıcıda ({{country}})",
+    "onsiteCustomer": "Yerinde — alıcıda ({{country}})",
+    "examplesLabel": "Örnekler:",
+    "searching": "Arama…",
+    "restart": "Sıfırla",
+    "helpAria": "Yardım",
+    "toWhom": "Alıcı?",
+    "what": "Ne satıyorsun?",
+    "chooseBuyer": "Bir alıcı seçin",
+    "choose": "Seçmek…"
+  },
+  "supplyVat": {
+    "sellerTag": "Satıcı KDV'si",
+    "buyerTag": "Alıcı KDV'si",
+    "rcTag": "%0 · ters şarj",
+    "exportTag": "İhracat · %0",
+    "outsideTag": "%0",
+    "calcLine": "Hesaplanan KDV",
+    "rcLine": "%0 oranında fatura kesersiniz — alıcının kendi hesapları",
+    "exportLine": "%0 fatura kesersiniz — KDV'yi içe aktarırsınız",
+    "outsideEuLine": "AB KDV'si hariç %0 oranında fatura kesersiniz",
+    "noTaxLine": "%0 oranında fatura kesersiniz — genel KDV yoktur"
+  },
+  "footer": {
+    "line1": "Bu ücretsiz, açık kaynaklı bir projedir. Dünyadaki tüm KDV'lerle baş etmek oldukça zorlu bir iştir.",
+    "line2": "Bir şey doğru değilse düzeltmemize yardımcı olun.",
+    "disclaimer": "Vergi tavsiyesi değildir, yalnızca eğitim amaçlıdır."
+  },
+  "vatCheck": {
+    "unknownCountry": "Bilinmeyen ülke.",
+    "empty": "Alıcının KDV numarasını girin.",
+    "format": "Geçerli bir {{country}} biçimi değil (örnek: {{sample}}). Yalnızca format kontrolü — gerçek geçerlilik VIES'ten gelir."
+  },
+  "result": {
+    "explanation": "Açıklama",
+    "editAria": "Bir düzeltme önerin — bu ülkenin kurallarını düzenleyin",
+    "taxPlace": "Vergilendirme yeri",
+    "taxPlaceHint": "KDV, satıcının bulunduğu yerde ödenmez, ancak \"tedarik yeri\"nin kurallara tabi olduğu yerde ödenir; bu, her sınır ötesi işlemde belirleyici sorudur.",
+    "net": "Açık",
+    "netHint": "Düzenlemek için sayıyı, değiştirmek için para birimini tıklayın.",
+    "netAria": "Net tutar",
+    "vat": "KDV vergisi",
+    "vatHint": "Vergi, geçerli oran üzerinden net tutar üzerinden hesaplanır.",
+    "gross": "Brüt",
+    "grossHint": "Net + KDV — alıcının ödediği toplam tutar.",
+    "statePlaceholder": "Bir eyalet seçin…",
+    "regThreshold": "Kayıt eşiği",
+    "regThresholdHint": "Bunun ötesinde satıcının, alıcının ülkesinde vergi kaydı yaptırması gerekir.",
+    "rcTitle": "Ters ücret — KDV'yi kim hesaplar?",
+    "rcHint": "B2B için vergi yükümlülüğü alıcıya \"döner\": %0 üzerinden fatura kesersiniz, onlar bunu kendi ülkelerindeki oran üzerinden beyan ederler (ve genellikle onu da düşürürler).",
+    "youInvoice": "Fatura kesiyorsun",
+    "buyerSelf": "Alıcının kendi hesapları ({{country}})",
+    "viesZeroWarning": "%0 geçerli bir VIES numarası gerektirir. Bu olmadan, kendi yurt içi tarifeniz uygulanır.",
+    "amountEntered": "Girilen tutar ({{amount}})",
+    "thresholdOver": "{{limit}} AB mesafeli satış/OSS eşiğini aşıyorsa — hedef ülkenin ücreti uygulanır.",
+    "thresholdUnder": "{{limit}} AB mesafeli satış/OSS eşiğine ulaşmıyorsa — satıcının ülkesinin ücreti uygulanır.",
+    "thresholdCaveat": "Not: Eşik aslında tek bir işlem için değil, toplam yıllık AB B2C satışlarınız için geçerlidir{{approx}}.",
+    "thresholdApprox": "ve dönüşüm yaklaşıktır"
+  },
+  "badges": {
+    "domestic": "Yurtiçi satış",
+    "reverseCharge": "Ters şarj",
+    "exportZero": "İhracat · %0",
+    "outsideEuVat": "AB KDV'si dışında",
+    "importVat": "İthalat KDV'si",
+    "destination": "Varış noktası",
+    "destinationOss": "Hedef · OSS",
+    "origin": "Menşe oranı",
+    "originLocal": "Menşei (yerel)",
+    "onsite": "Konuma göre"
+  },
+  "jurisdiction": {
+    "state": "{{country}} (eyalete göre)",
+    "province": "{{country}} (illere göre)",
+    "import": "{{country}} (içe aktarma)",
+    "importVat": "{{country}} (ithalat KDV'si)"
+  },
+  "notes": {
+    "brModel": "Brazil: simplified federal + state (ICMS) model; the CBS+IBS reform goes live from 2027.",
+    "pickState": "Choose a state/province for the exact combined rate.",
+    "viesCheck": "Verify the buyer's VAT number in VIES; both numbers + \"reverse charge\" on the invoice.",
+    "exportDocs": "Keep the export evidence (customs/freight documents) to support the 0%.",
+    "sellerExportRule": "The 0% depends on the seller's ({{from}}) export rule (e.g. Australian GST: services to non-residents are GST-free). Not every country exempts it — verify.",
+    "noEuThreshold": "A non-EU seller has no threshold — registration is required from the first sale."
+  },
+  "rules": {
+    "P-DOM-B2B": {
+      "name": "Domestic sale (B2B)",
+      "detail": "Ordinary domestic sale of goods, taxed by {{to}}."
+    },
+    "P-DOM-B2C": {
+      "name": "Domestic sale (B2C)",
+      "detail": "Ordinary domestic sale of goods, taxed by {{to}}."
+    },
+    "P-B2B-STAY": {
+      "name": "Domestic sale — the goods do not leave the country",
+      "detail": "The goods do not physically move to another country, so it is a domestic sale within {{from}}. The foreign buyer pays the seller's domestic VAT and can typically reclaim it via a VAT refund."
+    },
+    "P-B2B-EU-EU": {
+      "name": "Intra-Community supply (B2B)",
+      "detail": "Exempt intra-Community supply. The {{to}} buyer accounts for it via reverse charge (intra-Community acquisition). Both VAT numbers go on the invoice."
+    },
+    "P-B2B-EU-3": {
+      "name": "Export of goods — 0%",
+      "detail": "Exempt export from {{from}}. Import VAT and customs duty are collected by {{to}} (consignments ≤ €150: by the seller via IOSS)."
+    },
+    "P-B2B-3-EU": {
+      "name": "Import of goods into the EU",
+      "detail": "Import VAT at the {{to}} rate upon entry; customs duty may also apply."
+    },
+    "P-B2B-3-3": {
+      "name": "Cross-border goods — destination country",
+      "detail": "Taxed under the destination country's ({{to}}) rules."
+    },
+    "P-B2C-STAY": {
+      "name": "B2C purchase in the seller's country — the goods do not leave",
+      "detail": "The buyer purchases locally (or carries the goods away themselves), so it is a domestic sale in the seller's country ({{from}}): {{from}}'s rate applies and the distance-selling threshold is irrelevant."
+    },
+    "P-B2C-EU-EU-OVER": {
+      "name": "Distance selling (B2C) — destination",
+      "detail": "Genuine distance selling (the seller ships) above the €10,000 EU threshold: {{to}}'s rate, declared via OSS."
+    },
+    "P-B2C-EU-EU-UNDER": {
+      "name": "B2C goods — place of purchase (origin)",
+      "detail": "The individual is taxed at the place of purchase ({{from}}). If they carry the goods across themselves, the place of taxation still doesn't change. Destination applies only to distance selling by the seller, above the €10,000 threshold."
+    },
+    "P-B2C-EU-3": {
+      "name": "B2C goods — place of purchase (origin)",
+      "detail": "The individual is taxed at the place of purchase ({{from}}). For goods taken out of the EU, a tax-free refund can be claimed afterwards with export proof."
+    },
+    "P-B2C-3-EU": {
+      "name": "Import of goods — buyer on entry",
+      "detail": "Incoming goods: the consumer pays import VAT at the {{to}} rate (≤ €150: the seller via IOSS)."
+    },
+    "P-B2C-3-3": {
+      "name": "B2C goods — place of purchase",
+      "detail": "The consumer is taxed at the place of purchase ({{from}})."
+    },
+    "S-DOM-B2B": {
+      "name": "Domestic service (B2B)",
+      "detail": "Ordinary domestic service, taxed by {{to}}."
+    },
+    "S-DOM-B2C": {
+      "name": "Domestic service (B2C)",
+      "detail": "Ordinary domestic service, taxed by {{to}}."
+    },
+    "S-ONSITE": {
+      "name": "Location-bound service — by place of performance",
+      "detail": "Real-estate-related / event admission / restaurant / on-site service: taxed where it physically takes place ({{loc}}) — even for B2B, with no reverse charge. Local tax registration is typically required."
+    },
+    "S-B2B-EU-EU": {
+      "name": "B2B service — reverse charge (Art. 44)",
+      "detail": "General rule: the place of supply is the buyer's country ({{to}}). The buyer accounts for it via reverse charge."
+    },
+    "S-B2B-EU-3": {
+      "name": "B2B service — outside EU VAT",
+      "detail": "The place of supply is {{to}} (outside the EU). No EU VAT; the buyer follows local rules."
+    },
+    "S-B2B-3-X-RC": {
+      "name": "Service export — per the seller's country (typically 0%)",
+      "detail": "The seller invoices under their own country's ({{from}}) export rule: B2B services to non-resident businesses are 0% / GST-free in most countries — but that is decided by {{from}}, not {{to}}. On the buyer's side ({{to}}), ~{{buyerRate}}% arises via reverse charge."
+    },
+    "S-B2B-3-X-NOTAX": {
+      "name": "Service export — per the seller's country (typically 0%)",
+      "detail": "The seller invoices under their own country's ({{from}}) export rule (typically 0% / GST-free). {{to}} levies no general consumption tax, so there is no self-assessment on the buyer's side either."
+    },
+    "S-B2C-DIG-EU-EU-OVER": {
+      "name": "Digital service (B2C) — destination",
+      "detail": "The place of supply is the buyer's member state ({{to}}). The seller declares via OSS. (Live online events are also included, from 2025.)"
+    },
+    "S-B2C-DIG-EU-EU-UNDER": {
+      "name": "Digital service (B2C) — origin (below €10,000)",
+      "detail": "Below the €10,000 EU-wide threshold you may keep your own ({{from}}) rate."
+    },
+    "S-B2C-DIG-EU-3": {
+      "name": "Digital service (B2C) — outside EU VAT",
+      "detail": "0% EU VAT; the place of supply is {{to}}, under the destination country's digital rules (registration may be required there)."
+    },
+    "S-B2C-DIG-3-EU": {
+      "name": "Digital service to an EU consumer — destination",
+      "detail": "The foreign seller charges EU VAT ({{to}}'s rate) and declares via non-Union OSS (the \"Netflix tax\")."
+    },
+    "S-B2C-DIG-3-3": {
+      "name": "Digital service (B2C) — destination",
+      "detail": "Taxed under the destination country's ({{to}}) digital rules."
+    },
+    "S-B2C-GEN-EU-EU": {
+      "name": "B2C service — supplier's country (Art. 45)",
+      "detail": "General rule: the place of supply is the supplier's country ({{from}}). The seller invoices."
+    },
+    "S-B2C-GEN-EU-3": {
+      "name": "B2C service — supplier's country (Art. 45)",
+      "detail": "The place of supply is the supplier's country ({{from}}). For certain listed services the place of effective use ({{to}}) governs — verify."
+    },
+    "S-B2C-GEN-3": {
+      "name": "B2C service — supplier's country (local)",
+      "detail": "The place of supply is the foreign supplier's country ({{from}}); no EU VAT."
+    }
+  },
+  "countrySelect": {
+    "country": "Ülke",
+    "choose": "Seçmek…",
+    "rates": "Vergi oranları",
+    "euMember": "AB üyesi",
+    "system": {
+      "vat": "KDV vergisi",
+      "us": "Satış vergisi (eyalet)",
+      "ca": "GST + eyalet",
+      "br": "Federal + ICMS",
+      "au": "GST",
+      "none": "Genel vergi yok"
+    },
+    "noGeneralTax": "Genel tüketim vergisi",
+    "none": "hiçbiri",
+    "noTaxHint": "Bu ülkede genel satış/tüketim vergisi yoktur.",
+    "stdShort": "standart",
+    "stdRate": "Standart ücret",
+    "stdRateHint": "Genel oran — çoğu mal ve hizmet için geçerlidir.",
+    "reducedRate": "İndirimli oran",
+    "reducedRateHint": "Yalnızca belirli kategoriler (örneğin gıda, kitap, ilaç) için geçerlidir; hangisinin hangisi olduğu her ülkeye bağlıdır.",
+    "federalBr": "Federal (BR)",
+    "federalBrHint": "Brezilya'da federal oran eyalet (ICMS) oranının ÜSTÜNDE gelir.",
+    "reducedShort": "azaltılmış",
+    "regions": "Eyalet / il",
+    "regionsHint": "Oran ulusal değildir ancak eyalete/bölgeye göre değişir; tam listeye açıktır.",
+    "regionsSummary": "{{count}} bölge, %{{min}}–{{max}}",
+    "threshold": "Kayıt eşiği",
+    "thresholdHint": "Bunun üzerinde, yabancı bir satıcının vergi için yerel olarak kaydolması gerekir; bunun altında ise genellikle orada vergi ödemesi gerekmez.",
+    "dialogTitle": "Bir ülke seçin",
+    "dialogDesc": "Listeden bir ülke arayın ve seçin.",
+    "searchPlaceholder": "Ülkeleri ara…",
+    "noResults": "Sonuç yok",
+    "missing": "Ülkenizi bulamıyor musunuz? Bize bildirin"
+  },
+  "thresholds": {
+    "AU": "AUD 75,000 / year",
+    "CA": "CAD 30,000 / 12 months",
+    "CH": "CHF 100,000 global turnover",
+    "GB": "GBP 90,000 / year",
+    "JP": "JPY 10,000,000 / base period",
+    "NO": "NOK 50,000 / 12 months",
+    "NZ": "NZD 60,000 / 12 months",
+    "SG": "SGD 1,000,000 global + SGD 100,000 local"
+  }
+}

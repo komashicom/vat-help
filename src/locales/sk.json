@@ -1,0 +1,305 @@
+{
+  "app": {
+    "title": "Globálna pomoc s DPH",
+    "openSource": "Open source"
+  },
+  "steps": {
+    "supply": {
+      "hint": "Tovar a služby sa riadia rôznymi pravidlami miesta dodania – preto je to prvá otázka."
+    },
+    "buyer_type": {
+      "subtitle": "To rozhoduje, či ide o B2B alebo B2C."
+    }
+  },
+  "buyer": {
+    "vat": "S IČ DPH",
+    "novat": "Bez DIČ",
+    "individual": "Súkromná osoba"
+  },
+  "service": {
+    "digital": {
+      "title": "digitálny",
+      "desc": "Automatizovaná služba poskytovaná cez internet bez ľudského zásahu.",
+      "examples": "SaaS, streamovanie, e-kniha/sťahovanie, mobilná aplikácia, hosting, vopred nahraný online kurz."
+    },
+    "general": {
+      "title": "generál",
+      "desc": "Ľudská práca / odbornosť – aj online, ale NIE „digitálna“ z hľadiska DPH.",
+      "examples": "Účtovníctvo, právo, marketing, preklady, programovanie na mieru, LIVE online lekcia."
+    },
+    "onsite": {
+      "title": "Na mieste",
+      "desc": "Služba viazaná na fyzické miesto – miesto rozhoduje aj pre B2B.",
+      "examples": "Reštaurácia, vstup na podujatia, práca s nehnuteľnosťami, inštalácia na mieste, hotelový večer."
+    }
+  },
+  "wizard": {
+    "seller": "Predávajúci",
+    "sellerHint": "Predajca je vždy zdaniteľný podnik – východiskovým bodom je jeho krajina.",
+    "buyer": "kupujúci",
+    "buyerHint": "O väčšine cezhraničných pravidiel rozhoduje krajina kupujúceho — napr. kam spadá miesto dodania.",
+    "supplyService": "servis",
+    "supplyProduct": "Tovar",
+    "supplyProductDesc": "Fyzický tovar.",
+    "sectionGoods": "Tovar",
+    "sectionServices": "Služby",
+    "goodsLeaveTitle": "Tovar - opustiť krajinu",
+    "goodsLeaveDesc": "Tovar je fyzicky expedovaný z krajiny predávajúceho.",
+    "goodsStayTitle": "Tovar — pobyt v krajine",
+    "goodsStayDesc": "Miestny nákup — tovar neopustí krajinu predávajúceho, preto platí DPH predávajúceho.",
+    "buyerVatHint": "Podnikanie s DIČ → B2B pravidlá. V rámci EÚ prenesenie daňovej povinnosti: fakturujete so sadzbou 0 % a kupujúci si to účtuje samostatne.",
+    "buyerNovatHint": "Kupujúci je podnikateľ, ale bez IČ DPH sa to nedá preukázať — preto sa na účely DPH berie ako B2C.",
+    "buyerIndividualHint": "Konečný spotrebiteľ — vždy B2C, na faktúre musíte účtovať DPH.",
+    "vatIdLabel": "IČ DPH kupujúceho ({{country}})",
+    "vatIdHint": "Pre kupujúceho z EÚ vyžaduje 0 % platné IČ DPH. Formát sa skontroluje okamžite; tlačidlo Overiť overí pravosť oficiálnej databázy VIES.",
+    "vatIdPlaceholder": "IČ DPH…",
+    "viesButton": "Overiť",
+    "viesValid": "VIES: platné IČ DPH.",
+    "viesRegisteredName": "Registrovaný názov:",
+    "viesInvalid": "VIES: neplatné IČ DPH – ujasnite si to s kupujúcim pred fakturáciou vo výške 0 %.",
+    "viesError": "VIES je momentálne nedostupný — zatiaľ sa môžete spoľahnúť iba na kontrolu formátu.",
+    "onsiteSeller": "Na mieste — u predajcu ({{country}})",
+    "onsiteCustomer": "Na mieste — u kupujúceho ({{country}})",
+    "examplesLabel": "Príklady:",
+    "searching": "Hľadá sa…",
+    "restart": "Resetovať",
+    "helpAria": "Pomoc",
+    "toWhom": "Kupujúci?",
+    "what": "čo predávaš?",
+    "chooseBuyer": "Vyberte si kupujúceho",
+    "choose": "Vyberte si…"
+  },
+  "supplyVat": {
+    "sellerTag": "DPH predajcu",
+    "buyerTag": "DPH kupujúceho",
+    "rcTag": "0 % · prenesenie daňovej povinnosti",
+    "exportTag": "Export · 0 %",
+    "outsideTag": "0%",
+    "calcLine": "DPH vypočítaná v r",
+    "rcLine": "Fakturujete 0 % — kupujúci samostatne účtuje",
+    "exportLine": "Fakturujete 0 % – dovoz DPH v",
+    "outsideEuLine": "Fakturujete 0 % — mimo EÚ DPH",
+    "noTaxLine": "Fakturujete 0 % – bez všeobecnej DPH"
+  },
+  "footer": {
+    "line1": "Toto je bezplatný projekt s otvoreným zdrojom. Je dosť náročné zvládnuť všetky DPH na svete.",
+    "line2": "Ak niečo nie je správne, pomôžte nám to opraviť.",
+    "disclaimer": "Nejde o daňové poradenstvo, ale len o vzdelávacie účely."
+  },
+  "vatCheck": {
+    "unknownCountry": "Neznáma krajina.",
+    "empty": "Zadajte IČ DPH kupujúceho.",
+    "format": "Neplatný formát {{country}} (príklad: {{sample}}). Iba kontrola formátu – skutočná platnosť pochádza z VIES."
+  },
+  "result": {
+    "explanation": "Vysvetlenie",
+    "editAria": "Navrhnite opravu – upravte pravidlá tejto krajiny",
+    "taxPlace": "Miesto zdanenia",
+    "taxPlaceHint": "DPH sa neplatí tam, kde je predajca, ale tam, kde „miesto dodania“ spadá pod pravidlá – rozhodujúca otázka pri každej cezhraničnej transakcii.",
+    "net": "Net",
+    "netHint": "Kliknutím na číslo ho upravíte, kliknutím na menu ho zmeníte.",
+    "netAria": "Čistá suma",
+    "vat": "DPH",
+    "vatHint": "Daň vypočítaná z čistej sumy podľa platnej sadzby.",
+    "gross": "Hrubý",
+    "grossHint": "Netto + DPH – celková suma, ktorú zaplatí kupujúci.",
+    "statePlaceholder": "Vyberte štát…",
+    "regThreshold": "Prah registrácie",
+    "regThresholdHint": "Okrem toho sa predávajúci musí registrovať pre daň v krajine kupujúceho.",
+    "rcTitle": "Prenesenie daňovej povinnosti – kto účtuje DPH",
+    "rcHint": "V prípade B2B sa daňová povinnosť „obráti“ na kupujúceho: vy fakturujete so sadzbou 0 %, oni ju deklarujú podľa sadzby svojej vlastnej krajiny (a zvyčajne ju tiež odpočítajú).",
+    "youInvoice": "Fakturujete",
+    "buyerSelf": "Vlastné účty kupujúcich ({{country}})",
+    "viesZeroWarning": "0 % vyžaduje platné číslo VIES. Bez nej platí vaša vlastná domáca sadzba.",
+    "amountEntered": "Zadaná suma ({{amount}})",
+    "thresholdOver": "presahuje hranicu {{limit}} EÚ pre predaj na diaľku/OSS – uplatňuje sa sadzba v cieľovej krajine.",
+    "thresholdUnder": "nedosiahne limit {{limit}} EÚ pre predaj na diaľku/OSS – platí sadzba predajcu v krajine.",
+    "thresholdCaveat": "Poznámka: Limit sa v skutočnosti vzťahuje na váš celkový ročný predaj B2C v EÚ, nie na jednu transakciu{{approx}}.",
+    "thresholdApprox": "a prevod je približný"
+  },
+  "badges": {
+    "domestic": "Domáci predaj",
+    "reverseCharge": "Spätné nabíjanie",
+    "exportZero": "Export · 0 %",
+    "outsideEuVat": "DPH mimo EÚ",
+    "importVat": "DPH pri dovoze",
+    "destination": "Cieľ",
+    "destinationOss": "Cieľ · OSS",
+    "origin": "Miera pôvodu",
+    "originLocal": "Pôvod (miestny)",
+    "onsite": "Podľa polohy"
+  },
+  "jurisdiction": {
+    "state": "{{country}} (podľa štátu)",
+    "province": "{{country}} (podľa provincie)",
+    "import": "{{country}} (import)",
+    "importVat": "{{country}} (dovoz DPH)"
+  },
+  "notes": {
+    "brModel": "Brazil: simplified federal + state (ICMS) model; the CBS+IBS reform goes live from 2027.",
+    "pickState": "Choose a state/province for the exact combined rate.",
+    "viesCheck": "Verify the buyer's VAT number in VIES; both numbers + \"reverse charge\" on the invoice.",
+    "exportDocs": "Keep the export evidence (customs/freight documents) to support the 0%.",
+    "sellerExportRule": "The 0% depends on the seller's ({{from}}) export rule (e.g. Australian GST: services to non-residents are GST-free). Not every country exempts it — verify.",
+    "noEuThreshold": "A non-EU seller has no threshold — registration is required from the first sale."
+  },
+  "rules": {
+    "P-DOM-B2B": {
+      "name": "Domestic sale (B2B)",
+      "detail": "Ordinary domestic sale of goods, taxed by {{to}}."
+    },
+    "P-DOM-B2C": {
+      "name": "Domestic sale (B2C)",
+      "detail": "Ordinary domestic sale of goods, taxed by {{to}}."
+    },
+    "P-B2B-STAY": {
+      "name": "Domestic sale — the goods do not leave the country",
+      "detail": "The goods do not physically move to another country, so it is a domestic sale within {{from}}. The foreign buyer pays the seller's domestic VAT and can typically reclaim it via a VAT refund."
+    },
+    "P-B2B-EU-EU": {
+      "name": "Intra-Community supply (B2B)",
+      "detail": "Exempt intra-Community supply. The {{to}} buyer accounts for it via reverse charge (intra-Community acquisition). Both VAT numbers go on the invoice."
+    },
+    "P-B2B-EU-3": {
+      "name": "Export of goods — 0%",
+      "detail": "Exempt export from {{from}}. Import VAT and customs duty are collected by {{to}} (consignments ≤ €150: by the seller via IOSS)."
+    },
+    "P-B2B-3-EU": {
+      "name": "Import of goods into the EU",
+      "detail": "Import VAT at the {{to}} rate upon entry; customs duty may also apply."
+    },
+    "P-B2B-3-3": {
+      "name": "Cross-border goods — destination country",
+      "detail": "Taxed under the destination country's ({{to}}) rules."
+    },
+    "P-B2C-STAY": {
+      "name": "B2C purchase in the seller's country — the goods do not leave",
+      "detail": "The buyer purchases locally (or carries the goods away themselves), so it is a domestic sale in the seller's country ({{from}}): {{from}}'s rate applies and the distance-selling threshold is irrelevant."
+    },
+    "P-B2C-EU-EU-OVER": {
+      "name": "Distance selling (B2C) — destination",
+      "detail": "Genuine distance selling (the seller ships) above the €10,000 EU threshold: {{to}}'s rate, declared via OSS."
+    },
+    "P-B2C-EU-EU-UNDER": {
+      "name": "B2C goods — place of purchase (origin)",
+      "detail": "The individual is taxed at the place of purchase ({{from}}). If they carry the goods across themselves, the place of taxation still doesn't change. Destination applies only to distance selling by the seller, above the €10,000 threshold."
+    },
+    "P-B2C-EU-3": {
+      "name": "B2C goods — place of purchase (origin)",
+      "detail": "The individual is taxed at the place of purchase ({{from}}). For goods taken out of the EU, a tax-free refund can be claimed afterwards with export proof."
+    },
+    "P-B2C-3-EU": {
+      "name": "Import of goods — buyer on entry",
+      "detail": "Incoming goods: the consumer pays import VAT at the {{to}} rate (≤ €150: the seller via IOSS)."
+    },
+    "P-B2C-3-3": {
+      "name": "B2C goods — place of purchase",
+      "detail": "The consumer is taxed at the place of purchase ({{from}})."
+    },
+    "S-DOM-B2B": {
+      "name": "Domestic service (B2B)",
+      "detail": "Ordinary domestic service, taxed by {{to}}."
+    },
+    "S-DOM-B2C": {
+      "name": "Domestic service (B2C)",
+      "detail": "Ordinary domestic service, taxed by {{to}}."
+    },
+    "S-ONSITE": {
+      "name": "Location-bound service — by place of performance",
+      "detail": "Real-estate-related / event admission / restaurant / on-site service: taxed where it physically takes place ({{loc}}) — even for B2B, with no reverse charge. Local tax registration is typically required."
+    },
+    "S-B2B-EU-EU": {
+      "name": "B2B service — reverse charge (Art. 44)",
+      "detail": "General rule: the place of supply is the buyer's country ({{to}}). The buyer accounts for it via reverse charge."
+    },
+    "S-B2B-EU-3": {
+      "name": "B2B service — outside EU VAT",
+      "detail": "The place of supply is {{to}} (outside the EU). No EU VAT; the buyer follows local rules."
+    },
+    "S-B2B-3-X-RC": {
+      "name": "Service export — per the seller's country (typically 0%)",
+      "detail": "The seller invoices under their own country's ({{from}}) export rule: B2B services to non-resident businesses are 0% / GST-free in most countries — but that is decided by {{from}}, not {{to}}. On the buyer's side ({{to}}), ~{{buyerRate}}% arises via reverse charge."
+    },
+    "S-B2B-3-X-NOTAX": {
+      "name": "Service export — per the seller's country (typically 0%)",
+      "detail": "The seller invoices under their own country's ({{from}}) export rule (typically 0% / GST-free). {{to}} levies no general consumption tax, so there is no self-assessment on the buyer's side either."
+    },
+    "S-B2C-DIG-EU-EU-OVER": {
+      "name": "Digital service (B2C) — destination",
+      "detail": "The place of supply is the buyer's member state ({{to}}). The seller declares via OSS. (Live online events are also included, from 2025.)"
+    },
+    "S-B2C-DIG-EU-EU-UNDER": {
+      "name": "Digital service (B2C) — origin (below €10,000)",
+      "detail": "Below the €10,000 EU-wide threshold you may keep your own ({{from}}) rate."
+    },
+    "S-B2C-DIG-EU-3": {
+      "name": "Digital service (B2C) — outside EU VAT",
+      "detail": "0% EU VAT; the place of supply is {{to}}, under the destination country's digital rules (registration may be required there)."
+    },
+    "S-B2C-DIG-3-EU": {
+      "name": "Digital service to an EU consumer — destination",
+      "detail": "The foreign seller charges EU VAT ({{to}}'s rate) and declares via non-Union OSS (the \"Netflix tax\")."
+    },
+    "S-B2C-DIG-3-3": {
+      "name": "Digital service (B2C) — destination",
+      "detail": "Taxed under the destination country's ({{to}}) digital rules."
+    },
+    "S-B2C-GEN-EU-EU": {
+      "name": "B2C service — supplier's country (Art. 45)",
+      "detail": "General rule: the place of supply is the supplier's country ({{from}}). The seller invoices."
+    },
+    "S-B2C-GEN-EU-3": {
+      "name": "B2C service — supplier's country (Art. 45)",
+      "detail": "The place of supply is the supplier's country ({{from}}). For certain listed services the place of effective use ({{to}}) governs — verify."
+    },
+    "S-B2C-GEN-3": {
+      "name": "B2C service — supplier's country (local)",
+      "detail": "The place of supply is the foreign supplier's country ({{from}}); no EU VAT."
+    }
+  },
+  "countrySelect": {
+    "country": "Krajina",
+    "choose": "Vyberte si…",
+    "rates": "Daňové sadzby",
+    "euMember": "člen EÚ",
+    "system": {
+      "vat": "DPH",
+      "us": "Daň z obratu (štát)",
+      "ca": "GST + provinčné",
+      "br": "Federal + ICMS",
+      "au": "GST",
+      "none": "Žiadna všeobecná daň"
+    },
+    "noGeneralTax": "Všeobecná spotrebná daň",
+    "none": "žiadny",
+    "noTaxHint": "Táto krajina nemá žiadnu všeobecnú daň z predaja/spotreby.",
+    "stdShort": "štandardné",
+    "stdRate": "Štandardná sadzba",
+    "stdRateHint": "Všeobecná sadzba — vzťahuje sa na väčšinu tovarov a služieb.",
+    "reducedRate": "Znížená sadzba",
+    "reducedRateHint": "Vzťahuje sa len na konkrétne kategórie (napr. potraviny, knihy, lieky) – ktoré z nich závisí od jednotlivých krajín.",
+    "federalBr": "federálne (BR)",
+    "federalBrHint": "V Brazílii je federálna sadzba NAVEDENÍ štátnej (ICMS) sadzby.",
+    "reducedShort": "znížená",
+    "regions": "Štát / provincia",
+    "regionsHint": "Sadzba nie je národná, ale líši sa podľa štátu/provincie – otvorte pre úplný zoznam.",
+    "regionsSummary": "{{count}} oblasti, {{min}} – {{max}} %",
+    "threshold": "Prah registrácie",
+    "thresholdHint": "Okrem toho sa zahraničný predajca musí registrovať pre daň na miestnej úrovni – pod tým tam zvyčajne daň platiť nemusí.",
+    "dialogTitle": "Vyberte krajinu",
+    "dialogDesc": "Vyhľadajte a vyberte krajinu zo zoznamu.",
+    "searchPlaceholder": "Hľadať krajiny…",
+    "noResults": "Žiadne výsledky",
+    "missing": "Nemôžete nájsť svoju krajinu? Dajte nám vedieť"
+  },
+  "thresholds": {
+    "AU": "AUD 75,000 / year",
+    "CA": "CAD 30,000 / 12 months",
+    "CH": "CHF 100,000 global turnover",
+    "GB": "GBP 90,000 / year",
+    "JP": "JPY 10,000,000 / base period",
+    "NO": "NOK 50,000 / 12 months",
+    "NZ": "NZD 60,000 / 12 months",
+    "SG": "SGD 1,000,000 global + SGD 100,000 local"
+  }
+}

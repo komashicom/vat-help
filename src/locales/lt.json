@@ -1,0 +1,305 @@
+{
+  "app": {
+    "title": "Pasaulinė PVM pagalba",
+    "openSource": "Atviras šaltinis"
+  },
+  "steps": {
+    "supply": {
+      "hint": "Prekėms ir paslaugoms taikomos skirtingos tiekimo vietos taisyklės – štai kodėl toks pirmasis klausimas."
+    },
+    "buyer_type": {
+      "subtitle": "Tai nusprendžia, ar tai B2B, ar B2C."
+    }
+  },
+  "buyer": {
+    "vat": "Su PVM mokėtojo numeriu",
+    "novat": "Be PVM mokėtojo numerio",
+    "individual": "Privatus asmuo"
+  },
+  "service": {
+    "digital": {
+      "title": "Skaitmeninis",
+      "desc": "Automatizuota paslauga, teikiama internetu be žmogaus dalyvavimo.",
+      "examples": "SaaS, srautinis perdavimas, el. knyga / atsisiuntimas, mobilioji programėlė, priegloba, iš anksto įrašytas internetinis kursas."
+    },
+    "general": {
+      "title": "Generolas",
+      "desc": "Žmogaus darbas / kompetencija – net internetu, bet NE „skaitmeninis“ PVM požiūriu.",
+      "examples": "Buhalterinės apskaitos, teisės, rinkodaros, vertimo, individualaus programavimo, TIESIOGINĖ internetinė pamoka."
+    },
+    "onsite": {
+      "title": "Vietoje",
+      "desc": "Paslauga susieta su fizine vieta – vieta nusprendžia net B2B atveju.",
+      "examples": "Restoranas, renginių priėmimas, darbas su nekilnojamuoju turtu, montavimas vietoje, nakvynė viešbutyje."
+    }
+  },
+  "wizard": {
+    "seller": "Pardavėjas",
+    "sellerHint": "Pardavėjas visada yra apmokestinamas verslas – jo šalis yra atskaitos taškas.",
+    "buyer": "Pirkėjas",
+    "buyerHint": "Pirkėjo šalis nustato daugumą tarpvalstybinių taisyklių – pvz. kur patenka tiekimo vieta.",
+    "supplyService": "Aptarnavimas",
+    "supplyProduct": "Prekės",
+    "supplyProductDesc": "Fizinės prekės.",
+    "sectionGoods": "Prekės",
+    "sectionServices": "Paslaugos",
+    "goodsLeaveTitle": "Prekės – išvykti iš šalies",
+    "goodsLeaveDesc": "Prekės fiziškai išsiunčiamos iš pardavėjo šalies.",
+    "goodsStayTitle": "Prekės – likti šalyje",
+    "goodsStayDesc": "Vietinis pirkimas — prekės neišvežamos iš pardavėjo šalies, todėl taikomas pardavėjo PVM.",
+    "buyerVatHint": "Verslas su PVM mokėtojo numeriu → B2B taisyklės. ES viduje atvirkštinis apmokestinimas: jūs išrašote sąskaitą faktūrą su 0% ir pirkėjas atsiskaito pats.",
+    "buyerNovatHint": "Pirkėjas yra verslas, bet be PVM mokėtojo numerio to įrodyti neįmanoma, todėl PVM tikslais jis laikomas B2C.",
+    "buyerIndividualHint": "Galutinis vartotojas – visada B2C, sąskaitoje faktūroje turite apmokestinti PVM.",
+    "vatIdLabel": "Pirkėjo PVM mokėtojo kodas ({{country}})",
+    "vatIdHint": "ES pirkėjui 0% reikalauja galiojančio PVM mokėtojo kodo. Formatas patikrinamas akimirksniu; mygtukas Patvirtinti pateikia užklausą oficialioje VIES duomenų bazėje dėl autentiškumo.",
+    "vatIdPlaceholder": "PVM mokėtojo kodas…",
+    "viesButton": "Patvirtinti",
+    "viesValid": "VIES: galiojantis PVM mokėtojo kodas.",
+    "viesRegisteredName": "Registruotas vardas:",
+    "viesInvalid": "VIES: neteisingas PVM mokėtojo kodas – prieš išrašydami sąskaitą faktūrą pasiaiškinkite pirkėjui su 0 proc.",
+    "viesError": "VIES šiuo metu nepasiekiamas – kol kas galite pasikliauti tik formato patikra.",
+    "onsiteSeller": "Vietoje – pas pardavėją ({{country}})",
+    "onsiteCustomer": "Vietoje – pas pirkėją ({{country}})",
+    "examplesLabel": "Pavyzdžiai:",
+    "searching": "Ieškoma…",
+    "restart": "Nustatyti iš naujo",
+    "helpAria": "Pagalba",
+    "toWhom": "Pirkėjas?",
+    "what": "Ką parduodate?",
+    "chooseBuyer": "Pasirinkite pirkėją",
+    "choose": "Pasirinkite…"
+  },
+  "supplyVat": {
+    "sellerTag": "Pardavėjo PVM",
+    "buyerTag": "Pirkėjo PVM",
+    "rcTag": "0% · atvirkštinis apmokestinimas",
+    "exportTag": "Eksportuoti · 0 %",
+    "outsideTag": "0 %",
+    "calcLine": "PVM paskaičiuotas m",
+    "rcLine": "Jūs išrašote sąskaitą faktūrą 0% – pirkėjo asmeninės sąskaitos",
+    "exportLine": "Išrašote sąskaitą faktūrą 0% – importo PVM į",
+    "outsideEuLine": "Jūs išrašote sąskaitą 0% – ne ES PVM",
+    "noTaxLine": "Išrašote sąskaitą faktūrą 0% – nėra bendrojo PVM"
+  },
+  "footer": {
+    "line1": "Tai nemokamas atvirojo kodo projektas. Sunkus iššūkis tvarkyti visus pasaulio PVM.",
+    "line2": "Jei kažkas ne taip, padėkite mums tai ištaisyti.",
+    "disclaimer": "Ne mokesčių patarimas, tik švietimo tikslais."
+  },
+  "vatCheck": {
+    "unknownCountry": "Nežinoma šalis.",
+    "empty": "Įveskite pirkėjo PVM mokėtojo kodą.",
+    "format": "Netinkamas {{country}} formatas (pavyzdys: {{sample}}). Tik formato patikrinimas – tikrasis galiojimas gaunamas iš VIES."
+  },
+  "result": {
+    "explanation": "Paaiškinimas",
+    "editAria": "Pasiūlykite pataisymą – redaguokite šios šalies taisykles",
+    "taxPlace": "Apmokestinimo vieta",
+    "taxPlaceHint": "PVM mokamas ne ten, kur yra pardavėjas, o ten, kur „tiekimo vietai“ taikomos taisyklės – tai lemiamas kiekvieno tarpvalstybinio sandorio klausimas.",
+    "net": "Grynasis",
+    "netHint": "Spustelėkite numerį norėdami jį redaguoti, valiutą, kad jį pakeistumėte.",
+    "netAria": "Grynoji suma",
+    "vat": "PVM mokestis",
+    "vatHint": "Mokestis skaičiuojamas nuo grynosios sumos pagal taikomą tarifą.",
+    "gross": "Grubus",
+    "grossHint": "Grynasis + PVM – bendra suma, kurią moka pirkėjas.",
+    "statePlaceholder": "Pasirinkite valstybę…",
+    "regThreshold": "Registracijos riba",
+    "regThresholdHint": "Be to, pardavėjas turi užsiregistruoti mokesčių mokėtoju pirkėjo šalyje.",
+    "rcTitle": "Atvirkštinis apmokestinimas – kas sumoka PVM",
+    "rcHint": "B2B atveju mokestinė prievolė „perkeliama“ pirkėjui: jūs išrašote sąskaitą faktūrą su 0%, jie deklaruoja pagal savo šalies tarifą (ir paprastai taip pat išskaičiuoja).",
+    "youInvoice": "Jūs išrašote sąskaitą",
+    "buyerSelf": "Pirkėjo asmeninės sąskaitos ({{country}})",
+    "viesZeroWarning": "0% reikalauja galiojančio VIES numerio. Be jo bus taikomas jūsų vidaus tarifas.",
+    "amountEntered": "Įvesta suma ({{amount}})",
+    "thresholdOver": "viršija {{limit}} ES nuotolinės prekybos / OSS ribą – taikomas paskirties šalies tarifas.",
+    "thresholdUnder": "nepasiekia {{limit}} ES nuotolinės prekybos/OSS ribos – taikomas pardavėjo šalies tarifas.",
+    "thresholdCaveat": "Pastaba: riba iš tikrųjų taikoma bendram metiniam ES B2C pardavimui, o ne vienai operacijai{{approx}}.",
+    "thresholdApprox": ", o konversija yra apytikslė"
+  },
+  "badges": {
+    "domestic": "Pardavimas vidaus rinkoje",
+    "reverseCharge": "Atvirkštinis apmokestinimas",
+    "exportZero": "Eksportuoti · 0 %",
+    "outsideEuVat": "Už ES ribų PVM",
+    "importVat": "Importo PVM",
+    "destination": "Paskirties vieta",
+    "destinationOss": "Paskirtis · OSS",
+    "origin": "Kilmės norma",
+    "originLocal": "Kilmė (vietinė)",
+    "onsite": "Pagal vietą"
+  },
+  "jurisdiction": {
+    "state": "{{country}} (pagal valstiją)",
+    "province": "{{country}} (pagal provinciją)",
+    "import": "{{country}} (importuoti)",
+    "importVat": "{{country}} (importo PVM)"
+  },
+  "notes": {
+    "brModel": "Brazil: simplified federal + state (ICMS) model; the CBS+IBS reform goes live from 2027.",
+    "pickState": "Choose a state/province for the exact combined rate.",
+    "viesCheck": "Verify the buyer's VAT number in VIES; both numbers + \"reverse charge\" on the invoice.",
+    "exportDocs": "Keep the export evidence (customs/freight documents) to support the 0%.",
+    "sellerExportRule": "The 0% depends on the seller's ({{from}}) export rule (e.g. Australian GST: services to non-residents are GST-free). Not every country exempts it — verify.",
+    "noEuThreshold": "A non-EU seller has no threshold — registration is required from the first sale."
+  },
+  "rules": {
+    "P-DOM-B2B": {
+      "name": "Domestic sale (B2B)",
+      "detail": "Ordinary domestic sale of goods, taxed by {{to}}."
+    },
+    "P-DOM-B2C": {
+      "name": "Domestic sale (B2C)",
+      "detail": "Ordinary domestic sale of goods, taxed by {{to}}."
+    },
+    "P-B2B-STAY": {
+      "name": "Domestic sale — the goods do not leave the country",
+      "detail": "The goods do not physically move to another country, so it is a domestic sale within {{from}}. The foreign buyer pays the seller's domestic VAT and can typically reclaim it via a VAT refund."
+    },
+    "P-B2B-EU-EU": {
+      "name": "Intra-Community supply (B2B)",
+      "detail": "Exempt intra-Community supply. The {{to}} buyer accounts for it via reverse charge (intra-Community acquisition). Both VAT numbers go on the invoice."
+    },
+    "P-B2B-EU-3": {
+      "name": "Export of goods — 0%",
+      "detail": "Exempt export from {{from}}. Import VAT and customs duty are collected by {{to}} (consignments ≤ €150: by the seller via IOSS)."
+    },
+    "P-B2B-3-EU": {
+      "name": "Import of goods into the EU",
+      "detail": "Import VAT at the {{to}} rate upon entry; customs duty may also apply."
+    },
+    "P-B2B-3-3": {
+      "name": "Cross-border goods — destination country",
+      "detail": "Taxed under the destination country's ({{to}}) rules."
+    },
+    "P-B2C-STAY": {
+      "name": "B2C purchase in the seller's country — the goods do not leave",
+      "detail": "The buyer purchases locally (or carries the goods away themselves), so it is a domestic sale in the seller's country ({{from}}): {{from}}'s rate applies and the distance-selling threshold is irrelevant."
+    },
+    "P-B2C-EU-EU-OVER": {
+      "name": "Distance selling (B2C) — destination",
+      "detail": "Genuine distance selling (the seller ships) above the €10,000 EU threshold: {{to}}'s rate, declared via OSS."
+    },
+    "P-B2C-EU-EU-UNDER": {
+      "name": "B2C goods — place of purchase (origin)",
+      "detail": "The individual is taxed at the place of purchase ({{from}}). If they carry the goods across themselves, the place of taxation still doesn't change. Destination applies only to distance selling by the seller, above the €10,000 threshold."
+    },
+    "P-B2C-EU-3": {
+      "name": "B2C goods — place of purchase (origin)",
+      "detail": "The individual is taxed at the place of purchase ({{from}}). For goods taken out of the EU, a tax-free refund can be claimed afterwards with export proof."
+    },
+    "P-B2C-3-EU": {
+      "name": "Import of goods — buyer on entry",
+      "detail": "Incoming goods: the consumer pays import VAT at the {{to}} rate (≤ €150: the seller via IOSS)."
+    },
+    "P-B2C-3-3": {
+      "name": "B2C goods — place of purchase",
+      "detail": "The consumer is taxed at the place of purchase ({{from}})."
+    },
+    "S-DOM-B2B": {
+      "name": "Domestic service (B2B)",
+      "detail": "Ordinary domestic service, taxed by {{to}}."
+    },
+    "S-DOM-B2C": {
+      "name": "Domestic service (B2C)",
+      "detail": "Ordinary domestic service, taxed by {{to}}."
+    },
+    "S-ONSITE": {
+      "name": "Location-bound service — by place of performance",
+      "detail": "Real-estate-related / event admission / restaurant / on-site service: taxed where it physically takes place ({{loc}}) — even for B2B, with no reverse charge. Local tax registration is typically required."
+    },
+    "S-B2B-EU-EU": {
+      "name": "B2B service — reverse charge (Art. 44)",
+      "detail": "General rule: the place of supply is the buyer's country ({{to}}). The buyer accounts for it via reverse charge."
+    },
+    "S-B2B-EU-3": {
+      "name": "B2B service — outside EU VAT",
+      "detail": "The place of supply is {{to}} (outside the EU). No EU VAT; the buyer follows local rules."
+    },
+    "S-B2B-3-X-RC": {
+      "name": "Service export — per the seller's country (typically 0%)",
+      "detail": "The seller invoices under their own country's ({{from}}) export rule: B2B services to non-resident businesses are 0% / GST-free in most countries — but that is decided by {{from}}, not {{to}}. On the buyer's side ({{to}}), ~{{buyerRate}}% arises via reverse charge."
+    },
+    "S-B2B-3-X-NOTAX": {
+      "name": "Service export — per the seller's country (typically 0%)",
+      "detail": "The seller invoices under their own country's ({{from}}) export rule (typically 0% / GST-free). {{to}} levies no general consumption tax, so there is no self-assessment on the buyer's side either."
+    },
+    "S-B2C-DIG-EU-EU-OVER": {
+      "name": "Digital service (B2C) — destination",
+      "detail": "The place of supply is the buyer's member state ({{to}}). The seller declares via OSS. (Live online events are also included, from 2025.)"
+    },
+    "S-B2C-DIG-EU-EU-UNDER": {
+      "name": "Digital service (B2C) — origin (below €10,000)",
+      "detail": "Below the €10,000 EU-wide threshold you may keep your own ({{from}}) rate."
+    },
+    "S-B2C-DIG-EU-3": {
+      "name": "Digital service (B2C) — outside EU VAT",
+      "detail": "0% EU VAT; the place of supply is {{to}}, under the destination country's digital rules (registration may be required there)."
+    },
+    "S-B2C-DIG-3-EU": {
+      "name": "Digital service to an EU consumer — destination",
+      "detail": "The foreign seller charges EU VAT ({{to}}'s rate) and declares via non-Union OSS (the \"Netflix tax\")."
+    },
+    "S-B2C-DIG-3-3": {
+      "name": "Digital service (B2C) — destination",
+      "detail": "Taxed under the destination country's ({{to}}) digital rules."
+    },
+    "S-B2C-GEN-EU-EU": {
+      "name": "B2C service — supplier's country (Art. 45)",
+      "detail": "General rule: the place of supply is the supplier's country ({{from}}). The seller invoices."
+    },
+    "S-B2C-GEN-EU-3": {
+      "name": "B2C service — supplier's country (Art. 45)",
+      "detail": "The place of supply is the supplier's country ({{from}}). For certain listed services the place of effective use ({{to}}) governs — verify."
+    },
+    "S-B2C-GEN-3": {
+      "name": "B2C service — supplier's country (local)",
+      "detail": "The place of supply is the foreign supplier's country ({{from}}); no EU VAT."
+    }
+  },
+  "countrySelect": {
+    "country": "Šalis",
+    "choose": "Pasirinkite…",
+    "rates": "Mokesčių tarifai",
+    "euMember": "ES narė",
+    "system": {
+      "vat": "PVM mokestis",
+      "us": "Pardavimo mokestis (valstybė)",
+      "ca": "GST + provincijos",
+      "br": "Federalinis + ICMS",
+      "au": "GST",
+      "none": "Nėra bendro mokesčio"
+    },
+    "noGeneralTax": "Bendrasis vartojimo mokestis",
+    "none": "jokios",
+    "noTaxHint": "Šioje šalyje nėra bendro pardavimo / vartojimo mokesčio.",
+    "stdShort": "standartinis",
+    "stdRate": "Standartinis tarifas",
+    "stdRateHint": "Bendras tarifas – jis taikomas daugumai prekių ir paslaugų.",
+    "reducedRate": "Sumažintas tarifas",
+    "reducedRateHint": "Taikoma tik tam tikroms kategorijoms (pvz., maistui, knygoms, vaistams), kurias pasirenka kiekviena šalis.",
+    "federalBr": "Federalinis (BR)",
+    "federalBrHint": "Brazilijoje federalinis kursas viršija valstijos (ICMS) tarifą.",
+    "reducedShort": "sumažintas",
+    "regions": "Valstybė / provincija",
+    "regionsHint": "Įkainis nėra nacionalinis, bet skiriasi priklausomai nuo valstijos / provincijos – galite peržiūrėti visą sąrašą.",
+    "regionsSummary": "{{count}} regionai, {{min}}–{{max}} %",
+    "threshold": "Registracijos riba",
+    "thresholdHint": "Be to, užsienio pardavėjas turi užsiregistruoti mokesčių mokėtojas vietoje – žemiau jo jiems paprastai nereikia mokėti mokesčių.",
+    "dialogTitle": "Pasirinkite šalį",
+    "dialogDesc": "Ieškokite ir sąraše pasirinkite šalį.",
+    "searchPlaceholder": "Ieškoti šalių…",
+    "noResults": "Jokių rezultatų",
+    "missing": "Nerandate savo šalies? Praneškite mums"
+  },
+  "thresholds": {
+    "AU": "AUD 75,000 / year",
+    "CA": "CAD 30,000 / 12 months",
+    "CH": "CHF 100,000 global turnover",
+    "GB": "GBP 90,000 / year",
+    "JP": "JPY 10,000,000 / base period",
+    "NO": "NOK 50,000 / 12 months",
+    "NZ": "NZD 60,000 / 12 months",
+    "SG": "SGD 1,000,000 global + SGD 100,000 local"
+  }
+}

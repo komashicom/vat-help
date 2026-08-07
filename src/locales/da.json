@@ -1,0 +1,305 @@
+{
+  "app": {
+    "title": "Global momshjælp",
+    "openSource": "Open source"
+  },
+  "steps": {
+    "supply": {
+      "hint": "Varer og tjenester følger forskellige regler for leveringssted — det er derfor, dette er det første spørgsmål."
+    },
+    "buyer_type": {
+      "subtitle": "Dette afgør, om det er B2B eller B2C."
+    }
+  },
+  "buyer": {
+    "vat": "Med momsnummer",
+    "novat": "Uden momsnummer",
+    "individual": "Privatperson"
+  },
+  "service": {
+    "digital": {
+      "title": "Digital",
+      "desc": "Automatiseret service leveret over internettet uden menneskelig involvering.",
+      "examples": "SaaS, streaming, e-bog/download, mobilapp, hosting, forudindspillet online kursus."
+    },
+    "general": {
+      "title": "Generel",
+      "desc": "Menneskeligt arbejde/ekspertise — selv online, men IKKE \"digital\" i momsmæssig henseende.",
+      "examples": "Regnskab, jura, marketing, oversættelse, tilpasset programmering, LIVE online lektion."
+    },
+    "onsite": {
+      "title": "På stedet",
+      "desc": "Service knyttet til en fysisk placering - stedet bestemmer, selv for B2B.",
+      "examples": "Restaurant, optagelse til arrangementer, arbejde med fast ejendom, installation på stedet, hotelaften."
+    }
+  },
+  "wizard": {
+    "seller": "Sælger",
+    "sellerHint": "Sælgeren er altid en skattepligtig virksomhed - deres land er udgangspunktet.",
+    "buyer": "Køber",
+    "buyerHint": "Købers land bestemmer de fleste grænseoverskridende regler — f.eks. hvor forsyningsstedet falder.",
+    "supplyService": "Service",
+    "supplyProduct": "Gods",
+    "supplyProductDesc": "Fysiske varer.",
+    "sectionGoods": "Gods",
+    "sectionServices": "Tjenester",
+    "goodsLeaveTitle": "Varer — forlad landet",
+    "goodsLeaveDesc": "Varerne sendes fysisk ud af sælgers land.",
+    "goodsStayTitle": "Varer — bliv i landet",
+    "goodsStayDesc": "Lokalt køb — varerne forlader ikke sælgers land, så sælgers moms pålægges.",
+    "buyerVatHint": "Virksomhed med momsnummer → B2B regler. Inden for EU, omvendt betalingspligt: ​​du fakturerer til 0 % og køberen afregner selv.",
+    "buyerNovatHint": "Køberen er en virksomhed, men uden et momsnummer kan dette ikke bevises - så momsmæssigt behandles det som B2C.",
+    "buyerIndividualHint": "Slutforbruger — altid B2C, du skal opkræve moms på fakturaen.",
+    "vatIdLabel": "Købers momsnummer ({{country}})",
+    "vatIdHint": "For en EU-køber kræver 0% et gyldigt momsnummer. Formatet kontrolleres øjeblikkeligt; knappen Bekræft forespørger den officielle VIES-database for ægthed.",
+    "vatIdPlaceholder": "momsnummer...",
+    "viesButton": "Verificere",
+    "viesValid": "VIES: gyldigt momsnummer.",
+    "viesRegisteredName": "Registreret navn:",
+    "viesInvalid": "VIES: ugyldigt momsnummer — afklar med køber inden fakturering med 0 %.",
+    "viesError": "VIES er i øjeblikket ikke tilgængelig - for nu kan du kun stole på formattjekket.",
+    "onsiteSeller": "På stedet — hos sælgeren ({{country}})",
+    "onsiteCustomer": "On-site – hos køberen ({{country}})",
+    "examplesLabel": "Eksempler:",
+    "searching": "Søger...",
+    "restart": "Nulstil",
+    "helpAria": "Hjælp",
+    "toWhom": "Køber?",
+    "what": "Hvad sælger du?",
+    "chooseBuyer": "Vælg en køber",
+    "choose": "Vælge…"
+  },
+  "supplyVat": {
+    "sellerTag": "Sælger moms",
+    "buyerTag": "Købers moms",
+    "rcTag": "0 % · omvendt opladning",
+    "exportTag": "Eksporter · 0 %",
+    "outsideTag": "0 %",
+    "calcLine": "moms beregnet i",
+    "rcLine": "Du fakturerer 0 % — købers selvkonti",
+    "exportLine": "Du fakturerer 0% — import moms ind",
+    "outsideEuLine": "Du fakturerer 0 % — uden for EU-moms",
+    "noTaxLine": "Du fakturerer 0 % - ingen generel moms ind"
+  },
+  "footer": {
+    "line1": "Dette er et gratis open source-projekt. Det er noget af en udfordring at håndtere alle moms i verden.",
+    "line2": "Hvis noget ikke er korrekt, så hjælp os med at rette det.",
+    "disclaimer": "Ikke skatterådgivning, kun uddannelsesformål."
+  },
+  "vatCheck": {
+    "unknownCountry": "Ukendt land.",
+    "empty": "Indtast købers momsnummer.",
+    "format": "Ikke et gyldigt {{country}}-format (eksempel: {{sample}}). Kun formatkontrol — reel gyldighed kommer fra VIES."
+  },
+  "result": {
+    "explanation": "Forklaring",
+    "editAria": "Foreslå en løsning – rediger dette lands regler",
+    "taxPlace": "Beskatningssted",
+    "taxPlaceHint": "Der betales ikke moms, hvor sælgeren er, men hvor \"leveringsstedet\" falder ind under reglerne - det afgørende spørgsmål i enhver grænseoverskridende transaktion.",
+    "net": "Net",
+    "netHint": "Klik på tallet for at redigere det, på valutaen for at ændre det.",
+    "netAria": "Netto beløb",
+    "vat": "moms afgift",
+    "vatHint": "Skat beregnet af nettobeløbet efter gældende sats.",
+    "gross": "Brutto",
+    "grossHint": "Netto + moms — det samlede beløb køber betaler.",
+    "statePlaceholder": "Vælg en stat...",
+    "regThreshold": "Registreringsgrænse",
+    "regThresholdHint": "Herover skal sælger momsregistreres i købers land.",
+    "rcTitle": "Omvendt betalingspligt — hvem står for momsen",
+    "rcHint": "For B2B \"flipper\" skattepligten til køberen: du fakturerer til 0%, de erklærer det til deres eget lands sats (og trækker det typisk også).",
+    "youInvoice": "Du fakturerer",
+    "buyerSelf": "Købers selvkonti ({{country}})",
+    "viesZeroWarning": "0% kræver et gyldigt VIES-nummer. Uden det gælder din egen indenlandske takst.",
+    "amountEntered": "Det indtastede beløb ({{amount}})",
+    "thresholdOver": "overskrider {{limit}} EU-fjernsalg/OSS-grænsen — destinationslandets takst gælder.",
+    "thresholdUnder": "ikke når {{limit}} EU-fjernsalg/OSS-grænsen — sælgers lands takst gælder.",
+    "thresholdCaveat": "Bemærk: tærsklen gælder faktisk for dit samlede årlige B2C-salg i EU, ikke en enkelt transaktion{{approx}}.",
+    "thresholdApprox": ", og konverteringen er omtrentlig"
+  },
+  "badges": {
+    "domestic": "Indenlandsk salg",
+    "reverseCharge": "Omvendt opladning",
+    "exportZero": "Eksporter · 0 %",
+    "outsideEuVat": "Uden for EU moms",
+    "importVat": "Importmoms",
+    "destination": "Bestemmelsessted",
+    "destinationOss": "Destination · OSS",
+    "origin": "Oprindelsesrate",
+    "originLocal": "Oprindelse (lokal)",
+    "onsite": "Efter placering"
+  },
+  "jurisdiction": {
+    "state": "{{country}} (efter stat)",
+    "province": "{{country}} (efter provins)",
+    "import": "{{country}} (import)",
+    "importVat": "{{country}} (importmoms)"
+  },
+  "notes": {
+    "brModel": "Brazil: simplified federal + state (ICMS) model; the CBS+IBS reform goes live from 2027.",
+    "pickState": "Choose a state/province for the exact combined rate.",
+    "viesCheck": "Verify the buyer's VAT number in VIES; both numbers + \"reverse charge\" on the invoice.",
+    "exportDocs": "Keep the export evidence (customs/freight documents) to support the 0%.",
+    "sellerExportRule": "The 0% depends on the seller's ({{from}}) export rule (e.g. Australian GST: services to non-residents are GST-free). Not every country exempts it — verify.",
+    "noEuThreshold": "A non-EU seller has no threshold — registration is required from the first sale."
+  },
+  "rules": {
+    "P-DOM-B2B": {
+      "name": "Domestic sale (B2B)",
+      "detail": "Ordinary domestic sale of goods, taxed by {{to}}."
+    },
+    "P-DOM-B2C": {
+      "name": "Domestic sale (B2C)",
+      "detail": "Ordinary domestic sale of goods, taxed by {{to}}."
+    },
+    "P-B2B-STAY": {
+      "name": "Domestic sale — the goods do not leave the country",
+      "detail": "The goods do not physically move to another country, so it is a domestic sale within {{from}}. The foreign buyer pays the seller's domestic VAT and can typically reclaim it via a VAT refund."
+    },
+    "P-B2B-EU-EU": {
+      "name": "Intra-Community supply (B2B)",
+      "detail": "Exempt intra-Community supply. The {{to}} buyer accounts for it via reverse charge (intra-Community acquisition). Both VAT numbers go on the invoice."
+    },
+    "P-B2B-EU-3": {
+      "name": "Export of goods — 0%",
+      "detail": "Exempt export from {{from}}. Import VAT and customs duty are collected by {{to}} (consignments ≤ €150: by the seller via IOSS)."
+    },
+    "P-B2B-3-EU": {
+      "name": "Import of goods into the EU",
+      "detail": "Import VAT at the {{to}} rate upon entry; customs duty may also apply."
+    },
+    "P-B2B-3-3": {
+      "name": "Cross-border goods — destination country",
+      "detail": "Taxed under the destination country's ({{to}}) rules."
+    },
+    "P-B2C-STAY": {
+      "name": "B2C purchase in the seller's country — the goods do not leave",
+      "detail": "The buyer purchases locally (or carries the goods away themselves), so it is a domestic sale in the seller's country ({{from}}): {{from}}'s rate applies and the distance-selling threshold is irrelevant."
+    },
+    "P-B2C-EU-EU-OVER": {
+      "name": "Distance selling (B2C) — destination",
+      "detail": "Genuine distance selling (the seller ships) above the €10,000 EU threshold: {{to}}'s rate, declared via OSS."
+    },
+    "P-B2C-EU-EU-UNDER": {
+      "name": "B2C goods — place of purchase (origin)",
+      "detail": "The individual is taxed at the place of purchase ({{from}}). If they carry the goods across themselves, the place of taxation still doesn't change. Destination applies only to distance selling by the seller, above the €10,000 threshold."
+    },
+    "P-B2C-EU-3": {
+      "name": "B2C goods — place of purchase (origin)",
+      "detail": "The individual is taxed at the place of purchase ({{from}}). For goods taken out of the EU, a tax-free refund can be claimed afterwards with export proof."
+    },
+    "P-B2C-3-EU": {
+      "name": "Import of goods — buyer on entry",
+      "detail": "Incoming goods: the consumer pays import VAT at the {{to}} rate (≤ €150: the seller via IOSS)."
+    },
+    "P-B2C-3-3": {
+      "name": "B2C goods — place of purchase",
+      "detail": "The consumer is taxed at the place of purchase ({{from}})."
+    },
+    "S-DOM-B2B": {
+      "name": "Domestic service (B2B)",
+      "detail": "Ordinary domestic service, taxed by {{to}}."
+    },
+    "S-DOM-B2C": {
+      "name": "Domestic service (B2C)",
+      "detail": "Ordinary domestic service, taxed by {{to}}."
+    },
+    "S-ONSITE": {
+      "name": "Location-bound service — by place of performance",
+      "detail": "Real-estate-related / event admission / restaurant / on-site service: taxed where it physically takes place ({{loc}}) — even for B2B, with no reverse charge. Local tax registration is typically required."
+    },
+    "S-B2B-EU-EU": {
+      "name": "B2B service — reverse charge (Art. 44)",
+      "detail": "General rule: the place of supply is the buyer's country ({{to}}). The buyer accounts for it via reverse charge."
+    },
+    "S-B2B-EU-3": {
+      "name": "B2B service — outside EU VAT",
+      "detail": "The place of supply is {{to}} (outside the EU). No EU VAT; the buyer follows local rules."
+    },
+    "S-B2B-3-X-RC": {
+      "name": "Service export — per the seller's country (typically 0%)",
+      "detail": "The seller invoices under their own country's ({{from}}) export rule: B2B services to non-resident businesses are 0% / GST-free in most countries — but that is decided by {{from}}, not {{to}}. On the buyer's side ({{to}}), ~{{buyerRate}}% arises via reverse charge."
+    },
+    "S-B2B-3-X-NOTAX": {
+      "name": "Service export — per the seller's country (typically 0%)",
+      "detail": "The seller invoices under their own country's ({{from}}) export rule (typically 0% / GST-free). {{to}} levies no general consumption tax, so there is no self-assessment on the buyer's side either."
+    },
+    "S-B2C-DIG-EU-EU-OVER": {
+      "name": "Digital service (B2C) — destination",
+      "detail": "The place of supply is the buyer's member state ({{to}}). The seller declares via OSS. (Live online events are also included, from 2025.)"
+    },
+    "S-B2C-DIG-EU-EU-UNDER": {
+      "name": "Digital service (B2C) — origin (below €10,000)",
+      "detail": "Below the €10,000 EU-wide threshold you may keep your own ({{from}}) rate."
+    },
+    "S-B2C-DIG-EU-3": {
+      "name": "Digital service (B2C) — outside EU VAT",
+      "detail": "0% EU VAT; the place of supply is {{to}}, under the destination country's digital rules (registration may be required there)."
+    },
+    "S-B2C-DIG-3-EU": {
+      "name": "Digital service to an EU consumer — destination",
+      "detail": "The foreign seller charges EU VAT ({{to}}'s rate) and declares via non-Union OSS (the \"Netflix tax\")."
+    },
+    "S-B2C-DIG-3-3": {
+      "name": "Digital service (B2C) — destination",
+      "detail": "Taxed under the destination country's ({{to}}) digital rules."
+    },
+    "S-B2C-GEN-EU-EU": {
+      "name": "B2C service — supplier's country (Art. 45)",
+      "detail": "General rule: the place of supply is the supplier's country ({{from}}). The seller invoices."
+    },
+    "S-B2C-GEN-EU-3": {
+      "name": "B2C service — supplier's country (Art. 45)",
+      "detail": "The place of supply is the supplier's country ({{from}}). For certain listed services the place of effective use ({{to}}) governs — verify."
+    },
+    "S-B2C-GEN-3": {
+      "name": "B2C service — supplier's country (local)",
+      "detail": "The place of supply is the foreign supplier's country ({{from}}); no EU VAT."
+    }
+  },
+  "countrySelect": {
+    "country": "Land",
+    "choose": "Vælge…",
+    "rates": "Skattesatser",
+    "euMember": "EU-medlem",
+    "system": {
+      "vat": "moms afgift",
+      "us": "Omsætningsafgift (stat)",
+      "ca": "GST + provins",
+      "br": "Føderale + ICMS",
+      "au": "GST",
+      "none": "Ingen generel skat"
+    },
+    "noGeneralTax": "Generel forbrugsafgift",
+    "none": "ingen",
+    "noTaxHint": "Dette land har ingen generel salgs-/forbrugsafgift.",
+    "stdShort": "standard",
+    "stdRate": "Standardpris",
+    "stdRateHint": "Den generelle sats - den gælder for de fleste varer og tjenesteydelser.",
+    "reducedRate": "Reduceret sats",
+    "reducedRateHint": "Gælder kun for specifikke kategorier (f.eks. mad, bøger, medicin) - hvilke er op til hvert land.",
+    "federalBr": "Føderale (BR)",
+    "federalBrHint": "I Brasilien kommer den føderale kurs Oven på statens (ICMS) kurs.",
+    "reducedShort": "reduceret",
+    "regions": "Stat / provins",
+    "regionsHint": "Satsen er ikke national, men varierer efter stat/provins - åben for den fulde liste.",
+    "regionsSummary": "{{count}} områder, {{min}}–{{max}} %",
+    "threshold": "Registreringsgrænse",
+    "thresholdHint": "Ovenfor skal en udenlandsk sælger registrere sig for skat lokalt - under den skal de typisk ikke betale skat der.",
+    "dialogTitle": "Vælg et land",
+    "dialogDesc": "Søg og vælg et land fra listen.",
+    "searchPlaceholder": "Søg lande...",
+    "noResults": "Ingen resultater",
+    "missing": "Kan du ikke finde dit land? Fortæl os det"
+  },
+  "thresholds": {
+    "AU": "AUD 75,000 / year",
+    "CA": "CAD 30,000 / 12 months",
+    "CH": "CHF 100,000 global turnover",
+    "GB": "GBP 90,000 / year",
+    "JP": "JPY 10,000,000 / base period",
+    "NO": "NOK 50,000 / 12 months",
+    "NZ": "NZD 60,000 / 12 months",
+    "SG": "SGD 1,000,000 global + SGD 100,000 local"
+  }
+}

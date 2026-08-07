@@ -1,0 +1,305 @@
+{
+  "app": {
+    "title": "Глобальна довідка з ПДВ",
+    "openSource": "Відкритий код"
+  },
+  "steps": {
+    "supply": {
+      "hint": "Товари та послуги відповідають іншим правилам місця постачання — тому це перше запитання."
+    },
+    "buyer_type": {
+      "subtitle": "Це визначає, чи це B2B чи B2C."
+    }
+  },
+  "buyer": {
+    "vat": "З номером ПДВ",
+    "novat": "Без номера ПДВ",
+    "individual": "ФОП"
+  },
+  "service": {
+    "digital": {
+      "title": "цифровий",
+      "desc": "Автоматизовані послуги, що надаються через Інтернет без участі людини.",
+      "examples": "SaaS, потокове передавання, електронна книга/завантаження, мобільний додаток, хостинг, попередньо записаний онлайн-курс."
+    },
+    "general": {
+      "title": "Загальний",
+      "desc": "Людська робота/експертиза — навіть онлайн, але НЕ «цифровий» з точки зору ПДВ.",
+      "examples": "Бухгалтерський облік, право, маркетинг, переклад, індивідуальне програмування, LIVE онлайн-урок."
+    },
+    "onsite": {
+      "title": "На місці",
+      "desc": "Сервіс, прив’язаний до фізичного місцезнаходження — місце вирішує, навіть для B2B.",
+      "examples": "Ресторан, вхід на заходи, робота з нерухомістю, монтаж на місці, ніч у готелі."
+    }
+  },
+  "wizard": {
+    "seller": "Продавець",
+    "sellerHint": "Продавець — це завжди оподатковуваний бізнес — його країна є відправною точкою.",
+    "buyer": "Покупець",
+    "buyerHint": "Країна покупця визначає більшість транскордонних правил — напр. куди потрапляє місце постачання.",
+    "supplyService": "Сервіс",
+    "supplyProduct": "товари",
+    "supplyProductDesc": "Фізичні товари.",
+    "sectionGoods": "товари",
+    "sectionServices": "Послуги",
+    "goodsLeaveTitle": "Товар — виїхати з країни",
+    "goodsLeaveDesc": "Товар фізично відправляється за межі країни продавця.",
+    "goodsStayTitle": "Товар — залишатися в країні",
+    "goodsStayDesc": "Місцева покупка — товари не залишають країну продавця, тому застосовується ПДВ продавця.",
+    "buyerVatHint": "Бізнес з номером ПДВ → B2B правила. У межах ЄС зворотне нарахування: ви виставляєте рахунок-фактуру за ставкою 0%, а покупець виставляє рахунок самостійно.",
+    "buyerNovatHint": "Покупець є підприємством, але без номера платника ПДВ це неможливо підтвердити, тому для цілей ПДВ він розглядається як B2C.",
+    "buyerIndividualHint": "Кінцевий споживач — завжди B2C, ви повинні нарахувати ПДВ у рахунку-фактурі.",
+    "vatIdLabel": "Номер ПДВ покупця ({{country}})",
+    "vatIdHint": "Для покупця з ЄС 0% вимагає дійсного номера ПДВ. Формат перевіряється миттєво; кнопка Перевірити запитує офіційну базу даних VIES на автентичність.",
+    "vatIdPlaceholder": "Номер ПДВ…",
+    "viesButton": "Підтвердити",
+    "viesValid": "VIES: дійсний номер ПДВ.",
+    "viesRegisteredName": "Зареєстроване ім'я:",
+    "viesInvalid": "VIES: недійсний номер платника ПДВ — уточніть у покупця перед виставленням рахунка 0%.",
+    "viesError": "VIES наразі недоступний — наразі ви можете покладатися лише на перевірку формату.",
+    "onsiteSeller": "На місці — у продавця ({{country}})",
+    "onsiteCustomer": "На місці — у покупця ({{country}})",
+    "examplesLabel": "приклади:",
+    "searching": "Пошук…",
+    "restart": "Скинути",
+    "helpAria": "Довідка",
+    "toWhom": "Покупець?",
+    "what": "Що ви продаєте?",
+    "chooseBuyer": "Виберіть покупця",
+    "choose": "Виберіть…"
+  },
+  "supplyVat": {
+    "sellerTag": "ПДВ продавця",
+    "buyerTag": "ПДВ покупця",
+    "rcTag": "0% · зворотне нарахування",
+    "exportTag": "Експорт · 0%",
+    "outsideTag": "0%",
+    "calcLine": "ПДВ нараховано в",
+    "rcLine": "Ви виставляєте рахунок 0% — покупець самостійно рахує",
+    "exportLine": "Ви виставляєте рахунок 0% — імпортний ПДВ",
+    "outsideEuLine": "Ви виставляєте рахунок 0% — ПДВ за межами ЄС",
+    "noTaxLine": "Ви виставляєте рахунок-фактуру 0% — без загального ПДВ"
+  },
+  "footer": {
+    "line1": "Це безкоштовний проект з відкритим кодом. Справитися з усіма ПДВ у світі досить складно.",
+    "line2": "Якщо щось не так, допоможіть нам це виправити.",
+    "disclaimer": "Не податкова консультація, лише з освітньою метою."
+  },
+  "vatCheck": {
+    "unknownCountry": "Невідома країна.",
+    "empty": "Введіть номер ПДВ покупця.",
+    "format": "Недійсний формат {{country}} (приклад: {{sample}}). Лише перевірка формату — справжня валідність надходить від VIES."
+  },
+  "result": {
+    "explanation": "Пояснення",
+    "editAria": "Запропонуйте виправити — відредагуйте правила цієї країни",
+    "taxPlace": "Місце оподаткування",
+    "taxPlaceHint": "ПДВ сплачується не там, де є продавець, а там, де «місце постачання» підпадає під дію правил — вирішальне питання в кожній транскордонній операції.",
+    "net": "Чистий",
+    "netHint": "Натисніть число, щоб змінити його, або валюту, щоб змінити.",
+    "netAria": "Сума нетто",
+    "vat": "ПДВ",
+    "vatHint": "Податок розраховується на чисту суму за відповідною ставкою.",
+    "gross": "Валовий",
+    "grossHint": "Нетто + ПДВ — загальна сума, яку сплачує покупець.",
+    "statePlaceholder": "Виберіть штат…",
+    "regThreshold": "Поріг реєстрації",
+    "regThresholdHint": "Крім цього, продавець повинен зареєструватися як платник податків у країні покупця.",
+    "rcTitle": "Зворотне нарахування — хто обліковує ПДВ",
+    "rcHint": "Для B2B податкове зобов’язання «перевертається» до покупця: ви виставляєте рахунок-фактуру за ставкою 0%, вони декларують його за ставкою своєї країни (і зазвичай також вираховують його).",
+    "youInvoice": "Ви виставляєте рахунок",
+    "buyerSelf": "Власні рахунки покупця ({{country}})",
+    "viesZeroWarning": "Для 0% потрібен дійсний номер VIES. Без нього застосовується ваш внутрішній тариф.",
+    "amountEntered": "Введена сума ({{amount}})",
+    "thresholdOver": "перевищує поріг дистанційного продажу/OSS {{limit}} ЄС — застосовується ставка країни призначення.",
+    "thresholdUnder": "не досягає {{limit}} ЄС дистанційного продажу/OSS порогу — застосовується курс країни продавця.",
+    "thresholdCaveat": "Примітка: порогове значення фактично стосується ваших загальних річних продажів B2C в ЄС, а не однієї транзакції{{approx}}.",
+    "thresholdApprox": ", і перетворення є приблизним"
+  },
+  "badges": {
+    "domestic": "Внутрішній продаж",
+    "reverseCharge": "Зворотне нарахування",
+    "exportZero": "Експорт · 0%",
+    "outsideEuVat": "ПДВ за межами ЄС",
+    "importVat": "Імпортний ПДВ",
+    "destination": "Пункт призначення",
+    "destinationOss": "Пункт призначення · OSS",
+    "origin": "Ставка походження",
+    "originLocal": "Походження (місцеве)",
+    "onsite": "За місцем розташування"
+  },
+  "jurisdiction": {
+    "state": "{{country}} (за штатом)",
+    "province": "{{country}} (за провінцією)",
+    "import": "{{country}} (імпорт)",
+    "importVat": "{{country}} (імпортний ПДВ)"
+  },
+  "notes": {
+    "brModel": "Brazil: simplified federal + state (ICMS) model; the CBS+IBS reform goes live from 2027.",
+    "pickState": "Choose a state/province for the exact combined rate.",
+    "viesCheck": "Verify the buyer's VAT number in VIES; both numbers + \"reverse charge\" on the invoice.",
+    "exportDocs": "Keep the export evidence (customs/freight documents) to support the 0%.",
+    "sellerExportRule": "The 0% depends on the seller's ({{from}}) export rule (e.g. Australian GST: services to non-residents are GST-free). Not every country exempts it — verify.",
+    "noEuThreshold": "A non-EU seller has no threshold — registration is required from the first sale."
+  },
+  "rules": {
+    "P-DOM-B2B": {
+      "name": "Domestic sale (B2B)",
+      "detail": "Ordinary domestic sale of goods, taxed by {{to}}."
+    },
+    "P-DOM-B2C": {
+      "name": "Domestic sale (B2C)",
+      "detail": "Ordinary domestic sale of goods, taxed by {{to}}."
+    },
+    "P-B2B-STAY": {
+      "name": "Domestic sale — the goods do not leave the country",
+      "detail": "The goods do not physically move to another country, so it is a domestic sale within {{from}}. The foreign buyer pays the seller's domestic VAT and can typically reclaim it via a VAT refund."
+    },
+    "P-B2B-EU-EU": {
+      "name": "Intra-Community supply (B2B)",
+      "detail": "Exempt intra-Community supply. The {{to}} buyer accounts for it via reverse charge (intra-Community acquisition). Both VAT numbers go on the invoice."
+    },
+    "P-B2B-EU-3": {
+      "name": "Export of goods — 0%",
+      "detail": "Exempt export from {{from}}. Import VAT and customs duty are collected by {{to}} (consignments ≤ €150: by the seller via IOSS)."
+    },
+    "P-B2B-3-EU": {
+      "name": "Import of goods into the EU",
+      "detail": "Import VAT at the {{to}} rate upon entry; customs duty may also apply."
+    },
+    "P-B2B-3-3": {
+      "name": "Cross-border goods — destination country",
+      "detail": "Taxed under the destination country's ({{to}}) rules."
+    },
+    "P-B2C-STAY": {
+      "name": "B2C purchase in the seller's country — the goods do not leave",
+      "detail": "The buyer purchases locally (or carries the goods away themselves), so it is a domestic sale in the seller's country ({{from}}): {{from}}'s rate applies and the distance-selling threshold is irrelevant."
+    },
+    "P-B2C-EU-EU-OVER": {
+      "name": "Distance selling (B2C) — destination",
+      "detail": "Genuine distance selling (the seller ships) above the €10,000 EU threshold: {{to}}'s rate, declared via OSS."
+    },
+    "P-B2C-EU-EU-UNDER": {
+      "name": "B2C goods — place of purchase (origin)",
+      "detail": "The individual is taxed at the place of purchase ({{from}}). If they carry the goods across themselves, the place of taxation still doesn't change. Destination applies only to distance selling by the seller, above the €10,000 threshold."
+    },
+    "P-B2C-EU-3": {
+      "name": "B2C goods — place of purchase (origin)",
+      "detail": "The individual is taxed at the place of purchase ({{from}}). For goods taken out of the EU, a tax-free refund can be claimed afterwards with export proof."
+    },
+    "P-B2C-3-EU": {
+      "name": "Import of goods — buyer on entry",
+      "detail": "Incoming goods: the consumer pays import VAT at the {{to}} rate (≤ €150: the seller via IOSS)."
+    },
+    "P-B2C-3-3": {
+      "name": "B2C goods — place of purchase",
+      "detail": "The consumer is taxed at the place of purchase ({{from}})."
+    },
+    "S-DOM-B2B": {
+      "name": "Domestic service (B2B)",
+      "detail": "Ordinary domestic service, taxed by {{to}}."
+    },
+    "S-DOM-B2C": {
+      "name": "Domestic service (B2C)",
+      "detail": "Ordinary domestic service, taxed by {{to}}."
+    },
+    "S-ONSITE": {
+      "name": "Location-bound service — by place of performance",
+      "detail": "Real-estate-related / event admission / restaurant / on-site service: taxed where it physically takes place ({{loc}}) — even for B2B, with no reverse charge. Local tax registration is typically required."
+    },
+    "S-B2B-EU-EU": {
+      "name": "B2B service — reverse charge (Art. 44)",
+      "detail": "General rule: the place of supply is the buyer's country ({{to}}). The buyer accounts for it via reverse charge."
+    },
+    "S-B2B-EU-3": {
+      "name": "B2B service — outside EU VAT",
+      "detail": "The place of supply is {{to}} (outside the EU). No EU VAT; the buyer follows local rules."
+    },
+    "S-B2B-3-X-RC": {
+      "name": "Service export — per the seller's country (typically 0%)",
+      "detail": "The seller invoices under their own country's ({{from}}) export rule: B2B services to non-resident businesses are 0% / GST-free in most countries — but that is decided by {{from}}, not {{to}}. On the buyer's side ({{to}}), ~{{buyerRate}}% arises via reverse charge."
+    },
+    "S-B2B-3-X-NOTAX": {
+      "name": "Service export — per the seller's country (typically 0%)",
+      "detail": "The seller invoices under their own country's ({{from}}) export rule (typically 0% / GST-free). {{to}} levies no general consumption tax, so there is no self-assessment on the buyer's side either."
+    },
+    "S-B2C-DIG-EU-EU-OVER": {
+      "name": "Digital service (B2C) — destination",
+      "detail": "The place of supply is the buyer's member state ({{to}}). The seller declares via OSS. (Live online events are also included, from 2025.)"
+    },
+    "S-B2C-DIG-EU-EU-UNDER": {
+      "name": "Digital service (B2C) — origin (below €10,000)",
+      "detail": "Below the €10,000 EU-wide threshold you may keep your own ({{from}}) rate."
+    },
+    "S-B2C-DIG-EU-3": {
+      "name": "Digital service (B2C) — outside EU VAT",
+      "detail": "0% EU VAT; the place of supply is {{to}}, under the destination country's digital rules (registration may be required there)."
+    },
+    "S-B2C-DIG-3-EU": {
+      "name": "Digital service to an EU consumer — destination",
+      "detail": "The foreign seller charges EU VAT ({{to}}'s rate) and declares via non-Union OSS (the \"Netflix tax\")."
+    },
+    "S-B2C-DIG-3-3": {
+      "name": "Digital service (B2C) — destination",
+      "detail": "Taxed under the destination country's ({{to}}) digital rules."
+    },
+    "S-B2C-GEN-EU-EU": {
+      "name": "B2C service — supplier's country (Art. 45)",
+      "detail": "General rule: the place of supply is the supplier's country ({{from}}). The seller invoices."
+    },
+    "S-B2C-GEN-EU-3": {
+      "name": "B2C service — supplier's country (Art. 45)",
+      "detail": "The place of supply is the supplier's country ({{from}}). For certain listed services the place of effective use ({{to}}) governs — verify."
+    },
+    "S-B2C-GEN-3": {
+      "name": "B2C service — supplier's country (local)",
+      "detail": "The place of supply is the foreign supplier's country ({{from}}); no EU VAT."
+    }
+  },
+  "countrySelect": {
+    "country": "Країна",
+    "choose": "Виберіть…",
+    "rates": "Ставки податків",
+    "euMember": "член ЄС",
+    "system": {
+      "vat": "ПДВ",
+      "us": "Податок з продажу (штат)",
+      "ca": "GST + провінційний",
+      "br": "Федеральний + ICMS",
+      "au": "GST",
+      "none": "Без загального податку"
+    },
+    "noGeneralTax": "Загальний податок на споживання",
+    "none": "немає",
+    "noTaxHint": "У цій країні немає загального податку з продажу/споживання.",
+    "stdShort": "стандарт",
+    "stdRate": "Стандартна ставка",
+    "stdRateHint": "Загальний тариф — діє на більшість товарів і послуг.",
+    "reducedRate": "Знижена ставка",
+    "reducedRateHint": "Застосовується лише до певних категорій (наприклад, їжа, книги, ліки) — кожна країна вирішує, які саме.",
+    "federalBr": "Федеральний (BR)",
+    "federalBrHint": "У Бразилії федеральна ставка є ВЕРША від ставки штату (ICMS).",
+    "reducedShort": "зменшений",
+    "regions": "Штат/провінція",
+    "regionsHint": "Тариф не є національним, але залежить від штату/провінції — відкритий для повного списку.",
+    "regionsSummary": "{{count}} регіонів, {{min}}–{{max}}%",
+    "threshold": "Поріг реєстрації",
+    "thresholdHint": "Крім цього, іноземний продавець повинен зареєструватися для сплати податку на місцевому рівні — нижче цього йому зазвичай не потрібно сплачувати податок там.",
+    "dialogTitle": "Виберіть країну",
+    "dialogDesc": "Знайдіть і виберіть країну зі списку.",
+    "searchPlaceholder": "Пошук країн…",
+    "noResults": "Результатів немає",
+    "missing": "Не можете знайти свою країну? Дайте нам знати"
+  },
+  "thresholds": {
+    "AU": "AUD 75,000 / year",
+    "CA": "CAD 30,000 / 12 months",
+    "CH": "CHF 100,000 global turnover",
+    "GB": "GBP 90,000 / year",
+    "JP": "JPY 10,000,000 / base period",
+    "NO": "NOK 50,000 / 12 months",
+    "NZ": "NZD 60,000 / 12 months",
+    "SG": "SGD 1,000,000 global + SGD 100,000 local"
+  }
+}

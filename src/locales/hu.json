@@ -1,0 +1,305 @@
+{
+  "app": {
+    "title": "Globális áfa-súgó",
+    "openSource": "Nyílt forráskódú"
+  },
+  "steps": {
+    "supply": {
+      "hint": "Az áruk és szolgáltatások különböző értékesítési helyekre vonatkozó szabályokat követnek – ezért ez az első kérdés."
+    },
+    "buyer_type": {
+      "subtitle": "Ez dönti el, hogy B2B vagy B2C."
+    }
+  },
+  "buyer": {
+    "vat": "ÁFA számmal",
+    "novat": "ÁFA szám nélkül",
+    "individual": "Magánszemély"
+  },
+  "service": {
+    "digital": {
+      "title": "Digitális",
+      "desc": "Automatizált szolgáltatás az interneten keresztül emberi közreműködés nélkül.",
+      "examples": "SaaS, streaming, e-könyv/letöltés, mobilalkalmazás, tárhely, előre rögzített online tanfolyam."
+    },
+    "general": {
+      "title": "Általános",
+      "desc": "Emberi munka/szakértelem – akár online is, de NEM „digitálisan” az áfa szempontjából.",
+      "examples": "Könyvelés, jogi, marketing, fordítás, egyedi programozás, ÉLŐ online óra."
+    },
+    "onsite": {
+      "title": "A helyszínen",
+      "desc": "Fizikai helyhez kötött szolgáltatás – a hely dönt, még a B2B esetében is.",
+      "examples": "Étterem, rendezvénybelépő, ingatlanon végzett munka, helyszíni szerelés, szállodai éjszaka."
+    }
+  },
+  "wizard": {
+    "seller": "Eladó",
+    "sellerHint": "Az eladó mindig adóköteles vállalkozás – országa a kiindulópont.",
+    "buyer": "Vevő",
+    "buyerHint": "A legtöbb határon átnyúló szabályról a vásárló országa dönt – pl. ahová az ellátás helye esik.",
+    "supplyService": "Szolgáltatás",
+    "supplyProduct": "Áruk",
+    "supplyProductDesc": "Fizikai áruk.",
+    "sectionGoods": "Áruk",
+    "sectionServices": "Szolgáltatások",
+    "goodsLeaveTitle": "Áruk – hagyja el az országot",
+    "goodsLeaveDesc": "Az árut fizikailag szállítják ki az eladó országából.",
+    "goodsStayTitle": "Áruk – maradjon az országban",
+    "goodsStayDesc": "Helyi vásárlás – az áru nem hagyja el az eladó országát, ezért az eladó ÁFA-ja vonatkozik rá.",
+    "buyerVatHint": "Áfaszámmal rendelkező vállalkozás → B2B szabályok. Az EU-n belül fordított adózás: Ön 0%-kal számlázza, és a vevő saját maga számol el.",
+    "buyerNovatHint": "A vevő vállalkozás, de áfaszám nélkül ez nem bizonyítható – így áfa szempontjából B2C-nek minősül.",
+    "buyerIndividualHint": "Végső fogyasztó – mindig B2C, áfát kell felszámítania a számlán.",
+    "vatIdLabel": "Vevő adószáma ({{country}})",
+    "vatIdHint": "EU-s vásárló esetén a 0%-hoz érvényes áfaszám szükséges. A formátum azonnal ellenőrzésre kerül; az Ellenőrzés gomb lekérdezi a hivatalos VIES adatbázist a hitelesség érdekében.",
+    "vatIdPlaceholder": "ÁFA szám…",
+    "viesButton": "Ellenőrizze",
+    "viesValid": "VIES: érvényes adószám.",
+    "viesRegisteredName": "Bejegyzett név:",
+    "viesInvalid": "VIES: érvénytelen áfaszám – 0%-os számlázás előtt egyeztessen a vevővel.",
+    "viesError": "A VIES jelenleg nem érhető el – egyelőre csak a formátumellenőrzésre hagyatkozhat.",
+    "onsiteSeller": "Helyszínen – az eladónál ({{country}})",
+    "onsiteCustomer": "Helyszínen – a vevőnél ({{country}})",
+    "examplesLabel": "Példák:",
+    "searching": "Keresés…",
+    "restart": "Reset",
+    "helpAria": "Segítség",
+    "toWhom": "Vevő?",
+    "what": "mit árulsz?",
+    "chooseBuyer": "Válasszon vevőt",
+    "choose": "Válassz…"
+  },
+  "supplyVat": {
+    "sellerTag": "Eladó ÁFA",
+    "buyerTag": "Vevő ÁFA",
+    "rcTag": "0% · fordított töltés",
+    "exportTag": "Exportálás · 0%",
+    "outsideTag": "0%",
+    "calcLine": "ben számított áfa",
+    "rcLine": "Ön 0%-ot számláz – a vevő saját számlái",
+    "exportLine": "Ön 0% számlát állít ki – import ÁFA be",
+    "outsideEuLine": "Ön 0%-ot számláz – EU-n kívüli ÁFA",
+    "noTaxLine": "Ön 0%-ot számláz – nincs általános áfa"
+  },
+  "footer": {
+    "line1": "Ez egy ingyenes, nyílt forráskódú projekt. Elég nagy kihívás kezelni a világ összes áfáját.",
+    "line2": "Ha valami nem stimmel, segítsen javítani.",
+    "disclaimer": "Nem adótanácsadás, csak oktatási célokat szolgál."
+  },
+  "vatCheck": {
+    "unknownCountry": "Ismeretlen ország.",
+    "empty": "Adja meg a vevő adószámát.",
+    "format": "Nem érvényes {{country}} formátum (például: {{sample}}). Csak formátumellenőrzés – a valódi érvényesség a VIES-től származik."
+  },
+  "result": {
+    "explanation": "Magyarázat",
+    "editAria": "Javasoljon javítást – szerkessze az ország szabályait",
+    "taxPlace": "Adózás helye",
+    "taxPlaceHint": "A HÉA-t nem ott kell megfizetni, ahol az eladó tartózkodik, hanem ott, ahol a \"értékesítés helye\" a szabályok hatálya alá tartozik – ez minden határokon átnyúló ügylet döntő kérdése.",
+    "net": "Nettó",
+    "netHint": "Kattintson a számra a szerkesztéshez, a pénznemre pedig a módosításhoz.",
+    "netAria": "Nettó összeg",
+    "vat": "ÁFA adó",
+    "vatHint": "Az adó a nettó összegre számítva a vonatkozó kulcs szerint.",
+    "gross": "Bruttó",
+    "grossHint": "Nettó + ÁFA – a vevő által fizetett végösszeg.",
+    "statePlaceholder": "Válasszon államot…",
+    "regThreshold": "Regisztrációs küszöb",
+    "regThresholdHint": "Ezen felül az eladónak be kell jelentkeznie a vevő országában az adófizetésre.",
+    "rcTitle": "Fordított adózás – ki számolja el az áfát",
+    "rcHint": "A B2B esetében az adófizetési kötelezettség „átcsap” a vevőnek: 0%-kal számláz, ők a saját országuk árfolyamán vallják be (és jellemzően le is vonják).",
+    "youInvoice": "Ön számláz",
+    "buyerSelf": "Vevői önszámlák ({{country}})",
+    "viesZeroWarning": "A 0%-hoz érvényes VIES-szám szükséges. Enélkül a saját belföldi tarifája érvényes.",
+    "amountEntered": "A megadott összeg ({{amount}})",
+    "thresholdOver": "meghaladja a {{limit}} EU távértékesítési/OSS küszöbértéket – a célország díjszabása érvényes.",
+    "thresholdUnder": "nem éri el a {{limit}} EU távértékesítési/OSS küszöböt – az eladó országában érvényes tarifa érvényes.",
+    "thresholdCaveat": "Megjegyzés: a küszöb valójában az Ön teljes éves EU-B2C-értékesítésére vonatkozik, nem pedig egyetlen {{approx}} tranzakcióra.",
+    "thresholdApprox": ", és az átalakítás hozzávetőleges"
+  },
+  "badges": {
+    "domestic": "Belföldi értékesítés",
+    "reverseCharge": "Fordított töltés",
+    "exportZero": "Exportálás · 0%",
+    "outsideEuVat": "EU ÁFA-n kívül",
+    "importVat": "Import ÁFA",
+    "destination": "Rendeltetési hely",
+    "destinationOss": "Cél · OSS",
+    "origin": "Eredeti arány",
+    "originLocal": "Származási hely (helyi)",
+    "onsite": "Helyszín szerint"
+  },
+  "jurisdiction": {
+    "state": "{{country}} (állam szerint)",
+    "province": "{{country}} (tartományonként)",
+    "import": "{{country}} (import)",
+    "importVat": "{{country}} (import áfa)"
+  },
+  "notes": {
+    "brModel": "Brazil: simplified federal + state (ICMS) model; the CBS+IBS reform goes live from 2027.",
+    "pickState": "Choose a state/province for the exact combined rate.",
+    "viesCheck": "Verify the buyer's VAT number in VIES; both numbers + \"reverse charge\" on the invoice.",
+    "exportDocs": "Keep the export evidence (customs/freight documents) to support the 0%.",
+    "sellerExportRule": "The 0% depends on the seller's ({{from}}) export rule (e.g. Australian GST: services to non-residents are GST-free). Not every country exempts it — verify.",
+    "noEuThreshold": "A non-EU seller has no threshold — registration is required from the first sale."
+  },
+  "rules": {
+    "P-DOM-B2B": {
+      "name": "Domestic sale (B2B)",
+      "detail": "Ordinary domestic sale of goods, taxed by {{to}}."
+    },
+    "P-DOM-B2C": {
+      "name": "Domestic sale (B2C)",
+      "detail": "Ordinary domestic sale of goods, taxed by {{to}}."
+    },
+    "P-B2B-STAY": {
+      "name": "Domestic sale — the goods do not leave the country",
+      "detail": "The goods do not physically move to another country, so it is a domestic sale within {{from}}. The foreign buyer pays the seller's domestic VAT and can typically reclaim it via a VAT refund."
+    },
+    "P-B2B-EU-EU": {
+      "name": "Intra-Community supply (B2B)",
+      "detail": "Exempt intra-Community supply. The {{to}} buyer accounts for it via reverse charge (intra-Community acquisition). Both VAT numbers go on the invoice."
+    },
+    "P-B2B-EU-3": {
+      "name": "Export of goods — 0%",
+      "detail": "Exempt export from {{from}}. Import VAT and customs duty are collected by {{to}} (consignments ≤ €150: by the seller via IOSS)."
+    },
+    "P-B2B-3-EU": {
+      "name": "Import of goods into the EU",
+      "detail": "Import VAT at the {{to}} rate upon entry; customs duty may also apply."
+    },
+    "P-B2B-3-3": {
+      "name": "Cross-border goods — destination country",
+      "detail": "Taxed under the destination country's ({{to}}) rules."
+    },
+    "P-B2C-STAY": {
+      "name": "B2C purchase in the seller's country — the goods do not leave",
+      "detail": "The buyer purchases locally (or carries the goods away themselves), so it is a domestic sale in the seller's country ({{from}}): {{from}}'s rate applies and the distance-selling threshold is irrelevant."
+    },
+    "P-B2C-EU-EU-OVER": {
+      "name": "Distance selling (B2C) — destination",
+      "detail": "Genuine distance selling (the seller ships) above the €10,000 EU threshold: {{to}}'s rate, declared via OSS."
+    },
+    "P-B2C-EU-EU-UNDER": {
+      "name": "B2C goods — place of purchase (origin)",
+      "detail": "The individual is taxed at the place of purchase ({{from}}). If they carry the goods across themselves, the place of taxation still doesn't change. Destination applies only to distance selling by the seller, above the €10,000 threshold."
+    },
+    "P-B2C-EU-3": {
+      "name": "B2C goods — place of purchase (origin)",
+      "detail": "The individual is taxed at the place of purchase ({{from}}). For goods taken out of the EU, a tax-free refund can be claimed afterwards with export proof."
+    },
+    "P-B2C-3-EU": {
+      "name": "Import of goods — buyer on entry",
+      "detail": "Incoming goods: the consumer pays import VAT at the {{to}} rate (≤ €150: the seller via IOSS)."
+    },
+    "P-B2C-3-3": {
+      "name": "B2C goods — place of purchase",
+      "detail": "The consumer is taxed at the place of purchase ({{from}})."
+    },
+    "S-DOM-B2B": {
+      "name": "Domestic service (B2B)",
+      "detail": "Ordinary domestic service, taxed by {{to}}."
+    },
+    "S-DOM-B2C": {
+      "name": "Domestic service (B2C)",
+      "detail": "Ordinary domestic service, taxed by {{to}}."
+    },
+    "S-ONSITE": {
+      "name": "Location-bound service — by place of performance",
+      "detail": "Real-estate-related / event admission / restaurant / on-site service: taxed where it physically takes place ({{loc}}) — even for B2B, with no reverse charge. Local tax registration is typically required."
+    },
+    "S-B2B-EU-EU": {
+      "name": "B2B service — reverse charge (Art. 44)",
+      "detail": "General rule: the place of supply is the buyer's country ({{to}}). The buyer accounts for it via reverse charge."
+    },
+    "S-B2B-EU-3": {
+      "name": "B2B service — outside EU VAT",
+      "detail": "The place of supply is {{to}} (outside the EU). No EU VAT; the buyer follows local rules."
+    },
+    "S-B2B-3-X-RC": {
+      "name": "Service export — per the seller's country (typically 0%)",
+      "detail": "The seller invoices under their own country's ({{from}}) export rule: B2B services to non-resident businesses are 0% / GST-free in most countries — but that is decided by {{from}}, not {{to}}. On the buyer's side ({{to}}), ~{{buyerRate}}% arises via reverse charge."
+    },
+    "S-B2B-3-X-NOTAX": {
+      "name": "Service export — per the seller's country (typically 0%)",
+      "detail": "The seller invoices under their own country's ({{from}}) export rule (typically 0% / GST-free). {{to}} levies no general consumption tax, so there is no self-assessment on the buyer's side either."
+    },
+    "S-B2C-DIG-EU-EU-OVER": {
+      "name": "Digital service (B2C) — destination",
+      "detail": "The place of supply is the buyer's member state ({{to}}). The seller declares via OSS. (Live online events are also included, from 2025.)"
+    },
+    "S-B2C-DIG-EU-EU-UNDER": {
+      "name": "Digital service (B2C) — origin (below €10,000)",
+      "detail": "Below the €10,000 EU-wide threshold you may keep your own ({{from}}) rate."
+    },
+    "S-B2C-DIG-EU-3": {
+      "name": "Digital service (B2C) — outside EU VAT",
+      "detail": "0% EU VAT; the place of supply is {{to}}, under the destination country's digital rules (registration may be required there)."
+    },
+    "S-B2C-DIG-3-EU": {
+      "name": "Digital service to an EU consumer — destination",
+      "detail": "The foreign seller charges EU VAT ({{to}}'s rate) and declares via non-Union OSS (the \"Netflix tax\")."
+    },
+    "S-B2C-DIG-3-3": {
+      "name": "Digital service (B2C) — destination",
+      "detail": "Taxed under the destination country's ({{to}}) digital rules."
+    },
+    "S-B2C-GEN-EU-EU": {
+      "name": "B2C service — supplier's country (Art. 45)",
+      "detail": "General rule: the place of supply is the supplier's country ({{from}}). The seller invoices."
+    },
+    "S-B2C-GEN-EU-3": {
+      "name": "B2C service — supplier's country (Art. 45)",
+      "detail": "The place of supply is the supplier's country ({{from}}). For certain listed services the place of effective use ({{to}}) governs — verify."
+    },
+    "S-B2C-GEN-3": {
+      "name": "B2C service — supplier's country (local)",
+      "detail": "The place of supply is the foreign supplier's country ({{from}}); no EU VAT."
+    }
+  },
+  "countrySelect": {
+    "country": "Ország",
+    "choose": "Válassz…",
+    "rates": "Adókulcsok",
+    "euMember": "EU tag",
+    "system": {
+      "vat": "ÁFA adó",
+      "us": "Forgalmi adó (állami)",
+      "ca": "GST + tartományi",
+      "br": "Szövetségi + ICMS",
+      "au": "GST",
+      "none": "Nincs általános adó"
+    },
+    "noGeneralTax": "Általános fogyasztási adó",
+    "none": "egyik sem",
+    "noTaxHint": "Ebben az országban nincs általános forgalmi/fogyasztási adó.",
+    "stdShort": "standard",
+    "stdRate": "Normál árfolyam",
+    "stdRateHint": "Az általános kulcs – a legtöbb árura és szolgáltatásra vonatkozik.",
+    "reducedRate": "Csökkentett arány",
+    "reducedRateHint": "Csak meghatározott kategóriákra vonatkozik (pl. élelmiszerek, könyvek, gyógyszerek) – az egyes országok döntik el, hogy melyiket.",
+    "federalBr": "Szövetségi (BR)",
+    "federalBrHint": "Brazíliában a szövetségi kamatláb az állami kamatláb (ICMS) TETEJE.",
+    "reducedShort": "csökkent",
+    "regions": "Állam/tartomány",
+    "regionsHint": "Az arány nem országos, de államonként/tartományonként változik – a teljes lista megtekinthető.",
+    "regionsSummary": "{{count}} régió, {{min}}–{{max}}%",
+    "threshold": "Regisztrációs küszöb",
+    "thresholdHint": "E felett a külföldi eladónak helyben kell adóznia – ez alatt ott jellemzően nem kell adót fizetnie.",
+    "dialogTitle": "Válasszon országot",
+    "dialogDesc": "Keressen, és válasszon országot a listából.",
+    "searchPlaceholder": "Országok keresése…",
+    "noResults": "Nincs eredmény",
+    "missing": "Nem találja az országot? Tudasd velünk"
+  },
+  "thresholds": {
+    "AU": "AUD 75,000 / year",
+    "CA": "CAD 30,000 / 12 months",
+    "CH": "CHF 100,000 global turnover",
+    "GB": "GBP 90,000 / year",
+    "JP": "JPY 10,000,000 / base period",
+    "NO": "NOK 50,000 / 12 months",
+    "NZ": "NZD 60,000 / 12 months",
+    "SG": "SGD 1,000,000 global + SGD 100,000 local"
+  }
+}

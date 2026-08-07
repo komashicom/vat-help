@@ -18,6 +18,7 @@ import { checkVies, type ViesResult } from "../lib/vies";
 import { defaultCurrency, editCountryUrl, REPO_URL } from "../ui/constants";
 import { countryName } from "../ui/format";
 import { CountrySelect } from "../ui/CountrySelect";
+import { LanguageSelect } from "../ui/LanguageSelect";
 import { ResultView } from "../ui/ResultView";
 import { ChoiceCard, Hint } from "../ui/components";
 import { Input } from "@/components/ui/input";
@@ -292,9 +293,13 @@ export function Wizard() {
             <Globe className="h-5 w-5" />
           </span>
           <h1 className="text-sm font-bold leading-tight tracking-tight text-foreground">{t("app.title")}</h1>
+          {/* language switcher — sits right of the title, before the repo pill */}
+          <div className="ml-auto">
+            <LanguageSelect />
+          </div>
           {/* open source presence: "OPEN SOURCE" pill linking to the repo */}
           <a href={REPO_URL} target="_blank" rel="noreferrer"
-            className="ml-auto inline-flex items-center gap-1.5 rounded-lg border px-2.5 py-1.5 text-[10px] font-semibold uppercase tracking-wide text-muted-foreground transition-colors hover:bg-accent hover:text-foreground">
+            className="inline-flex items-center gap-1.5 rounded-lg border px-2.5 py-1.5 text-[10px] font-semibold uppercase tracking-wide text-muted-foreground transition-colors hover:bg-accent hover:text-foreground">
             <Github className="h-3.5 w-3.5" />
             {t("app.openSource")}
           </a>

@@ -1,0 +1,305 @@
+{
+  "app": {
+    "title": "Alþjóðleg virðisaukaskattshjálp",
+    "openSource": "Opinn uppspretta"
+  },
+  "steps": {
+    "supply": {
+      "hint": "Vörur og þjónusta fylgja mismunandi reglum um afhendingarstað — þess vegna er þetta fyrsta spurningin."
+    },
+    "buyer_type": {
+      "subtitle": "Þetta ákveður hvort það er B2B eða B2C."
+    }
+  },
+  "buyer": {
+    "vat": "Með VSK númeri",
+    "novat": "Án VSK-númers",
+    "individual": "Einkamaður"
+  },
+  "service": {
+    "digital": {
+      "title": "Stafræn",
+      "desc": "Sjálfvirk þjónusta afhent í gegnum netið án mannlegrar aðkomu.",
+      "examples": "SaaS, streymi, rafbók/niðurhal, farsímaforrit, hýsing, fyrirfram skráð netnámskeið."
+    },
+    "general": {
+      "title": "Almennt",
+      "desc": "Mannleg vinna / sérfræðiþekking - jafnvel á netinu, en EKKI \"stafrænt\" í virðisaukaskattsskilmálum.",
+      "examples": "Bókhald, lögfræði, markaðssetning, þýðing, sérsniðin forritun, LIVE kennslustund á netinu."
+    },
+    "onsite": {
+      "title": "Á staðnum",
+      "desc": "Þjónusta bundin við líkamlega staðsetningu - staðurinn ræður, jafnvel fyrir B2B.",
+      "examples": "Veitingastaður, aðgangur að viðburðum, vinna við fasteignir, uppsetning á staðnum, hótelnótt."
+    }
+  },
+  "wizard": {
+    "seller": "Seljandi",
+    "sellerHint": "Seljandinn er alltaf skattskyld fyrirtæki - landið þeirra er upphafspunkturinn.",
+    "buyer": "Kaupandi",
+    "buyerHint": "Land kaupandans ákveður flestar reglur um landamæri — t.d. þar sem afhendingarstaðurinn fellur.",
+    "supplyService": "Þjónusta",
+    "supplyProduct": "Vörur",
+    "supplyProductDesc": "Líkamlegar vörur.",
+    "sectionGoods": "Vörur",
+    "sectionServices": "Þjónusta",
+    "goodsLeaveTitle": "Vörur — farðu úr landi",
+    "goodsLeaveDesc": "Vörurnar eru líkamlega sendar út úr landi seljanda.",
+    "goodsStayTitle": "Vörur — vertu í landinu",
+    "goodsStayDesc": "Innkaup á staðnum — varan fer ekki frá landi seljanda, þannig að virðisaukaskattur seljanda á við.",
+    "buyerVatHint": "Viðskipti með VSK-númer → B2B reglur. Innan ESB, öfug gjaldfærsla: þú reikningar á 0% og kaupandinn gerir sjálfan sig.",
+    "buyerNovatHint": "Kaupandinn er fyrirtæki, en án virðisaukaskattsnúmers er ekki hægt að sanna þetta — þannig að í virðisaukaskattsskyni er litið á það sem B2C.",
+    "buyerIndividualHint": "Endanleg neytandi - alltaf B2C, þú verður að rukka virðisaukaskatt á reikningnum.",
+    "vatIdLabel": "VSK-númer kaupanda ({{country}})",
+    "vatIdHint": "Fyrir ESB-kaupanda þarf 0% gilt VSK-númer. Snið er athugað samstundis; Staðfestu hnappurinn spyr opinbera VIES gagnagrunninn um áreiðanleika.",
+    "vatIdPlaceholder": "VSK númer…",
+    "viesButton": "Staðfestu",
+    "viesValid": "VIES: gilt VSK númer.",
+    "viesRegisteredName": "Skráð nafn:",
+    "viesInvalid": "VIES: ógilt virðisaukaskattsnúmer — útskýrðu við kaupanda áður en reikningur er 0%.",
+    "viesError": "VIES er ekki tiltækt eins og er - eins og er geturðu aðeins treyst á sniðathugunina.",
+    "onsiteSeller": "Á staðnum — hjá seljanda ({{country}})",
+    "onsiteCustomer": "Á staðnum — hjá kaupanda ({{country}})",
+    "examplesLabel": "Dæmi:",
+    "searching": "Leitar…",
+    "restart": "Endurstilla",
+    "helpAria": "Hjálp",
+    "toWhom": "Kaupandi?",
+    "what": "Hvað ertu að selja?",
+    "chooseBuyer": "Veldu kaupanda",
+    "choose": "Veldu…"
+  },
+  "supplyVat": {
+    "sellerTag": "VSK seljanda",
+    "buyerTag": "VSK kaupanda",
+    "rcTag": "0% · öfug hleðsla",
+    "exportTag": "Flytja út · 0%",
+    "outsideTag": "0%",
+    "calcLine": "VSK reiknaður í",
+    "rcLine": "Þú reikningar 0% - sjálfsreikningar kaupanda",
+    "exportLine": "Þú reikningar 0% — flytur VSK inn",
+    "outsideEuLine": "Þú reikningar 0% — utan ESB VSK",
+    "noTaxLine": "Þú reikningar 0% — enginn almennur VSK inn"
+  },
+  "footer": {
+    "line1": "Þetta er ókeypis, opinn uppspretta verkefni. Það er töluverð áskorun að sjá um allan virðisaukaskatt í heiminum.",
+    "line2": "Ef eitthvað er ekki rétt, hjálpaðu okkur að laga það.",
+    "disclaimer": "Ekki skattaráðgjöf, eingöngu í fræðsluskyni."
+  },
+  "vatCheck": {
+    "unknownCountry": "Óþekkt land.",
+    "empty": "Sláðu inn VSK-númer kaupanda.",
+    "format": "Ekki gilt {{country}} snið (dæmi: {{sample}}). Aðeins sniðathugun - raunverulegt gildi kemur frá VIES."
+  },
+  "result": {
+    "explanation": "Skýring",
+    "editAria": "Leggðu til lagfæringu — breyttu reglum þessa lands",
+    "taxPlace": "Álagningarstaður",
+    "taxPlaceHint": "Virðisaukaskattur er ekki greiddur þar sem seljandinn er, heldur þar sem „afhendingarstaður“ fellur undir reglurnar - það er afgerandi spurningin í öllum viðskiptum milli landa.",
+    "net": "Nettó",
+    "netHint": "Smelltu á númerið til að breyta því, gjaldmiðilinn til að breyta því.",
+    "netAria": "Nettóupphæð",
+    "vat": "VSK skattur",
+    "vatHint": "Skattur reiknaður af nettóupphæðinni samkvæmt gildandi hlutfalli.",
+    "gross": "Gróft",
+    "grossHint": "Nettó + VSK - heildarkostnaður sem kaupandi greiðir.",
+    "statePlaceholder": "Veldu ríki…",
+    "regThreshold": "Skráningarþröskuldur",
+    "regThresholdHint": "Þar fyrir ofan þarf seljandi að skrá sig til skatts í landi kaupanda.",
+    "rcTitle": "Öfug gjaldfærsla - hver ber virðisaukaskattinn",
+    "rcHint": "Fyrir B2B \"snýr\" skattskyldan til kaupandans: þú reikningar á 0%, þeir lýsa því yfir á genginu sínu eigin lands (og draga það venjulega líka).",
+    "youInvoice": "Þú reikningar",
+    "buyerSelf": "Sjálfsreikningar kaupanda ({{country}})",
+    "viesZeroWarning": "0% krefst gilt VIES númer. Án þess gildir þitt eigið innanlandsgjald.",
+    "amountEntered": "Slá inn upphæð ({{amount}})",
+    "thresholdOver": "fer yfir {{limit}} ESB fjarsölu/OSS þröskuldinn — gjald ákvörðunarlands gildir.",
+    "thresholdUnder": "nær ekki {{limit}} ESB fjarsölu/OSS þröskuldinum — gjaldskrá seljendalands gildir.",
+    "thresholdCaveat": "Athugið: viðmiðunarmörkin gilda í raun um heildar árlega B2C sölu þína í ESB, ekki eina færslu{{approx}}.",
+    "thresholdApprox": ", og umbreytingin er áætluð"
+  },
+  "badges": {
+    "domestic": "Sala innanlands",
+    "reverseCharge": "Öfugt gjald",
+    "exportZero": "Flytja út · 0%",
+    "outsideEuVat": "VSK utan ESB",
+    "importVat": "Innflutnings virðisaukaskattur",
+    "destination": "Áfangastaður",
+    "destinationOss": "Áfangastaður · OSS",
+    "origin": "Upprunahlutfall",
+    "originLocal": "Uppruni (staðbundinn)",
+    "onsite": "Eftir staðsetningu"
+  },
+  "jurisdiction": {
+    "state": "{{country}} (eftir ríki)",
+    "province": "{{country}} (eftir héraði)",
+    "import": "{{country}} (innflutningur)",
+    "importVat": "{{country}} (innflutnings VSK)"
+  },
+  "notes": {
+    "brModel": "Brazil: simplified federal + state (ICMS) model; the CBS+IBS reform goes live from 2027.",
+    "pickState": "Choose a state/province for the exact combined rate.",
+    "viesCheck": "Verify the buyer's VAT number in VIES; both numbers + \"reverse charge\" on the invoice.",
+    "exportDocs": "Keep the export evidence (customs/freight documents) to support the 0%.",
+    "sellerExportRule": "The 0% depends on the seller's ({{from}}) export rule (e.g. Australian GST: services to non-residents are GST-free). Not every country exempts it — verify.",
+    "noEuThreshold": "A non-EU seller has no threshold — registration is required from the first sale."
+  },
+  "rules": {
+    "P-DOM-B2B": {
+      "name": "Domestic sale (B2B)",
+      "detail": "Ordinary domestic sale of goods, taxed by {{to}}."
+    },
+    "P-DOM-B2C": {
+      "name": "Domestic sale (B2C)",
+      "detail": "Ordinary domestic sale of goods, taxed by {{to}}."
+    },
+    "P-B2B-STAY": {
+      "name": "Domestic sale — the goods do not leave the country",
+      "detail": "The goods do not physically move to another country, so it is a domestic sale within {{from}}. The foreign buyer pays the seller's domestic VAT and can typically reclaim it via a VAT refund."
+    },
+    "P-B2B-EU-EU": {
+      "name": "Intra-Community supply (B2B)",
+      "detail": "Exempt intra-Community supply. The {{to}} buyer accounts for it via reverse charge (intra-Community acquisition). Both VAT numbers go on the invoice."
+    },
+    "P-B2B-EU-3": {
+      "name": "Export of goods — 0%",
+      "detail": "Exempt export from {{from}}. Import VAT and customs duty are collected by {{to}} (consignments ≤ €150: by the seller via IOSS)."
+    },
+    "P-B2B-3-EU": {
+      "name": "Import of goods into the EU",
+      "detail": "Import VAT at the {{to}} rate upon entry; customs duty may also apply."
+    },
+    "P-B2B-3-3": {
+      "name": "Cross-border goods — destination country",
+      "detail": "Taxed under the destination country's ({{to}}) rules."
+    },
+    "P-B2C-STAY": {
+      "name": "B2C purchase in the seller's country — the goods do not leave",
+      "detail": "The buyer purchases locally (or carries the goods away themselves), so it is a domestic sale in the seller's country ({{from}}): {{from}}'s rate applies and the distance-selling threshold is irrelevant."
+    },
+    "P-B2C-EU-EU-OVER": {
+      "name": "Distance selling (B2C) — destination",
+      "detail": "Genuine distance selling (the seller ships) above the €10,000 EU threshold: {{to}}'s rate, declared via OSS."
+    },
+    "P-B2C-EU-EU-UNDER": {
+      "name": "B2C goods — place of purchase (origin)",
+      "detail": "The individual is taxed at the place of purchase ({{from}}). If they carry the goods across themselves, the place of taxation still doesn't change. Destination applies only to distance selling by the seller, above the €10,000 threshold."
+    },
+    "P-B2C-EU-3": {
+      "name": "B2C goods — place of purchase (origin)",
+      "detail": "The individual is taxed at the place of purchase ({{from}}). For goods taken out of the EU, a tax-free refund can be claimed afterwards with export proof."
+    },
+    "P-B2C-3-EU": {
+      "name": "Import of goods — buyer on entry",
+      "detail": "Incoming goods: the consumer pays import VAT at the {{to}} rate (≤ €150: the seller via IOSS)."
+    },
+    "P-B2C-3-3": {
+      "name": "B2C goods — place of purchase",
+      "detail": "The consumer is taxed at the place of purchase ({{from}})."
+    },
+    "S-DOM-B2B": {
+      "name": "Domestic service (B2B)",
+      "detail": "Ordinary domestic service, taxed by {{to}}."
+    },
+    "S-DOM-B2C": {
+      "name": "Domestic service (B2C)",
+      "detail": "Ordinary domestic service, taxed by {{to}}."
+    },
+    "S-ONSITE": {
+      "name": "Location-bound service — by place of performance",
+      "detail": "Real-estate-related / event admission / restaurant / on-site service: taxed where it physically takes place ({{loc}}) — even for B2B, with no reverse charge. Local tax registration is typically required."
+    },
+    "S-B2B-EU-EU": {
+      "name": "B2B service — reverse charge (Art. 44)",
+      "detail": "General rule: the place of supply is the buyer's country ({{to}}). The buyer accounts for it via reverse charge."
+    },
+    "S-B2B-EU-3": {
+      "name": "B2B service — outside EU VAT",
+      "detail": "The place of supply is {{to}} (outside the EU). No EU VAT; the buyer follows local rules."
+    },
+    "S-B2B-3-X-RC": {
+      "name": "Service export — per the seller's country (typically 0%)",
+      "detail": "The seller invoices under their own country's ({{from}}) export rule: B2B services to non-resident businesses are 0% / GST-free in most countries — but that is decided by {{from}}, not {{to}}. On the buyer's side ({{to}}), ~{{buyerRate}}% arises via reverse charge."
+    },
+    "S-B2B-3-X-NOTAX": {
+      "name": "Service export — per the seller's country (typically 0%)",
+      "detail": "The seller invoices under their own country's ({{from}}) export rule (typically 0% / GST-free). {{to}} levies no general consumption tax, so there is no self-assessment on the buyer's side either."
+    },
+    "S-B2C-DIG-EU-EU-OVER": {
+      "name": "Digital service (B2C) — destination",
+      "detail": "The place of supply is the buyer's member state ({{to}}). The seller declares via OSS. (Live online events are also included, from 2025.)"
+    },
+    "S-B2C-DIG-EU-EU-UNDER": {
+      "name": "Digital service (B2C) — origin (below €10,000)",
+      "detail": "Below the €10,000 EU-wide threshold you may keep your own ({{from}}) rate."
+    },
+    "S-B2C-DIG-EU-3": {
+      "name": "Digital service (B2C) — outside EU VAT",
+      "detail": "0% EU VAT; the place of supply is {{to}}, under the destination country's digital rules (registration may be required there)."
+    },
+    "S-B2C-DIG-3-EU": {
+      "name": "Digital service to an EU consumer — destination",
+      "detail": "The foreign seller charges EU VAT ({{to}}'s rate) and declares via non-Union OSS (the \"Netflix tax\")."
+    },
+    "S-B2C-DIG-3-3": {
+      "name": "Digital service (B2C) — destination",
+      "detail": "Taxed under the destination country's ({{to}}) digital rules."
+    },
+    "S-B2C-GEN-EU-EU": {
+      "name": "B2C service — supplier's country (Art. 45)",
+      "detail": "General rule: the place of supply is the supplier's country ({{from}}). The seller invoices."
+    },
+    "S-B2C-GEN-EU-3": {
+      "name": "B2C service — supplier's country (Art. 45)",
+      "detail": "The place of supply is the supplier's country ({{from}}). For certain listed services the place of effective use ({{to}}) governs — verify."
+    },
+    "S-B2C-GEN-3": {
+      "name": "B2C service — supplier's country (local)",
+      "detail": "The place of supply is the foreign supplier's country ({{from}}); no EU VAT."
+    }
+  },
+  "countrySelect": {
+    "country": "Land",
+    "choose": "Veldu…",
+    "rates": "Skatthlutföll",
+    "euMember": "ESB meðlimur",
+    "system": {
+      "vat": "VSK skattur",
+      "us": "Söluskattur (ríki)",
+      "ca": "GST + hérað",
+      "br": "Federal + ICMS",
+      "au": "GST",
+      "none": "Enginn almennur skattur"
+    },
+    "noGeneralTax": "Almennur neysluskattur",
+    "none": "engin",
+    "noTaxHint": "Hér á landi er enginn almennur sölu-/neysluskattur.",
+    "stdShort": "staðall",
+    "stdRate": "Venjulegt verð",
+    "stdRateHint": "Almennt gjald — það á við um flestar vörur og þjónustu.",
+    "reducedRate": "Lækkað hlutfall",
+    "reducedRateHint": "Gildir aðeins um tiltekna flokka (t.d. matvæli, bækur, lyf) - hverjir eru undir hverju landi.",
+    "federalBr": "Federal (BR)",
+    "federalBrHint": "Í Brasilíu koma sambandsvextir ofan á ríkið (ICMS).",
+    "reducedShort": "minnkað",
+    "regions": "Ríki/hérað",
+    "regionsHint": "Verðið er ekki á landsvísu en er breytilegt eftir ríki / héruðum - opið fyrir allan listann.",
+    "regionsSummary": "{{count}} svæði, {{min}}–{{max}}%",
+    "threshold": "Skráningarþröskuldur",
+    "thresholdHint": "Fyrir ofan þetta verður erlendur seljandi að skrá sig fyrir skatt á staðnum - fyrir neðan það þurfa þeir venjulega ekki að borga skatt þar.",
+    "dialogTitle": "Veldu land",
+    "dialogDesc": "Leitaðu og veldu land af listanum.",
+    "searchPlaceholder": "Leitaðu að löndum...",
+    "noResults": "Engar niðurstöður",
+    "missing": "Finnurðu ekki landið þitt? Láttu okkur vita"
+  },
+  "thresholds": {
+    "AU": "AUD 75,000 / year",
+    "CA": "CAD 30,000 / 12 months",
+    "CH": "CHF 100,000 global turnover",
+    "GB": "GBP 90,000 / year",
+    "JP": "JPY 10,000,000 / base period",
+    "NO": "NOK 50,000 / 12 months",
+    "NZ": "NZD 60,000 / 12 months",
+    "SG": "SGD 1,000,000 global + SGD 100,000 local"
+  }
+}

@@ -1,13 +1,19 @@
 {
   "_comments": [
-    "PROMPT — You are an AI updating one country's VAT/tax profile. Treat this block as your task brief; the full spec is in countries/README.md. Work carefully: this data drives the calculator's answers, so accuracy matters more than speed.",
-    "If anything below is ambiguous, or you are not confident a value is correct, STOP and ask the maintainer a specific question instead of guessing. Never invent a rate, threshold or rule you cannot back with a reliable source.",
-    "Edit ONLY this file. review.md and generated.json beside it are generated and read-only — do not touch them.",
-    "country.std = standard rate %. country.reduced = reduced rates %, in descending order. reducedCategories maps each reduced rate to the goods/services it covers (its rate values must match entries in `reduced`).",
-    "threshold = the FOREIGN seller's registration threshold (free text: amount + currency). vatPattern = the VAT-number regex (EU countries only). subRegions = state/province rates (state-based systems only).",
-    "rules = the explanations shown when THIS country taxes the transaction. Rewrite name/detail to be accurate and clear, but KEEP the {{from}}/{{to}}/{{loc}}/{{buyerRate}} placeholders — the app substitutes them.",
-    "Do NOT change country.code (it must equal the folder name). eu and system drive the engine's logic — change them only if they are genuinely wrong.",
-    "When you have verified the data, set meta.status to \"reviewed\", fill in meta.reviewedBy, meta.reviewedAt and meta.sources, and cite official/primary sources."
+    "VAT / TAX PROFILE REVIEW INSTRUCTIONS",
+    "You are reviewing and updating the VAT/tax profile for one country. Please treat the following as the review brief. The full technical and data specification is available in countries/README.md. This data powers Global VAT Help, a reference tool used by tax professionals. Accuracy and reliability are therefore more important than speed or completeness based on assumptions.",
+    "If any requirement, tax treatment, rate, threshold, or other value is ambiguous or cannot be verified with sufficient confidence, do not guess or infer the answer. Instead, flag the issue and ask the maintainer a specific question. Never provide or approve a rate, threshold, tax rule, or interpretation that cannot be supported by a reliable source.",
+    "Review and edit ONLY the assigned country file. review.md and generated.json located beside it are generated files and must be treated as read-only. Do not modify them.",
+    "Verify country.std as the country's standard VAT/tax rate expressed as a percentage. Verify country.reduced as all applicable reduced VAT/tax rates expressed as percentages and listed in descending order. Verify reducedCategories as the goods and services to which each reduced rate applies. Every rate referenced in reducedCategories must correspond exactly to a rate included in country.reduced.",
+    "Verify threshold as the VAT/tax registration threshold applicable specifically to a FOREIGN seller. This is a free-text field and should clearly state the amount and currency, together with any relevant qualification where necessary.",
+    "Verify vatPattern as the VAT-number validation regex. This field applies to EU countries only. Verify subRegions as state, province, or other subnational tax rates and use this only for tax systems where rates are determined at state/province or comparable subnational level.",
+    "The rules section contains the explanations displayed when THIS country has the right to tax the transaction. Review and, where necessary, rewrite the name and detail fields so that they accurately and clearly explain the applicable tax treatment.",
+    "Do not remove, rename, translate, or modify the {{from}}, {{to}}, {{loc}}, or {{buyerRate}} placeholders. They are dynamically substituted by the application.",
+    "Do NOT change country.code. It must always correspond exactly to the country folder name. The eu and system fields affect the application's tax determination logic. Change these fields ONLY if you have verified that the existing value is genuinely incorrect.",
+    "All material tax information must be checked against reliable and up-to-date sources. Official and primary sources should be used wherever available, including national tax authorities, ministries of finance, official government legislation databases, EU institutions and official EU tax resources, and other competent public authorities.",
+    "Secondary sources may be used for interpretation or cross-checking, but they should not replace an available authoritative primary source for key tax rates, thresholds, or rules.",
+    "Once the country's data has been fully reviewed and verified, set meta.status to \"reviewed\", fill in meta.reviewedBy and meta.reviewedAt, and add the authoritative sources used during the review to meta.sources.",
+    "Only mark the profile as \"reviewed\" when the relevant information has actually been checked and any material uncertainty has been resolved or explicitly raised with the maintainer."
   ],
   "meta": {
     "status": "draft",

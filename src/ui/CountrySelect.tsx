@@ -3,10 +3,11 @@ import type { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 import type { TFunction } from "i18next";
 import { Popover as PopoverPrimitive } from "radix-ui";
-import { Search, Check, ChevronDown } from "lucide-react";
+import { Search, Check, ChevronDown, Plus } from "lucide-react";
 import type { Country } from "../schema/country";
 import { COUNTRIES, byCode } from "../data/countries";
 import { hasRegionalRates, ratesText } from "../lib/rates";
+import { requestCountryUrl } from "./constants";
 import { countryName } from "./format";
 import { Hint } from "./components";
 import { cn } from "@/lib/utils";
@@ -123,6 +124,13 @@ export function CountrySelect({ value, onChange, placeholder }: {
               </button>
             ))}
           </div>
+          {/* Fallback for a country that isn't in the dataset: let the user
+              flag it (opens a pre-filled GitHub issue) instead of getting stuck. */}
+          <a href={requestCountryUrl()} target="_blank" rel="noreferrer"
+            className="flex items-center gap-1.5 border-t px-3 py-2 text-xs text-muted-foreground transition-colors hover:bg-accent hover:text-foreground">
+            <Plus className="h-3.5 w-3.5 shrink-0" />
+            {t("countrySelect.missing")}
+          </a>
         </PopoverPrimitive.Content>
       </PopoverPrimitive.Portal>
     </PopoverPrimitive.Root>
