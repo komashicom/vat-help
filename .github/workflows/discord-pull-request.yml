@@ -1,0 +1,69 @@
+name: Discord pull request notifications
+
+on:
+  pull_request_target:
+    types: [opened, reopened, synchronize, closed]
+
+jobs:
+  notify-discord:
+    runs-on: ubuntu-latest
+    env:
+      DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+
+    steps:
+      - name: Send Discord notification
+        if: ${{ env.DISCORD_WEBHOOK_URL != '' }}
+        env:
+          DISCORD_EVENT_ACTION: ${{ github.event.action }}
+          DISCORD_PR_MERGED: ${{ github.event.pull_request.merged }}
+          DISCORD_PR_TITLE: ${{ github.event.pull_request.title }}
+          DISCORD_PR_URL: ${{ github.event.pull_request.html_url }}
+          DISCORD_PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+          DISCORD_REPOSITORY: ${{ github.repository }}
+          DISCORD_PR_BASE: ${{ github.event.pull_request.base.ref }}
+          DISCORD_PR_HEAD: ${{ github.event.pull_request.head.ref }}
+        run: |
+          node <<'NODE'
+          const action = process.env.DISCORD_PR_MERGED === 'true'
+            ? 'merged'
+            : process.env.DISCORD_EVENT_ACTION;
+          const labels = {
+            opened: 'új pull request',
+            reopened: 'újranyitott pull request',
+            synchronize: 'frissített pull request',
+            closed: 'lezárt pull request',
+            merged: 'merge-ölt pull request',
+          };
+          const colors = { opened: 0x2ecc71, reopened: 0x3498db, synchronize: 0xf1c40f, closed: 0xe74c3c, merged: 0x9b59b6 };
+          const payload = {
+            username: 'GitHub',
+            embeds: [{
+              title: `GitHub: ${action === 'merged' ? 'Merge megtörtént' : labels[action]}`,
+              url: process.env.DISCORD_PR_URL,
+              description: process.env.DISCORD_PR_TITLE,
+              color: colors[action],
+              fields: [
+                { name: 'Repository', value: process.env.DISCORD_REPOSITORY, inline: true },
+                { name: 'Szerző', value: process.env.DISCORD_PR_AUTHOR, inline: true },
+                { name: 'Ágak', value: `\`${process.env.DISCORD_PR_HEAD}\` → \`${process.env.DISCORD_PR_BASE}\`` },
+              ],
+              footer: { text: `Esemény: ${action}` },
+              timestamp: new Date().toISOString(),
+            }],
+          };
+          (async () => {
+            const response = await fetch(process.env.DISCORD_WEBHOOK_URL, {
+              method: 'POST',
+              headers: { 'content-type': 'application/json' },
+              body: JSON.stringify(payload),
+            });
+            if (!response.ok) throw new Error(`Discord HTTP ${response.status}`);
+          })().catch((error) => {
+            console.error(error);
+            process.exit(1);
+          });
+          NODE
+
+      - name: Explain missing webhook secret
+        if: ${{ env.DISCORD_WEBHOOK_URL == '' }}
+        run: 'echo "A Discord értesítés kihagyva: nincs DISCORD_WEBHOOK_URL repository secret beállítva."'
