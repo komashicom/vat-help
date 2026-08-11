@@ -10,3 +10,4 @@ public/data
 countries/*/generated.json
 countries/*/review.md
 tsconfig.tsbuildinfo
+.idea
