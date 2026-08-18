@@ -75,11 +75,11 @@
     "rcTag": "0%・リバースチャージ",
     "exportTag": "輸出 · 0%",
     "outsideTag": "0%",
-    "calcLine": "VAT の計算方法",
+    "calcLine": "VAT の対象国:",
     "rcLine": "請求書は 0% — 購入者の自己勘定",
-    "exportLine": "0% を請求します — VAT をインポートします",
+    "exportLine": "0% で請求します — 輸入 VAT の対象国:",
     "outsideEuLine": "請求額は 0% — EU VAT 外",
-    "noTaxLine": "請求額は 0% — 一般的な VAT はかかりません"
+    "noTaxLine": "0% で請求します — 一般的な VAT がない国:"
   },
   "footer": {
     "line1": "これは無料のオープンソース プロジェクトです。世界中のすべての VAT を処理するのは非常に困難です。",

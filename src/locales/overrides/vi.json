@@ -1,0 +1,7 @@
+{
+  "supplyVat": {
+    "calcLine": "Quốc gia tính VAT:",
+    "exportLine": "Bạn xuất hóa đơn 0% — quốc gia VAT nhập khẩu:",
+    "noTaxLine": "Bạn xuất hóa đơn 0% — quốc gia không có VAT chung:"
+  }
+}

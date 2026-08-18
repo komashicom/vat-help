@@ -75,11 +75,11 @@
     "rcTag": "0% · 대리 납부",
     "exportTag": "수출 · 0%",
     "outsideTag": "0%",
-    "calcLine": "VAT 계산 대상",
+    "calcLine": "VAT 부과 국가:",
     "rcLine": "송장 0% — 구매자 자체 계정",
-    "exportLine": "송장 0% — VAT 수입",
+    "exportLine": "0% 청구 — 수입 VAT 부과 국가:",
     "outsideEuLine": "0% 인보이스 — EU VAT 이외의 지역",
-    "noTaxLine": "인보이스 0% — 일반 VAT 없음"
+    "noTaxLine": "0% 청구 — 일반 VAT가 없는 국가:"
   },
   "footer": {
     "line1": "이것은 무료 오픈 소스 프로젝트입니다. 전 세계의 모든 부가가치세(VAT)를 처리한다는 것은 꽤 어려운 일입니다.",

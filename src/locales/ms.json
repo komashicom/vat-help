@@ -75,11 +75,11 @@
     "rcTag": "0% · cas terbalik",
     "exportTag": "Eksport · 0%",
     "outsideTag": "0%",
-    "calcLine": "VAT dikira dalam",
+    "calcLine": "Negara VAT:",
     "rcLine": "Anda invois 0% — akaun diri pembeli",
-    "exportLine": "Anda invois 0% — import VAT masuk",
+    "exportLine": "Anda invois 0% — negara VAT import:",
     "outsideEuLine": "Anda invois 0% — di luar VAT EU",
-    "noTaxLine": "Anda invois 0% — tiada VAT am masuk"
+    "noTaxLine": "Anda invois 0% — negara tanpa VAT am:"
   },
   "footer": {
     "line1": "Ini adalah projek sumber terbuka percuma. Agak mencabar untuk mengendalikan semua VAT di dunia.",

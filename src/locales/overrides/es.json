@@ -1,0 +1,39 @@
+{
+  "wizard": {
+    "buyerVatHint": "Empresa con NIF-IVA → normas B2B. Dentro de la UE, inversión del sujeto pasivo: facturas al 0 % y el comprador autoliquida.",
+    "buyerIndividualHint": "Consumidor final — siempre B2C, tienes que cobrar el IVA en la factura.",
+    "vatIdHint": "Para un comprador de la UE, el 0 % requiere un número de IVA válido. El formato se comprueba al instante; el botón Verificar consulta la base de datos oficial VIES.",
+    "viesButton": "Verificar",
+    "viesInvalid": "VIES: número de IVA no válido — acláralo con el comprador antes de facturar al 0 %.",
+    "viesError": "VIES no está disponible ahora mismo; por ahora solo puedes confiar en la comprobación del formato.",
+    "chooseBuyer": "Elige un comprador",
+    "choose": "Elegir…",
+    "what": "¿Qué estás vendiendo?"
+  },
+  "supplyVat": {
+    "rcLine": "Facturas al 0 % — el comprador autoliquida",
+    "exportLine": "Facturas al 0 % — país del IVA de importación:",
+    "outsideEuLine": "Facturas al 0 % — fuera del IVA de la UE",
+    "noTaxLine": "Facturas al 0 % — país sin IVA general:",
+    "calcLine": "País del IVA:"
+  },
+  "footer": {
+    "line2": "Si algo no está bien, ayúdanos a solucionarlo."
+  },
+  "vatCheck": {
+    "empty": "Introduce el número de IVA del comprador."
+  },
+  "result": {
+    "editAria": "Sugiere una corrección — edita las reglas de este país",
+    "netHint": "Haz clic en el número para editarlo y en la moneda para cambiarla.",
+    "statePlaceholder": "Elige un estado…",
+    "rcHint": "En B2B la obligación tributaria se traslada al comprador: tú facturas al 0 % y él lo declara al tipo de su propio país (y normalmente también lo deduce).",
+    "youInvoice": "Tú facturas",
+    "viesZeroWarning": "El 0 % requiere un número VIES válido. Sin él se aplica tu propio tipo nacional.",
+    "thresholdCaveat": "Nota: el umbral se aplica en realidad a tus ventas B2C anuales totales en la UE, no a una sola transacción{{approx}}."
+  },
+  "countrySelect": {
+    "missing": "¿No encuentras tu país? Cuéntanoslo",
+    "regionsHint": "El tipo no es nacional, sino que varía según el estado/provincia — ábrelo para ver la lista completa."
+  }
+}

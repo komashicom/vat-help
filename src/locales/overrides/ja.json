@@ -1,0 +1,7 @@
+{
+  "supplyVat": {
+    "calcLine": "VAT の対象国:",
+    "exportLine": "0% で請求します — 輸入 VAT の対象国:",
+    "noTaxLine": "0% で請求します — 一般的な VAT がない国:"
+  }
+}

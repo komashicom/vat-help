@@ -1,0 +1,39 @@
+{
+  "wizard": {
+    "buyerVatHint": "Įmonė su PVM mokėtojo kodu → B2B taisyklės. ES viduje atvirkštinis apmokestinimas: išrašai sąskaitą su 0 % ir pirkėjas pats apskaičiuoja PVM.",
+    "buyerIndividualHint": "Galutinis vartotojas — visada B2C, sąskaitoje turi apskaičiuoti PVM.",
+    "vatIdHint": "ES pirkėjui 0 % reikalauja galiojančio PVM mokėtojo kodo. Formatas patikrinamas akimirksniu; mygtukas Patikrinti pateikia užklausą oficialiai VIES duomenų bazei.",
+    "viesButton": "Patikrinti",
+    "viesInvalid": "VIES: neteisingas PVM mokėtojo kodas — išsiaiškink su pirkėju prieš išrašydamas sąskaitą su 0 %.",
+    "viesError": "VIES šiuo metu nepasiekiamas — kol kas gali pasikliauti tik formato patikra.",
+    "chooseBuyer": "Pasirink pirkėją",
+    "choose": "Pasirink…",
+    "what": "Ką parduodi?"
+  },
+  "supplyVat": {
+    "rcLine": "Išrašai sąskaitą 0 % — pirkėjas pats apskaičiuoja PVM",
+    "exportLine": "Išrašai sąskaitą 0 % — importo PVM šalis:",
+    "outsideEuLine": "Išrašai sąskaitą 0 % — ne ES PVM",
+    "noTaxLine": "Išrašai sąskaitą 0 % — šalis be bendrojo PVM:",
+    "calcLine": "PVM šalis:"
+  },
+  "footer": {
+    "line2": "Jei kažkas ne taip, padėk mums tai ištaisyti."
+  },
+  "vatCheck": {
+    "empty": "Įvesk pirkėjo PVM mokėtojo kodą."
+  },
+  "result": {
+    "editAria": "Pasiūlyk pataisymą — redaguok šios šalies taisykles",
+    "netHint": "Spustelėk skaičių, kad jį redaguotum, ir valiutą, kad ją pakeistum.",
+    "statePlaceholder": "Pasirink valstiją…",
+    "rcHint": "B2B atveju mokestinė prievolė pereina pirkėjui: tu išrašai sąskaitą su 0 %, jis ją deklaruoja pagal savo šalies tarifą (ir paprastai taip pat atskaito).",
+    "youInvoice": "Tu išrašai sąskaitą",
+    "viesZeroWarning": "0 % reikalauja galiojančio VIES numerio. Be jo taikomas tavo vidaus tarifas.",
+    "thresholdCaveat": "Pastaba: riba iš tikrųjų taikoma bendram tavo metiniam ES B2C pardavimui, o ne vienai operacijai{{approx}}."
+  },
+  "countrySelect": {
+    "missing": "Nerandi savo šalies? Pranešk mums",
+    "regionsHint": "Tarifas nėra nacionalinis, jis skiriasi priklausomai nuo valstijos / provincijos — atidaryk, kad pamatytum visą sąrašą."
+  }
+}

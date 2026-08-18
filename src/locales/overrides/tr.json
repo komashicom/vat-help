@@ -1,0 +1,39 @@
+{
+  "wizard": {
+    "buyerVatHint": "KDV numarası olan işletme → B2B kuralları. AB içinde ters ödeme: %0 üzerinden fatura kesersin ve alıcı KDV'yi kendi beyan eder.",
+    "buyerIndividualHint": "Nihai tüketici — her zaman B2C, faturada KDV tahsil etmen gerekir.",
+    "vatIdHint": "AB'deki bir alıcı için %0 geçerli bir KDV numarası gerektirir. Format anında kontrol edilir; Doğrula düğmesi resmi VIES veritabanını sorgular.",
+    "viesButton": "Doğrula",
+    "viesInvalid": "VIES: geçersiz KDV numarası — %0 ile fatura kesmeden önce alıcıyla netleştir.",
+    "viesError": "VIES şu anda kullanılamıyor — şimdilik yalnızca format kontrolüne güvenebilirsin.",
+    "chooseBuyer": "Bir alıcı seç",
+    "choose": "Seç…",
+    "what": "Ne satıyorsun?"
+  },
+  "supplyVat": {
+    "rcLine": "%0 fatura kesersin — alıcı KDV'yi kendi beyan eder",
+    "exportLine": "%0 fatura kesersin — ithalat KDV'si ülkesi:",
+    "outsideEuLine": "%0 fatura kesersin — AB KDV kapsamı dışında",
+    "noTaxLine": "%0 fatura kesersin — genel KDV'si olmayan ülke:",
+    "calcLine": "KDV ülkesi:"
+  },
+  "footer": {
+    "line2": "Bir şey doğru değilse düzeltmemize yardım et."
+  },
+  "vatCheck": {
+    "empty": "Alıcının KDV numarasını gir."
+  },
+  "result": {
+    "editAria": "Bir düzeltme öner — bu ülkenin kurallarını düzenle",
+    "netHint": "Düzenlemek için sayıya, değiştirmek için para birimine tıkla.",
+    "statePlaceholder": "Bir eyalet seç…",
+    "rcHint": "B2B'de vergi yükümlülüğü alıcıya geçer: sen %0 üzerinden fatura kesersin, o kendi ülkesinin oranıyla beyan eder (ve genellikle indirir).",
+    "youInvoice": "Sen fatura kesersin",
+    "viesZeroWarning": "%0 geçerli bir VIES numarası gerektirir. Onsuz kendi yurt içi oranın uygulanır.",
+    "thresholdCaveat": "Not: eşik aslında tek bir işlem için değil, toplam yıllık AB B2C satışların için geçerlidir{{approx}}."
+  },
+  "countrySelect": {
+    "missing": "Ülkeni bulamıyor musun? Bize bildir",
+    "regionsHint": "Oran ulusal değildir, eyalete/bölgeye göre değişir — tam listeyi aç."
+  }
+}

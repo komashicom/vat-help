@@ -1,0 +1,80 @@
+{
+  "steps": {
+    "supply": {
+      "hint": "Az árukra és a szolgáltatásokra más-más teljesítésihely-szabály vonatkozik – ezért ez az első kérdés."
+    }
+  },
+  "service": {
+    "general": {
+      "desc": "Emberi munka/szakértelem – akár online is, de NEM „digitális” az áfa szempontjából.",
+      "examples": "Könyvelés, jogi tanácsadás, marketing, fordítás, egyedi programozás, ÉLŐ online óra."
+    }
+  },
+  "wizard": {
+    "buyerHint": "A legtöbb határon átnyúló szabályról a vevő országa dönt – pl. hogy hová esik a teljesítés helye.",
+    "goodsLeaveTitle": "Áruk – elhagyják az országot",
+    "goodsStayTitle": "Áruk – az országban maradnak",
+    "buyerVatHint": "Áfaszámmal rendelkező vállalkozás → B2B szabályok. Az EU-n belül fordított adózás: 0%-kal számlázol, a vevő pedig önadózik.",
+    "viesButton": "Ellenőrzés",
+    "moreOptions": "További lehetőségek",
+    "fewerOptions": "Kevesebb lehetőség",
+    "what": "Mit árulsz?",
+    "buyerIndividualHint": "Végső fogyasztó – mindig B2C, áfát kell felszámítanod a számlán.",
+    "vatIdHint": "EU-s vevő esetén a 0%-hoz érvényes áfaszám szükséges. A formátumot azonnal ellenőrizzük; az Ellenőrzés gomb a hivatalos VIES adatbázist kérdezi le.",
+    "viesInvalid": "VIES: érvénytelen áfaszám – 0%-os számlázás előtt egyeztess a vevővel.",
+    "viesError": "A VIES jelenleg nem érhető el – egyelőre csak a formátumellenőrzésre hagyatkozhatsz.",
+    "chooseBuyer": "Válassz vevőt",
+    "choose": "Válassz…"
+  },
+  "supplyVat": {
+    "rcTag": "0% · fordított adózás",
+    "calcLine": "Az áfa országa:",
+    "rcLine": "0%-ot számlázol – a vevő önadózik",
+    "exportLine": "0%-ot számlázol – az import áfa országa:",
+    "outsideEuLine": "0%-ot számlázol – az EU áfahatályán kívül",
+    "noTaxLine": "0%-ot számlázol – általános forgalmi adó nélküli ország:"
+  },
+  "vatCheck": {
+    "format": "A megadott adószám formátuma nem érvényes – {{country}} (például: {{sample}}). Csak formátumellenőrzés – a valódi érvényességet a VIES adja meg.",
+    "empty": "Add meg a vevő adószámát."
+  },
+  "result": {
+    "taxPlaceHint": "Az áfát nem ott kell megfizetni, ahol az eladó van, hanem ott, ahová a szabályok szerint a „teljesítés helye” esik – ez minden határon átnyúló ügylet döntő kérdése.",
+    "vat": "ÁFA",
+    "regThresholdHint": "E felett az eladónak be kell jelentkeznie a vevő országában az adófizetésre.",
+    "rcHint": "B2B esetén az adófizetési kötelezettség átszáll a vevőre: te 0%-kal számlázol, ő pedig a saját országa adókulcsával vallja be (és jellemzően le is vonja).",
+    "buyerSelf": "A vevő önadózik ({{country}})",
+    "viesZeroWarning": "A 0%-hoz érvényes VIES-szám szükséges. Enélkül a saját belföldi adókulcsod érvényes.",
+    "thresholdOver": "meghaladja az EU távértékesítési/OSS küszöbét ({{limit}}) – a célország adókulcsa érvényes.",
+    "thresholdUnder": "nem éri el az EU távértékesítési/OSS küszöbét ({{limit}}) – az eladó országának adókulcsa érvényes.",
+    "thresholdCaveat": "Megjegyzés: a küszöb valójában a teljes éves EU-s B2C-értékesítésedre vonatkozik, nem egyetlen ügyletre{{approx}}.",
+    "thresholdApprox": ", és az átváltás hozzávetőleges",
+    "editAria": "Javasolj javítást – szerkeszd az ország szabályait",
+    "netHint": "Kattints a számra a szerkesztéshez, a pénznemre a módosításhoz.",
+    "statePlaceholder": "Válassz államot…",
+    "youInvoice": "Te számlázol"
+  },
+  "badges": {
+    "reverseCharge": "Fordított adózás",
+    "origin": "Származási kulcs"
+  },
+  "jurisdiction": {
+    "province": "{{country}} (tartomány szerint)"
+  },
+  "countrySelect": {
+    "euMember": "EU-tag",
+    "system": {
+      "vat": "ÁFA"
+    },
+    "stdRate": "Standard kulcs",
+    "reducedRate": "Csökkentett kulcs",
+    "reducedRateHint": "Csak meghatározott kategóriákra vonatkozik (pl. élelmiszer, könyv, gyógyszer) – hogy melyekre, azt minden ország maga dönti el.",
+    "federalBrHint": "Brazíliában a szövetségi kulcs az állami (ICMS) kulcs FÖLÉ jön.",
+    "reducedShort": "csökkentett",
+    "regionsHint": "A kulcs nem országos, hanem államonként/tartományonként változik – a teljes lista megtekinthető.",
+    "missing": "Nem találod az országot? Jelezd nekünk"
+  },
+  "footer": {
+    "line2": "Ha valami nem stimmel, segíts javítani."
+  }
+}

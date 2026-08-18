@@ -1,0 +1,7 @@
+{
+  "supplyVat": {
+    "calcLine": "VAT 부과 국가:",
+    "exportLine": "0% 청구 — 수입 VAT 부과 국가:",
+    "noTaxLine": "0% 청구 — 일반 VAT가 없는 국가:"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "wizard": {
+    "buyerVatHint": "Firmă cu cod de TVA → reguli B2B. În UE, taxare inversă: facturezi la 0 % și cumpărătorul se autotaxează.",
+    "buyerIndividualHint": "Consumator final — întotdeauna B2C, trebuie să percepi TVA pe factură.",
+    "vatIdHint": "Pentru un cumpărător din UE, 0 % necesită un cod de TVA valid. Formatul este verificat instantaneu; butonul Verifică interoghează baza de date oficială VIES.",
+    "viesButton": "Verifică",
+    "viesInvalid": "VIES: cod de TVA invalid — clarifică cu cumpărătorul înainte de a factura la 0 %.",
+    "viesError": "VIES este momentan indisponibil — deocamdată te poți baza doar pe verificarea formatului.",
+    "chooseBuyer": "Alege un cumpărător",
+    "choose": "Alege…",
+    "what": "Ce vinzi?"
+  },
+  "supplyVat": {
+    "rcLine": "Facturezi 0 % — cumpărătorul se autotaxează",
+    "exportLine": "Facturezi 0 % — țara TVA-ului la import:",
+    "outsideEuLine": "Facturezi 0 % — în afara TVA-ului UE",
+    "noTaxLine": "Facturezi 0 % — țară fără TVA general:",
+    "calcLine": "Țara TVA-ului:"
+  },
+  "footer": {
+    "line2": "Dacă ceva nu este corect, ajută-ne să reparăm."
+  },
+  "vatCheck": {
+    "empty": "Introdu codul de TVA al cumpărătorului."
+  },
+  "result": {
+    "editAria": "Sugerează o corectură — editează regulile acestei țări",
+    "netHint": "Dă clic pe număr ca să-l editezi, pe monedă ca s-o schimbi.",
+    "statePlaceholder": "Alege un stat…",
+    "rcHint": "La B2B obligația fiscală trece la cumpărător: tu facturezi la 0 %, el o declară la cota propriei țări (și de obicei o și deduce).",
+    "youInvoice": "Tu facturezi",
+    "viesZeroWarning": "0 % necesită un număr VIES valid. Fără el se aplică propria ta cotă internă.",
+    "thresholdCaveat": "Notă: pragul se aplică de fapt vânzărilor tale anuale B2C din UE, nu unei singure tranzacții{{approx}}."
+  },
+  "countrySelect": {
+    "missing": "Nu îți găsești țara? Anunță-ne",
+    "regionsHint": "Cota nu este națională, ci variază în funcție de stat/provincie — deschide pentru lista completă."
+  }
+}

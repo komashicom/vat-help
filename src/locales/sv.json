@@ -75,11 +75,11 @@
     "rcTag": "0% · omvänd laddning",
     "exportTag": "Exportera · 0 %",
     "outsideTag": "0 %",
-    "calcLine": "Moms beräknad i",
+    "calcLine": "Momsland:",
     "rcLine": "Du fakturerar 0 % — köparens egenkonton",
-    "exportLine": "Du fakturerar 0 % — importera moms in",
+    "exportLine": "Du fakturerar 0 % — land för importmoms:",
     "outsideEuLine": "Du fakturerar 0 % — utanför EU-moms",
-    "noTaxLine": "Du fakturerar 0 % — ingen allmän moms in"
+    "noTaxLine": "Du fakturerar 0 % — land utan allmän moms:"
   },
   "footer": {
     "line1": "Detta är ett gratis, öppen källkodsprojekt. Det är en ganska stor utmaning att hantera all moms i världen.",

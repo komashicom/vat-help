@@ -1,0 +1,39 @@
+{
+  "wizard": {
+    "buyerVatHint": "Tvrtka s PDV brojem → pravila B2B. Unutar EU prijenos porezne obveze: fakturiraš po 0 % i kupac sam obračunava PDV.",
+    "buyerIndividualHint": "Krajnji potrošač — uvijek B2C, na računu moraš naplatiti PDV.",
+    "vatIdHint": "Za kupca iz EU 0 % zahtijeva važeći PDV broj. Format se odmah provjerava; gumb Provjeri postavlja upit službenoj VIES bazi podataka.",
+    "viesButton": "Provjeri",
+    "viesInvalid": "VIES: nevažeći PDV broj — razjasni s kupcem prije nego što izdaš račun po 0 %.",
+    "viesError": "VIES trenutno nije dostupan — zasad se možeš osloniti samo na provjeru formata.",
+    "chooseBuyer": "Odaberi kupca",
+    "choose": "Odaberi…",
+    "what": "Što prodaješ?"
+  },
+  "supplyVat": {
+    "rcLine": "Fakturiraš 0 % — kupac sam obračunava PDV",
+    "exportLine": "Fakturiraš 0 % — zemlja uvoznog PDV-a:",
+    "outsideEuLine": "Fakturiraš 0 % — izvan PDV-a EU",
+    "noTaxLine": "Fakturiraš 0 % — zemlja bez općeg PDV-a:",
+    "calcLine": "Zemlja PDV-a:"
+  },
+  "footer": {
+    "line2": "Ako nešto nije točno, pomozi nam to popraviti."
+  },
+  "vatCheck": {
+    "empty": "Unesi PDV broj kupca."
+  },
+  "result": {
+    "editAria": "Predloži ispravak — uredi pravila ove zemlje",
+    "netHint": "Klikni broj da ga urediš, a valutu da je promijeniš.",
+    "statePlaceholder": "Odaberi državu…",
+    "rcHint": "Kod B2B porezna obveza prelazi na kupca: ti fakturiraš po 0 %, on je prijavljuje po stopi svoje zemlje (i obično je odbija).",
+    "youInvoice": "Ti fakturiraš",
+    "viesZeroWarning": "0 % zahtijeva važeći VIES broj. Bez njega primjenjuje se tvoja domaća stopa.",
+    "thresholdCaveat": "Napomena: prag se zapravo odnosi na tvoju ukupnu godišnju B2C prodaju u EU, a ne na jednu transakciju{{approx}}."
+  },
+  "countrySelect": {
+    "missing": "Ne možeš pronaći svoju zemlju? Javi nam",
+    "regionsHint": "Stopa nije nacionalna, već se razlikuje ovisno o državi/pokrajini — otvori za potpuni popis."
+  }
+}

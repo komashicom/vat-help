@@ -1,0 +1,8 @@
+{
+  "supplyVat": {
+    "calcLine": "VSK-land:",
+    "exportLine": "Þú rukkar 0% — land innflutnings-VSK:",
+    "noTaxLine": "Þú rukkar 0% — land án almenns VSK:",
+    "outsideEuLine": "Þú rukkar 0% — utan VSK ESB"
+  }
+}

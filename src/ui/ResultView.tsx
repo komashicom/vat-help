@@ -109,8 +109,11 @@ export function ResultView({
           operator signs between cells; the gross cell is in a green box. In
           the Net cell, clicking the currency code switches currency, clicking
           the number lets you edit it. */}
-      <div className="mx-auto flex w-fit max-w-full flex-wrap items-center justify-center gap-x-2.5 gap-y-1 rounded-xl border bg-card px-3 py-2">
-        <div className="flex flex-col gap-0.5 rounded-lg px-1.5 py-1">
+      {/* Each operator is glued to the cell that FOLLOWS it, so if the row has
+          to wrap on a narrow screen it breaks as "Net × VAT" / "= Gross" —
+          never leaving a lone "=" dangling at the end of the first line. */}
+      <div className="mx-auto flex w-fit max-w-full flex-wrap items-center justify-center gap-x-1.5 gap-y-1 rounded-xl border bg-card px-2 py-2 sm:gap-x-2.5 sm:px-3">
+        <div className="flex flex-col gap-0.5 rounded-lg px-1 py-1 sm:px-1.5">
           <span className="inline-flex items-center gap-1 text-[10px] font-medium uppercase tracking-wide text-muted-foreground">
             {t("result.net")}
             <Hint text={t("result.netHint")} />
@@ -131,36 +134,40 @@ export function ResultView({
               className="mono cursor-text rounded-sm bg-transparent text-lg font-semibold text-foreground outline-none focus:bg-primary/5 sm:text-xl" />
           </div>
         </div>
-        <Op>×</Op>
-        {/* the rate is shown next to the VAT label too: "VAT 20%" */}
-        <Stat label={`${t("result.vat")} ${rateDisplay}`} hint={t("result.vatHint")}
-          currency={calc.stateRequired ? "" : currency}
-          value={calc.stateRequired ? "—" : fmtAmount(vat, currency)} />
-        <Op>=</Op>
-        <Stat label={t("result.gross")} hint={t("result.grossHint")} accent
-          currency={calc.stateRequired ? "" : currency}
-          value={calc.stateRequired ? "—" : fmtAmount(gross, currency)} />
+        <span className="flex items-center gap-1.5 sm:gap-2.5">
+          <Op>×</Op>
+          {/* the rate is shown next to the VAT label too: "VAT 20%" */}
+          <Stat label={`${t("result.vat")} ${rateDisplay}`} hint={t("result.vatHint")}
+            currency={calc.stateRequired ? "" : currency}
+            value={calc.stateRequired ? "—" : fmtAmount(vat, currency)} />
+        </span>
+        <span className="flex items-center gap-1.5 sm:gap-2.5">
+          <Op>=</Op>
+          <Stat label={t("result.gross")} hint={t("result.grossHint")} accent
+            currency={calc.stateRequired ? "" : currency}
+            value={calc.stateRequired ? "—" : fmtAmount(gross, currency)} />
+        </span>
       </div>
 
       {/* law-adjacent explanation — below a faint divider line, with its own
           heading; on the right, the pencil with the TAXING country's name
           (opens that country's country.json in Gitea's web editor — saving
           auto-creates a PR), so it's clear whose data you're editing */}
-      <div className="border-t border-border/70 pt-3">
-        <div className="flex items-start justify-between gap-3">
-          <div className="text-left">
-            <div className="text-sm font-bold text-foreground">{t("result.explanation")}</div>
-            <div className="mt-0.5 text-sm font-semibold text-foreground">{ruleName}</div>
-            <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{ruleDetail}</p>
-          </div>
+      {/* The edit link shares the heading's line only — putting it beside the
+          whole block squeezed the rule text into a half-width column on mobile. */}
+      <div className="border-t border-border/70 pt-3 text-left">
+        <div className="flex items-baseline justify-between gap-3">
+          <div className="text-sm font-bold text-foreground">{t("result.explanation")}</div>
           <a href={editCountryUrl(rec.jurisdiction.country)} target="_blank" rel="noreferrer"
             aria-label={`${t("result.editAria")} — ${countryName(rec.jurisdiction.country)}`}
             title={`${t("result.editAria")} — ${countryName(rec.jurisdiction.country)}`}
-            className="mt-0.5 inline-flex shrink-0 items-center gap-1 text-xs font-medium text-muted-foreground/60 transition-colors hover:text-foreground">
-            <Pencil className="h-3.5 w-3.5" />
-            {countryName(rec.jurisdiction.country)}
+            className="inline-flex min-w-0 items-center gap-1 text-xs font-medium text-muted-foreground/60 transition-colors hover:text-foreground">
+            <Pencil className="h-3.5 w-3.5 shrink-0" />
+            <span className="truncate">{countryName(rec.jurisdiction.country)}</span>
           </a>
         </div>
+        <div className="mt-0.5 text-sm font-semibold text-foreground">{ruleName}</div>
+        <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{ruleDetail}</p>
       </div>
 
       {/* registration threshold */}
@@ -238,7 +245,7 @@ function Stat({ label, currency, value, accent, hint }: {
   label: string; currency?: string; value: string; accent?: boolean; hint?: string;
 }) {
   return (
-    <div className={cn("flex flex-col gap-0.5 rounded-lg px-1.5 py-1", accent && "bg-green-50/60")}>
+    <div className={cn("flex flex-col gap-0.5 rounded-lg px-1 py-1 sm:px-1.5", accent && "bg-green-50/60")}>
       <span className="inline-flex items-center gap-1 text-[10px] font-medium uppercase tracking-wide text-muted-foreground">
         {label}
         {hint && <Hint text={hint} />}

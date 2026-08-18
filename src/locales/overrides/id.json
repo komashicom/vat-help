@@ -1,0 +1,24 @@
+{
+  "wizard": {
+    "buyerIndividualHint": "Konsumen akhir — selalu B2C, kamu harus memungut PPN pada faktur.",
+    "viesError": "VIES sedang tidak tersedia — untuk saat ini kamu hanya bisa mengandalkan pemeriksaan format.",
+    "what": "Apa yang kamu jual?"
+  },
+  "footer": {
+    "line2": "Kalau ada yang tidak benar, bantu kami memperbaikinya."
+  },
+  "result": {
+    "viesZeroWarning": "0% memerlukan nomor VIES yang valid. Tanpa itu, tarif domestikmu sendiri yang berlaku.",
+    "thresholdCaveat": "Catatan: ambang batas ini sebenarnya berlaku untuk total penjualan B2C tahunanmu di UE, bukan satu transaksi{{approx}}."
+  },
+  "countrySelect": {
+    "missing": "Tidak menemukan negaramu? Beri tahu kami"
+  },
+  "supplyVat": {
+    "calcLine": "Negara PPN:",
+    "exportLine": "Kamu menagih 0% — negara PPN impor:",
+    "noTaxLine": "Kamu menagih 0% — negara tanpa PPN umum:",
+    "rcLine": "Kamu menagih 0% — pembeli menyetor sendiri",
+    "outsideEuLine": "Kamu menagih 0% — di luar PPN UE"
+  }
+}

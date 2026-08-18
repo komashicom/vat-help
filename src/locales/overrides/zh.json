@@ -1,0 +1,39 @@
+{
+  "wizard": {
+    "buyerVatHint": "有增值税号的企业 → B2B 规则。在欧盟境内适用反向征收：你按 0% 开票，由买家自行申报增值税。",
+    "buyerIndividualHint": "最终消费者 — 始终是 B2C，你必须在发票上收取增值税。",
+    "vatIdHint": "对于欧盟买家，0% 需要有效的增值税号。格式会立即校验；「验证」按钮会查询官方 VIES 数据库。",
+    "viesButton": "验证",
+    "viesInvalid": "VIES：增值税号无效 — 在按 0% 开票前先和买家确认。",
+    "viesError": "VIES 目前不可用 — 暂时你只能依靠格式校验。",
+    "chooseBuyer": "选择买家",
+    "choose": "选择…",
+    "what": "你卖什么？"
+  },
+  "supplyVat": {
+    "rcLine": "你按 0% 开票 — 买家自行申报",
+    "exportLine": "你按 0% 开票 — 进口增值税所属国家/地区：",
+    "outsideEuLine": "你按 0% 开票 — 不属于欧盟增值税范围",
+    "noTaxLine": "你按 0% 开票 — 没有一般增值税的国家/地区：",
+    "calcLine": "增值税所属国家/地区："
+  },
+  "footer": {
+    "line2": "如果有不对的地方，帮我们一起修正。"
+  },
+  "vatCheck": {
+    "empty": "输入买家的增值税号。"
+  },
+  "result": {
+    "editAria": "提出修正 — 编辑该国家/地区的规则",
+    "netHint": "点击数字进行编辑，点击货币进行更改。",
+    "statePlaceholder": "选择一个州…",
+    "rcHint": "在 B2B 中，纳税义务转移给买家：你按 0% 开票，他按自己国家的税率申报（通常也可以抵扣）。",
+    "youInvoice": "你开票",
+    "viesZeroWarning": "0% 需要有效的 VIES 号码。没有它，则适用你自己的国内税率。",
+    "thresholdCaveat": "注意：该阈值实际上针对你全年的欧盟 B2C 销售总额，而不是单笔交易{{approx}}。"
+  },
+  "countrySelect": {
+    "missing": "找不到你的国家？告诉我们",
+    "regionsHint": "该税率不是全国统一的，而是因州/省而异 — 打开查看完整列表。"
+  }
+}

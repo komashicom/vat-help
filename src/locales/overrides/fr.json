@@ -1,0 +1,39 @@
+{
+  "wizard": {
+    "buyerVatHint": "Entreprise avec numéro de TVA → règles B2B. Au sein de l'UE, autoliquidation : tu factures à 0 % et l'acheteur autoliquide la TVA.",
+    "buyerIndividualHint": "Consommateur final — toujours B2C, tu dois facturer la TVA sur la facture.",
+    "vatIdHint": "Pour un acheteur de l'UE, 0 % nécessite un numéro de TVA valide. Le format est vérifié instantanément ; le bouton Vérifier interroge la base de données officielle VIES.",
+    "viesButton": "Vérifier",
+    "viesInvalid": "VIES : numéro de TVA invalide — vérifie avec l'acheteur avant de facturer à 0 %.",
+    "viesError": "VIES n'est pas disponible actuellement — pour l'instant, tu ne peux compter que sur la vérification du format.",
+    "chooseBuyer": "Choisis un acheteur",
+    "choose": "Choisir…",
+    "what": "Que vends-tu ?"
+  },
+  "supplyVat": {
+    "rcLine": "Tu factures 0 % — l'acheteur autoliquide",
+    "exportLine": "Tu factures 0 % — pays de la TVA à l'importation :",
+    "outsideEuLine": "Tu factures 0 % — hors champ de la TVA UE",
+    "noTaxLine": "Tu factures 0 % — pays sans TVA générale :",
+    "calcLine": "Pays de la TVA :"
+  },
+  "footer": {
+    "line2": "Si quelque chose ne va pas, aide-nous à le corriger."
+  },
+  "vatCheck": {
+    "empty": "Saisis le numéro de TVA de l'acheteur."
+  },
+  "result": {
+    "editAria": "Suggère une correction — modifie les règles de ce pays",
+    "netHint": "Clique sur le nombre pour le modifier, sur la devise pour la changer.",
+    "statePlaceholder": "Choisis un état…",
+    "rcHint": "Pour le B2B, la dette fiscale est transférée à l'acheteur : tu factures à 0 %, il la déclare au taux de son propre pays (et la déduit généralement aussi).",
+    "youInvoice": "Tu factures",
+    "viesZeroWarning": "0 % nécessite un numéro VIES valide. Sans cela, ton propre taux national s'applique.",
+    "thresholdCaveat": "Remarque : le seuil s'applique en réalité à tes ventes B2C annuelles totales dans l'UE, et non à une seule transaction{{approx}}."
+  },
+  "countrySelect": {
+    "missing": "Tu ne trouves pas ton pays ? Dis-le-nous",
+    "regionsHint": "Le taux n'est pas national mais varie selon l'État/la province — ouvre pour voir la liste complète."
+  }
+}

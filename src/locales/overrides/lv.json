@@ -1,0 +1,39 @@
+{
+  "wizard": {
+    "buyerVatHint": "Uzņēmums ar PVN numuru → B2B noteikumi. ES ietvaros apgrieztā jeb reversā PVN maksāšana: tu izraksti rēķinu ar 0 % un pircējs pats aprēķina PVN.",
+    "buyerIndividualHint": "Gala patērētājs — vienmēr B2C, rēķinā tev jāaprēķina PVN.",
+    "vatIdHint": "ES pircējam 0 % ir nepieciešams derīgs PVN maksātāja numurs. Formāts tiek pārbaudīts uzreiz; poga Pārbaudīt vaicā oficiālajai VIES datubāzei.",
+    "viesButton": "Pārbaudīt",
+    "viesInvalid": "VIES: nederīgs PVN numurs — noskaidro ar pircēju, pirms izraksti rēķinu ar 0 %.",
+    "viesError": "VIES pašlaik nav pieejams — pagaidām vari paļauties tikai uz formāta pārbaudi.",
+    "chooseBuyer": "Izvēlies pircēju",
+    "choose": "Izvēlies…",
+    "what": "Ko tu pārdod?"
+  },
+  "supplyVat": {
+    "rcLine": "Tu izraksti rēķinu 0 % — pircējs pats aprēķina PVN",
+    "exportLine": "Tu izraksti rēķinu 0 % — importa PVN valsts:",
+    "outsideEuLine": "Tu izraksti rēķinu 0 % — ārpus ES PVN",
+    "noTaxLine": "Tu izraksti rēķinu 0 % — valsts bez vispārējā PVN:",
+    "calcLine": "PVN valsts:"
+  },
+  "footer": {
+    "line2": "Ja kaut kas nav pareizi, palīdzi mums to izlabot."
+  },
+  "vatCheck": {
+    "empty": "Ievadi pircēja PVN numuru."
+  },
+  "result": {
+    "editAria": "Ieteic labojumu — rediģē šīs valsts noteikumus",
+    "netHint": "Noklikšķini uz skaitļa, lai to rediģētu, un uz valūtas, lai to mainītu.",
+    "statePlaceholder": "Izvēlies štatu…",
+    "rcHint": "B2B gadījumā nodokļa saistības pāriet pircējam: tu izraksti rēķinu ar 0 %, viņš to deklarē pēc savas valsts likmes (un parasti to arī atskaita).",
+    "youInvoice": "Tu izraksti rēķinu",
+    "viesZeroWarning": "0 % ir nepieciešams derīgs VIES numurs. Bez tā tiek piemērota tava vietējā likme.",
+    "thresholdCaveat": "Piezīme: slieksnis faktiski attiecas uz tavu kopējo gada ES B2C pārdošanas apjomu, nevis uz vienu darījumu{{approx}}."
+  },
+  "countrySelect": {
+    "missing": "Nevari atrast savu valsti? Paziņo mums",
+    "regionsHint": "Likme nav valsts mēroga, tā atšķiras atkarībā no štata/provinces — atver, lai redzētu pilnu sarakstu."
+  }
+}

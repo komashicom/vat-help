@@ -1,0 +1,39 @@
+{
+  "wizard": {
+    "buyerVatHint": "Onderneming met btw-nummer → B2B-regels. Binnen de EU verlegging: je factureert tegen 0 % en de koper draagt de btw zelf af.",
+    "buyerIndividualHint": "Eindverbruiker — altijd B2C, je moet btw op de factuur in rekening brengen.",
+    "vatIdHint": "Voor een EU-koper vereist 0 % een geldig btw-nummer. Het formaat wordt direct gecontroleerd; de knop Verifiëren bevraagt de officiële VIES-database.",
+    "viesButton": "Verifiëren",
+    "viesInvalid": "VIES: ongeldig btw-nummer — overleg met de koper voordat je tegen 0 % factureert.",
+    "viesError": "VIES is momenteel niet beschikbaar — voorlopig kun je alleen op de formaatcontrole vertrouwen.",
+    "chooseBuyer": "Kies een koper",
+    "choose": "Kiezen…",
+    "what": "Wat verkoop je?"
+  },
+  "supplyVat": {
+    "rcLine": "Je factureert 0 % — de koper draagt zelf af",
+    "exportLine": "Je factureert 0 % — land van de invoer-btw:",
+    "outsideEuLine": "Je factureert 0 % — buiten de EU-btw",
+    "noTaxLine": "Je factureert 0 % — land zonder algemene btw:",
+    "calcLine": "Btw-land:"
+  },
+  "footer": {
+    "line2": "Als er iets niet klopt, help ons het te verbeteren."
+  },
+  "vatCheck": {
+    "empty": "Vul het btw-nummer van de koper in."
+  },
+  "result": {
+    "editAria": "Stel een correctie voor — bewerk de regels van dit land",
+    "netHint": "Klik op het getal om het te bewerken, op de valuta om die te wijzigen.",
+    "statePlaceholder": "Kies een staat…",
+    "rcHint": "Bij B2B verschuift de belastingplicht naar de koper: jij factureert tegen 0 %, hij geeft het aan tegen het tarief van zijn eigen land (en trekt het doorgaans ook af).",
+    "youInvoice": "Jij factureert",
+    "viesZeroWarning": "Voor 0 % is een geldig VIES-nummer vereist. Zonder dat geldt je eigen binnenlandse tarief.",
+    "thresholdCaveat": "Let op: de drempel geldt voor je totale jaarlijkse B2C-omzet in de EU, niet voor één enkele transactie{{approx}}."
+  },
+  "countrySelect": {
+    "missing": "Kun je je land niet vinden? Laat het ons weten",
+    "regionsHint": "Het tarief is niet nationaal, maar verschilt per staat/provincie — open voor de volledige lijst."
+  }
+}

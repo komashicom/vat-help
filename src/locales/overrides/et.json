@@ -1,0 +1,39 @@
+{
+  "wizard": {
+    "buyerVatHint": "KMKR-numbriga ettevõte → B2B reeglid. EL-is pöördmaksustamine: esitad arve 0 % ja ostja arvestab käibemaksu ise.",
+    "buyerIndividualHint": "Lõpptarbija — alati B2C, arvel pead lisama käibemaksu.",
+    "vatIdHint": "EL-i ostja puhul nõuab 0 % kehtivat käibemaksukohustuslase numbrit. Vormingut kontrollitakse kohe; nupp Kontrolli teeb päringu ametlikku VIES-i andmebaasi.",
+    "viesButton": "Kontrolli",
+    "viesInvalid": "VIES: kehtetu käibemaksukohustuslase number — täpsusta ostjaga, enne kui esitad arve 0 %-ga.",
+    "viesError": "VIES pole praegu saadaval — praegu saad loota ainult vormingukontrollile.",
+    "chooseBuyer": "Vali ostja",
+    "choose": "Vali…",
+    "what": "Mida sa müüd?"
+  },
+  "supplyVat": {
+    "rcLine": "Esitad arve 0 % — ostja arvestab käibemaksu ise",
+    "exportLine": "Esitad arve 0 % — impordi käibemaksu riik:",
+    "outsideEuLine": "Esitad arve 0 % — väljaspool EL-i käibemaksu",
+    "noTaxLine": "Esitad arve 0 % — üldise käibemaksuta riik:",
+    "calcLine": "Käibemaksu riik:"
+  },
+  "footer": {
+    "line2": "Kui midagi pole õige, aita meil see parandada."
+  },
+  "vatCheck": {
+    "empty": "Sisesta ostja KMKR number."
+  },
+  "result": {
+    "editAria": "Paku parandust — muuda selle riigi reegleid",
+    "netHint": "Klõpsa numbril, et seda muuta, ja valuutal, et seda vahetada.",
+    "statePlaceholder": "Vali osariik…",
+    "rcHint": "B2B puhul läheb maksukohustus ostjale: sina esitad arve 0 %, tema deklareerib selle oma riigi määra alusel (ja tavaliselt arvab selle ka maha).",
+    "youInvoice": "Sina esitad arve",
+    "viesZeroWarning": "0 % nõuab kehtivat VIES-numbrit. Ilma selleta kehtib sinu enda siseriiklik määr.",
+    "thresholdCaveat": "Märkus: lävi kehtib tegelikult sinu EL-i aastase B2C müügi kogusummale, mitte ühele tehingule{{approx}}."
+  },
+  "countrySelect": {
+    "missing": "Kas sa ei leia oma riiki? Anna meile teada",
+    "regionsHint": "Maksumäär ei ole üleriigiline, vaid erineb osariigiti/provintsiti — ava täielik loetelu."
+  }
+}

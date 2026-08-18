@@ -1,0 +1,39 @@
+{
+  "wizard": {
+    "buyerVatHint": "Firma s IČ DPH → pravidlá B2B. V rámci EÚ prenesenie daňovej povinnosti: fakturuješ so sadzbou 0 % a kupujúci si daň vysporiada sám.",
+    "buyerIndividualHint": "Konečný spotrebiteľ — vždy B2C, na faktúre musíš účtovať DPH.",
+    "vatIdHint": "Pri kupujúcom z EÚ vyžaduje 0 % platné IČ DPH. Formát sa kontroluje okamžite; tlačidlo Overiť sa dopytuje oficiálnej databázy VIES.",
+    "viesButton": "Overiť",
+    "viesInvalid": "VIES: neplatné IČ DPH — vyjasni si to s kupujúcim skôr, než budeš fakturovať so sadzbou 0 %.",
+    "viesError": "VIES je momentálne nedostupný — zatiaľ sa môžeš spoľahnúť iba na kontrolu formátu.",
+    "chooseBuyer": "Vyber kupujúceho",
+    "choose": "Vyber…",
+    "what": "Čo predávaš?"
+  },
+  "supplyVat": {
+    "rcLine": "Fakturuješ 0 % — kupujúci si daň vysporiada sám",
+    "exportLine": "Fakturuješ 0 % — krajina dovoznej DPH:",
+    "outsideEuLine": "Fakturuješ 0 % — mimo DPH EÚ",
+    "noTaxLine": "Fakturuješ 0 % — krajina bez všeobecnej DPH:",
+    "calcLine": "Krajina DPH:"
+  },
+  "footer": {
+    "line2": "Ak niečo nie je správne, pomôž nám to opraviť."
+  },
+  "vatCheck": {
+    "empty": "Zadaj IČ DPH kupujúceho."
+  },
+  "result": {
+    "editAria": "Navrhni opravu — uprav pravidlá tejto krajiny",
+    "netHint": "Klikni na číslo, aby si ho upravil, na menu, aby si ju zmenil.",
+    "statePlaceholder": "Vyber štát…",
+    "rcHint": "Pri B2B prechádza daňová povinnosť na kupujúceho: ty fakturuješ so sadzbou 0 %, on ju prizná podľa sadzby svojej krajiny (a zvyčajne si ju aj odpočíta).",
+    "youInvoice": "Ty fakturuješ",
+    "viesZeroWarning": "0 % vyžaduje platné číslo VIES. Bez neho platí tvoja vlastná tuzemská sadzba.",
+    "thresholdCaveat": "Poznámka: limit sa v skutočnosti vzťahuje na tvoj celkový ročný predaj B2C v EÚ, nie na jednu transakciu{{approx}}."
+  },
+  "countrySelect": {
+    "missing": "Nemôžeš nájsť svoju krajinu? Daj nám vedieť",
+    "regionsHint": "Sadzba nie je celoštátna, ale líši sa podľa štátu/provincie — otvor pre úplný zoznam."
+  }
+}

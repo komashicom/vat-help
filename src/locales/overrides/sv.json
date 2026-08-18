@@ -1,0 +1,7 @@
+{
+  "supplyVat": {
+    "calcLine": "Momsland:",
+    "exportLine": "Du fakturerar 0 % — land för importmoms:",
+    "noTaxLine": "Du fakturerar 0 % — land utan allmän moms:"
+  }
+}

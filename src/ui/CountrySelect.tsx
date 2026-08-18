@@ -101,8 +101,11 @@ export function CountrySelect({ value, onChange, placeholder }: {
         )}
       </div>
       <PopoverPrimitive.Portal>
-        <PopoverPrimitive.Content align="start" sideOffset={6}
-          className="z-50 w-[var(--radix-popover-trigger-width)] min-w-64 overflow-hidden rounded-xl border bg-popover shadow-lg outline-none">
+        {/* min-w-64 can exceed a narrow trigger, so cap it to the viewport
+            (and give the collision detector a margin) — otherwise the list
+            hangs off the screen edge on mobile. */}
+        <PopoverPrimitive.Content align="start" sideOffset={6} collisionPadding={12}
+          className="z-50 w-[var(--radix-popover-trigger-width)] min-w-64 max-w-[calc(100vw-1.5rem)] overflow-hidden rounded-xl border bg-popover shadow-lg outline-none">
           <div className="border-b px-3 py-2">
             <div className="flex items-center gap-2">
               <Search className="h-4 w-4 text-muted-foreground" />

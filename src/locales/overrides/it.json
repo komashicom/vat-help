@@ -1,0 +1,39 @@
+{
+  "wizard": {
+    "buyerVatHint": "Impresa con partita IVA → regole B2B. All'interno dell'UE, reverse charge: fatturi allo 0 % e l'acquirente assolve l'imposta.",
+    "buyerIndividualHint": "Consumatore finale — sempre B2C, devi addebitare l'IVA in fattura.",
+    "vatIdHint": "Per un acquirente UE, lo 0 % richiede una partita IVA valida. Il formato viene controllato subito; il pulsante Verifica interroga il database ufficiale VIES.",
+    "viesButton": "Verifica",
+    "viesInvalid": "VIES: partita IVA non valida — chiarisci con l'acquirente prima di fatturare allo 0 %.",
+    "viesError": "Il VIES al momento non è disponibile: per ora puoi fare affidamento solo sul controllo del formato.",
+    "chooseBuyer": "Scegli un acquirente",
+    "choose": "Scegli…",
+    "what": "Cosa stai vendendo?"
+  },
+  "supplyVat": {
+    "rcLine": "Fatturi lo 0 % — l'acquirente assolve l'imposta",
+    "exportLine": "Fatturi lo 0 % — paese dell'IVA all'importazione:",
+    "outsideEuLine": "Fatturi lo 0 % — fuori dal campo IVA UE",
+    "noTaxLine": "Fatturi lo 0 % — paese senza IVA generale:",
+    "calcLine": "Paese dell'IVA:"
+  },
+  "footer": {
+    "line2": "Se qualcosa non è corretto, aiutaci a sistemarlo."
+  },
+  "vatCheck": {
+    "empty": "Inserisci la partita IVA dell'acquirente."
+  },
+  "result": {
+    "editAria": "Suggerisci una correzione — modifica le regole di questo Paese",
+    "netHint": "Clicca sul numero per modificarlo, sulla valuta per cambiarla.",
+    "statePlaceholder": "Scegli uno stato…",
+    "rcHint": "Nel B2B il debito d'imposta passa all'acquirente: tu fatturi allo 0 %, lui la dichiara all'aliquota del proprio paese (e in genere la detrae anche).",
+    "youInvoice": "Tu fatturi",
+    "viesZeroWarning": "Lo 0 % richiede un numero VIES valido. Senza, si applica la tua aliquota nazionale.",
+    "thresholdCaveat": "Nota: la soglia si applica al totale delle tue vendite annuali B2C nell'UE, non a una singola transazione{{approx}}."
+  },
+  "countrySelect": {
+    "missing": "Non trovi il tuo Paese? Faccelo sapere",
+    "regionsHint": "L'aliquota non è nazionale ma varia in base allo stato/provincia — apri per l'elenco completo."
+  }
+}

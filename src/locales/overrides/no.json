@@ -1,0 +1,7 @@
+{
+  "supplyVat": {
+    "calcLine": "Mva-land:",
+    "exportLine": "Du fakturerer 0 % — land for importmva:",
+    "noTaxLine": "Du fakturerer 0 % — land uten generell mva:"
+  }
+}

@@ -49,7 +49,7 @@
     "goodsStayDesc": "Pembelian lokal — barang tidak keluar dari negara penjual, sehingga dikenakan PPN penjual.",
     "buyerVatHint": "Bisnis dengan nomor PPN → Aturan B2B. Di UE, tagihan balik: Anda menagih sebesar 0% dan pembeli memperhitungkan sendiri.",
     "buyerNovatHint": "Pembelinya adalah sebuah bisnis, namun tanpa nomor PPN hal ini tidak dapat dibuktikan — jadi untuk keperluan PPN diperlakukan sebagai B2C.",
-    "buyerIndividualHint": "Konsumen akhir — selalu B2C, Anda harus membebankan PPN pada faktur.",
+    "buyerIndividualHint": "Konsumen akhir — selalu B2C, kamu harus memungut PPN pada faktur.",
     "vatIdLabel": "Nomor PPN pembeli ({{country}})",
     "vatIdHint": "Untuk pembeli UE, 0% memerlukan nomor PPN yang valid. Formatnya diperiksa secara instan; tombol Verifikasi menanyakan keaslian database resmi VIES.",
     "vatIdPlaceholder": "Nomor PPN…",
@@ -57,7 +57,7 @@
     "viesValid": "VIES: nomor PPN yang valid.",
     "viesRegisteredName": "Nama terdaftar:",
     "viesInvalid": "VIES: nomor PPN tidak valid — klarifikasi dengan pembeli sebelum membuat faktur sebesar 0%.",
-    "viesError": "VIES saat ini tidak tersedia — untuk saat ini Anda hanya dapat mengandalkan pemeriksaan format.",
+    "viesError": "VIES sedang tidak tersedia — untuk saat ini kamu hanya bisa mengandalkan pemeriksaan format.",
     "onsiteSeller": "Di tempat — di penjual ({{country}})",
     "onsiteCustomer": "Di tempat — di pembeli ({{country}})",
     "examplesLabel": "Contoh:",
@@ -75,15 +75,15 @@
     "rcTag": "0% · pengisian terbalik",
     "exportTag": "Ekspor · 0%",
     "outsideTag": "0%",
-    "calcLine": "PPN dihitung dalam",
-    "rcLine": "Anda menagih 0% — akun mandiri pembeli",
-    "exportLine": "Anda menagih 0% — mengimpor PPN masuk",
-    "outsideEuLine": "Anda menagih 0% — di luar PPN UE",
-    "noTaxLine": "Anda menagih 0% — tidak ada PPN umum"
+    "calcLine": "Negara PPN:",
+    "rcLine": "Kamu menagih 0% — pembeli menyetor sendiri",
+    "exportLine": "Kamu menagih 0% — negara PPN impor:",
+    "outsideEuLine": "Kamu menagih 0% — di luar PPN UE",
+    "noTaxLine": "Kamu menagih 0% — negara tanpa PPN umum:"
   },
   "footer": {
     "line1": "Ini adalah proyek sumber terbuka dan gratis. Merupakan tantangan yang cukup besar untuk menangani semua PPN di dunia.",
-    "line2": "Jika ada yang tidak benar, bantu kami memperbaikinya.",
+    "line2": "Kalau ada yang tidak benar, bantu kami memperbaikinya.",
     "disclaimer": "Bukan nasihat perpajakan, hanya untuk tujuan pendidikan."
   },
   "vatCheck": {
@@ -110,11 +110,11 @@
     "rcHint": "Untuk B2B, kewajiban pajak \"beralih\" ke pembeli: Anda menagih sebesar 0%, mereka menyatakannya sesuai tarif negara mereka sendiri (dan biasanya memotongnya juga).",
     "youInvoice": "Anda menagih",
     "buyerSelf": "Akun mandiri pembeli ({{country}})",
-    "viesZeroWarning": "0% memerlukan nomor VIES yang valid. Tanpa itu, tarif domestik Anda sendiri yang berlaku.",
+    "viesZeroWarning": "0% memerlukan nomor VIES yang valid. Tanpa itu, tarif domestikmu sendiri yang berlaku.",
     "amountEntered": "Jumlah yang dimasukkan ({{amount}})",
     "thresholdOver": "melebihi ambang batas penjualan jarak jauh/OSS UE {{limit}} — tarif di negara tujuan berlaku.",
     "thresholdUnder": "tidak mencapai ambang batas penjualan jarak jauh/OSS UE {{limit}} — tarif di negara penjual berlaku.",
-    "thresholdCaveat": "Catatan: ambang batas sebenarnya berlaku untuk total penjualan B2C UE tahunan Anda, bukan satu transaksi{{approx}}.",
+    "thresholdCaveat": "Catatan: ambang batas ini sebenarnya berlaku untuk total penjualan B2C tahunanmu di UE, bukan satu transaksi{{approx}}.",
     "thresholdApprox": ", dan konversinya merupakan perkiraan"
   },
   "badges": {
@@ -290,7 +290,7 @@
     "dialogDesc": "Cari dan pilih negara dari daftar.",
     "searchPlaceholder": "Telusuri negara…",
     "noResults": "Tidak ada hasil",
-    "missing": "Tidak dapat menemukan negara Anda? Beri tahu kami"
+    "missing": "Tidak menemukan negaramu? Beri tahu kami"
   },
   "thresholds": {
     "AU": "AUD 75,000 / year",

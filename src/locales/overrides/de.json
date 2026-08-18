@@ -1,0 +1,39 @@
+{
+  "wizard": {
+    "buyerVatHint": "Unternehmen mit Umsatzsteuer-Identifikationsnummer → B2B-Regeln. Innerhalb der EU gilt die Umkehrung der Steuerschuldnerschaft: Du rechnest mit 0 % ab und der Käufer versteuert selbst.",
+    "buyerIndividualHint": "Endverbraucher – immer B2C, du musst die Mehrwertsteuer auf der Rechnung ausweisen.",
+    "vatIdHint": "Für einen EU-Käufer erfordert 0 % eine gültige Umsatzsteuer-Identifikationsnummer. Das Format wird sofort geprüft; die Schaltfläche „Prüfen“ fragt die offizielle VIES-Datenbank ab.",
+    "viesButton": "Prüfen",
+    "viesInvalid": "VIES: ungültige Umsatzsteuer-Identifikationsnummer – kläre das mit dem Käufer, bevor du mit 0 % abrechnest.",
+    "viesError": "VIES ist derzeit nicht verfügbar – vorerst kannst du dich nur auf die Formatprüfung verlassen.",
+    "chooseBuyer": "Wähle einen Käufer",
+    "choose": "Wähle…",
+    "what": "Was verkaufst du?"
+  },
+  "supplyVat": {
+    "rcLine": "Du rechnest 0 % ab – der Käufer versteuert selbst",
+    "exportLine": "Du rechnest 0 % ab – Land der Einfuhrumsatzsteuer:",
+    "outsideEuLine": "Du rechnest 0 % ab – außerhalb der EU-Mehrwertsteuer",
+    "noTaxLine": "Du rechnest 0 % ab – Land ohne allgemeine Mehrwertsteuer:",
+    "calcLine": "Mehrwertsteuer-Land:"
+  },
+  "footer": {
+    "line2": "Wenn etwas nicht stimmt, hilf uns, es zu beheben."
+  },
+  "vatCheck": {
+    "empty": "Gib die Umsatzsteuer-Identifikationsnummer des Käufers ein."
+  },
+  "result": {
+    "editAria": "Schlag eine Korrektur vor – bearbeite die Regeln dieses Landes",
+    "netHint": "Klicke auf die Zahl, um sie zu bearbeiten, auf die Währung, um sie zu ändern.",
+    "statePlaceholder": "Wähle ein Bundesland…",
+    "rcHint": "Bei B2B geht die Steuerschuld auf den Käufer über: Du stellst eine Rechnung mit 0 % aus, er deklariert sie zum Steuersatz seines eigenen Landes (und zieht sie normalerweise auch ab).",
+    "youInvoice": "Du rechnest ab",
+    "viesZeroWarning": "0 % erfordert eine gültige VIES-Nummer. Ohne sie gilt dein eigener Inlandssatz.",
+    "thresholdCaveat": "Hinweis: Der Schwellenwert gilt für deinen gesamten jährlichen EU-B2C-Umsatz, nicht für eine einzelne Transaktion{{approx}}."
+  },
+  "countrySelect": {
+    "missing": "Du findest dein Land nicht? Sag uns Bescheid",
+    "regionsHint": "Der Satz ist nicht landesweit, sondern variiert je nach Bundesstaat/Provinz – hier findest du die vollständige Liste."
+  }
+}

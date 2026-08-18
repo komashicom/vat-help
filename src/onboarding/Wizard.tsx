@@ -4,7 +4,7 @@ import type { TFunction } from "i18next";
 import { useTranslation } from "react-i18next";
 import {
   Building2, User, UserX, Package, Home, Wrench, Store, MapPin, Loader2,
-  ArrowRight, ChevronDown, CheckCircle2, XCircle, AlertTriangle, RotateCcw, Pencil,
+  ArrowRight, ChevronDown, ChevronUp, CheckCircle2, XCircle, AlertTriangle, RotateCcw, Pencil,
   Globe, Github,
 } from "lucide-react";
 import type { Supply, ServiceKind, OnsiteLocation, ScenarioKey, ResultRecord } from "../schema/result";
@@ -161,6 +161,11 @@ export function Wizard() {
   const [s, setS] = useState<WizState>(makeInitial);
   const [buyerOpen, setBuyerOpen] = useState(false);
   const [supplyOpen, setSupplyOpen] = useState(false);
+  /** WHAT popup: on a phone the full six-option list needs scrolling, so we
+   *  open on the two service options people reach for most and keep the rest
+   *  (goods, on-site) behind "more options". Desktop always shows everything —
+   *  the gate is pure CSS (`hidden sm:block`), see `moreOnly`. */
+  const [showAllSupply, setShowAllSupply] = useState(false);
   const [rec, setRec] = useState<ResultRecord | null>(null);
   /** Per-option records for the What-are-you-selling popup (whose-VAT chips). */
   const [optRecs, setOptRecs] = useState<Record<string, ResultRecord>>({});
@@ -247,12 +252,24 @@ export function Wizard() {
   const pickBuyerType = (b: BuyerType) => { set({ buyerType: b }); setBuyerOpen(false); };
   const pickSupply = (d: Partial<WizState>) => { set(d); setSupplyOpen(false); };
 
+  /* Digital + general are the two options that stay visible while collapsed.
+   * Any other current selection forces the popup open in full — otherwise
+   * reopening it would hide the very choice the user already made. */
+  const supplyShortlisted = s.supply === "service" && (s.serviceKind === "digital" || s.serviceKind === "general");
+  const openSupply = () => {
+    setShowAllSupply(Boolean(s.supply) && !supplyShortlisted);
+    setSupplyOpen(true);
+  };
+  /** Collapsed → mobile-only hide. On sm+ every option is always shown. */
+  const moreOnly = showAllSupply ? undefined : "hidden sm:block";
+
   const restart = () => {
     setS(makeInitial());
     setRec(null);
     setVies({ status: "idle" });
     setBuyerOpen(false);
     setSupplyOpen(false);
+    setShowAllSupply(false);
   };
 
   const runVies = async () => {
@@ -288,27 +305,34 @@ export function Wizard() {
     <div className="mx-auto w-full max-w-md sm:max-w-2xl">
       {/* white card — header + calculator + footer */}
       <div className="flex min-h-[100dvh] flex-col bg-background shadow-sm sm:min-h-0 sm:overflow-hidden sm:rounded-2xl sm:border sm:shadow-xl">
-        <header className="flex items-center gap-2.5 px-5 py-4">
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+        {/* On mobile the three header items don't fit side by side, so the repo
+            pill shrinks to its bare icon and the title is allowed to go narrow. */}
+        <header className="flex items-center gap-2 px-4 py-3.5 sm:gap-2.5 sm:px-5 sm:py-4">
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary text-primary-foreground">
             <Globe className="h-5 w-5" />
           </span>
-          <h1 className="text-sm font-bold leading-tight tracking-tight text-foreground">{t("app.title")}</h1>
+          <h1 className="min-w-0 text-sm font-bold leading-tight tracking-tight text-foreground">{t("app.title")}</h1>
           {/* language switcher — sits right of the title, before the repo pill */}
-          <div className="ml-auto">
+          <div className="ml-auto shrink-0">
             <LanguageSelect />
           </div>
-          {/* open source presence: "OPEN SOURCE" pill linking to the repo */}
-          <a href={REPO_URL} target="_blank" rel="noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-lg border px-2.5 py-1.5 text-[10px] font-semibold uppercase tracking-wide text-muted-foreground transition-colors hover:bg-accent hover:text-foreground">
-            <Github className="h-3.5 w-3.5" />
-            {t("app.openSource")}
+          {/* open source presence: "OPEN SOURCE" pill linking to the repo
+              (icon only below sm — the label wraps to two lines otherwise) */}
+          <a href={REPO_URL} target="_blank" rel="noreferrer" title={t("app.openSource")}
+            className="inline-flex h-8 shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg border px-2 text-[10px] font-semibold uppercase tracking-wide text-muted-foreground transition-colors hover:bg-accent hover:text-foreground sm:px-2.5">
+            <Github className="h-3.5 w-3.5 shrink-0" />
+            <span className="hidden sm:inline">{t("app.openSource")}</span>
           </a>
         </header>
         <div className="flex flex-col px-4 pb-8 pt-2 sm:px-5">
           {/* 1. seller → buyer (the rates sit below the countries, hence top alignment).
               min-w-0 is required, otherwise long country names push the columns
-              wider than the screen (horizontal overflow on mobile). */}
-          <div className="grid grid-cols-[1fr_auto_1fr] items-start gap-2">
+              wider than the screen (horizontal overflow on mobile).
+              Below sm the two columns STACK: at ~390px a half-width column is
+              barely 170px, which truncates country names ("Egyesült Ara…"), the
+              buyer-type button and the VAT-ID field. Full width fixes all of
+              those at once; the arrow just turns to point down. */}
+          <div className="flex flex-col gap-2 sm:grid sm:grid-cols-[1fr_auto_1fr] sm:items-start">
             <div className="min-w-0 space-y-1.5">
               <PanelLabel>{t("wizard.seller")} <Hint text={t("wizard.sellerHint")} /></PanelLabel>
               <CountrySelect value={s.from} onChange={pickFrom} />
@@ -318,7 +342,7 @@ export function Wizard() {
                   placeholder={t("result.statePlaceholder")} />
               )}
             </div>
-            <ArrowRight className="mt-9 h-5 w-5 text-muted-foreground" />
+            <ArrowRight className="mx-auto h-5 w-5 rotate-90 text-muted-foreground sm:mt-9 sm:rotate-0" />
             <div className="min-w-0 space-y-1.5">
               <PanelLabel>{t("wizard.buyer")} <Hint text={t("wizard.buyerHint")} /></PanelLabel>
               <CountrySelect value={s.to} onChange={pickBuyerCountry} placeholder={t("wizard.chooseBuyer")} />
@@ -399,7 +423,7 @@ export function Wizard() {
             {s.buyerType && (
               <div className="space-y-1.5">
                 <PanelLabel>{t("wizard.what")} <Hint text={t("steps.supply.hint")} /></PanelLabel>
-                <button onClick={() => setSupplyOpen(true)}
+                <button onClick={openSupply}
                   className={cn(
                     "flex w-full items-center justify-center gap-2 rounded-xl border px-3 py-3 transition hover:bg-accent active:scale-[0.99]",
                     // once selected: borderless — only the chevron hints it can be reopened
@@ -418,7 +442,7 @@ export function Wizard() {
           <Dialog open={buyerOpen} onOpenChange={setBuyerOpen}>
             <DialogContent className="sm:max-w-md" showCloseButton={false}>
               <DialogHeader>
-                <DialogTitle>{t("wizard.toWhom")}</DialogTitle>
+                <DialogTitle className="text-center">{t("wizard.toWhom")}</DialogTitle>
                 <DialogDescription className="sr-only">{t("steps.buyer_type.subtitle")}</DialogDescription>
               </DialogHeader>
               <div className="space-y-2">
@@ -442,32 +466,34 @@ export function Wizard() {
                 ("On-site — at the buyer (🇦🇪 United Arab Emirates)") plus a tag */}
             <DialogContent className="sm:max-w-lg" showCloseButton={false}>
               <DialogHeader>
-                <DialogTitle>{t("wizard.what")}</DialogTitle>
+                <DialogTitle className="text-center">{t("wizard.what")}</DialogTitle>
                 <DialogDescription className="sr-only">{t("steps.supply.hint")}</DialogDescription>
               </DialogHeader>
+              {/* The DOM order is always the full list; while collapsed the
+                  phone simply hides everything but digital + general. */}
               <div className="space-y-2">
-                <SectionLabel>{t("wizard.sectionGoods")}</SectionLabel>
+                <SectionLabel className={moreOnly}>{t("wizard.sectionGoods")}</SectionLabel>
                 {crossBorder ? (
                   <>
-                    <ChoiceCard active={s.supply === "product" && s.goodsLeave}
+                    <ChoiceCard className={moreOnly} active={s.supply === "product" && s.goodsLeave}
                       onClick={() => pickSupply({ supply: "product", goodsLeave: true })}
                       icon={<Package className="h-5 w-5" />} title={t("wizard.goodsLeaveTitle")}
                       desc={t("wizard.goodsLeaveDesc")}
                       tag={ind("product-leave")?.tag} footer={ind("product-leave")?.footer} />
-                    <ChoiceCard active={s.supply === "product" && !s.goodsLeave}
+                    <ChoiceCard className={moreOnly} active={s.supply === "product" && !s.goodsLeave}
                       onClick={() => pickSupply({ supply: "product", goodsLeave: false })}
                       icon={<Home className="h-5 w-5" />} title={t("wizard.goodsStayTitle")}
                       desc={t("wizard.goodsStayDesc")}
                       tag={ind("product-stay")?.tag} footer={ind("product-stay")?.footer} />
                   </>
                 ) : (
-                  <ChoiceCard active={s.supply === "product"}
+                  <ChoiceCard className={moreOnly} active={s.supply === "product"}
                     onClick={() => pickSupply({ supply: "product", goodsLeave: true })}
                     icon={<Package className="h-5 w-5" />} title={t("wizard.supplyProduct")}
                     desc={t("wizard.supplyProductDesc")}
                     tag={ind("product")?.tag} footer={ind("product")?.footer} />
                 )}
-                <SectionLabel className="pt-2">{t("wizard.sectionServices")}</SectionLabel>
+                <SectionLabel className={cn("pt-2", moreOnly)}>{t("wizard.sectionServices")}</SectionLabel>
                 <ChoiceCard active={s.supply === "service" && s.serviceKind === "digital"}
                   onClick={() => pickSupply({ supply: "service", serviceKind: "digital" })}
                   icon={<Store className="h-5 w-5" />} title={t("service.digital.title")}
@@ -484,13 +510,13 @@ export function Wizard() {
                     IS the choice — no separate radio-button sub-step */}
                 {crossBorder ? (
                   <>
-                    <ChoiceCard active={s.supply === "service" && s.serviceKind === "onsite" && s.onsiteLocation === "seller"}
+                    <ChoiceCard className={moreOnly} active={s.supply === "service" && s.serviceKind === "onsite" && s.onsiteLocation === "seller"}
                       onClick={() => pickSupply({ supply: "service", serviceKind: "onsite", onsiteLocation: "seller" })}
                       icon={<MapPin className="h-5 w-5" />} title={t("wizard.onsiteSeller", { country: fromFlagged })}
                       desc={t("service.onsite.desc")}
                       hint={`${t("wizard.examplesLabel")} ${t("service.onsite.examples")}`}
                       tag={ind("onsite-seller")?.tag} footer={ind("onsite-seller")?.footer} />
-                    <ChoiceCard active={s.supply === "service" && s.serviceKind === "onsite" && s.onsiteLocation === "customer"}
+                    <ChoiceCard className={moreOnly} active={s.supply === "service" && s.serviceKind === "onsite" && s.onsiteLocation === "customer"}
                       onClick={() => pickSupply({ supply: "service", serviceKind: "onsite", onsiteLocation: "customer" })}
                       icon={<MapPin className="h-5 w-5" />} title={t("wizard.onsiteCustomer", { country: toFlagged })}
                       desc={t("service.onsite.desc")}
@@ -498,13 +524,22 @@ export function Wizard() {
                       tag={ind("onsite-customer")?.tag} footer={ind("onsite-customer")?.footer} />
                   </>
                 ) : (
-                  <ChoiceCard active={s.supply === "service" && s.serviceKind === "onsite"}
+                  <ChoiceCard className={moreOnly} active={s.supply === "service" && s.serviceKind === "onsite"}
                     onClick={() => pickSupply({ supply: "service", serviceKind: "onsite", onsiteLocation: "seller" })}
                     icon={<MapPin className="h-5 w-5" />} title={t("service.onsite.title")}
                     desc={t("service.onsite.desc")}
                     hint={`${t("wizard.examplesLabel")} ${t("service.onsite.examples")}`}
                     tag={ind("onsite")?.tag} footer={ind("onsite")?.footer} />
                 )}
+                {/* Phone-only toggle: reveals / hides goods + on-site again.
+                    Never shown on sm+, where nothing was hidden to begin with. */}
+                <button type="button" onClick={() => setShowAllSupply((v) => !v)}
+                  className="flex w-full items-center justify-center gap-1.5 rounded-xl border border-dashed px-3 py-2.5 text-xs font-semibold uppercase tracking-wide text-muted-foreground transition-colors hover:bg-accent hover:text-foreground sm:hidden">
+                  {t(showAllSupply ? "wizard.fewerOptions" : "wizard.moreOptions")}
+                  {showAllSupply
+                    ? <ChevronUp className="h-3.5 w-3.5 shrink-0" />
+                    : <ChevronDown className="h-3.5 w-3.5 shrink-0" />}
+                </button>
               </div>
             </DialogContent>
           </Dialog>
@@ -541,7 +576,10 @@ export function Wizard() {
       {/* Mobile: stack the three items, each centered on its own line, so long
           country names never overflow or collide with Reset. Desktop (sm+): a
           3-column grid with Reset in the centered "auto" column, links flanking.
-          Each link is an unbreakable unit so the pencil never orphans. */}
+          Each link is an unbreakable unit so the pencil never orphans.
+          The pencil leads BOTH links on mobile (they sit centered under each
+          other, so mirroring them would just look misaligned); from sm up the
+          buyer's link flips so its pencil points outward, away from Reset. */}
       <div className="mx-auto mt-4 flex w-full max-w-md flex-col items-center gap-1.5 px-4 pb-6 sm:grid sm:grid-cols-[1fr_auto_1fr] sm:items-center sm:gap-x-4">
         <a href={editCountryUrl(s.from)} target="_blank" rel="noreferrer"
           title={`${t("result.editAria")} — ${fromName}`}
@@ -556,9 +594,9 @@ export function Wizard() {
         {s.to && s.to !== s.from ? (
           <a href={editCountryUrl(s.to)} target="_blank" rel="noreferrer"
             title={`${t("result.editAria")} — ${toName}`}
-            className="inline-flex max-w-full items-center gap-1 whitespace-nowrap text-xs font-medium text-primary hover:text-primary/80 sm:justify-self-end">
-            <span className="min-w-0 truncate underline underline-offset-2">{toName.toUpperCase()}</span>
+            className="inline-flex max-w-full items-center gap-1 whitespace-nowrap text-xs font-medium text-primary hover:text-primary/80 sm:flex-row-reverse sm:justify-self-end">
             <Pencil className="h-3 w-3 shrink-0" />
+            <span className="min-w-0 truncate underline underline-offset-2">{toName.toUpperCase()}</span>
           </a>
         ) : <span className="hidden sm:block" />}
       </div>

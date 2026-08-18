@@ -75,11 +75,11 @@
     "rcTag": "0% · phí ngược",
     "exportTag": "Xuất khẩu · 0%",
     "outsideTag": "0%",
-    "calcLine": "VAT tính vào",
+    "calcLine": "Quốc gia tính VAT:",
     "rcLine": "Bạn lập hóa đơn 0% - người mua tự tài khoản",
-    "exportLine": "Bạn xuất hóa đơn 0% — thuế VAT nhập khẩu vào",
+    "exportLine": "Bạn xuất hóa đơn 0% — quốc gia VAT nhập khẩu:",
     "outsideEuLine": "Bạn lập hoá đơn 0% — ngoài EU VAT",
-    "noTaxLine": "Bạn lập hóa đơn 0% — không có VAT chung trong"
+    "noTaxLine": "Bạn xuất hóa đơn 0% — quốc gia không có VAT chung:"
   },
   "footer": {
     "line1": "Đây là một dự án nguồn mở, miễn phí. Việc xử lý tất cả các loại thuế VAT trên thế giới là một thách thức khá lớn.",

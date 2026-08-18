@@ -75,11 +75,11 @@
     "rcTag": "0 % · omvendt opladning",
     "exportTag": "Eksporter · 0 %",
     "outsideTag": "0 %",
-    "calcLine": "moms beregnet i",
+    "calcLine": "Momsland:",
     "rcLine": "Du fakturerer 0 % — købers selvkonti",
-    "exportLine": "Du fakturerer 0% — import moms ind",
+    "exportLine": "Du fakturerer 0 % — land for importmoms:",
     "outsideEuLine": "Du fakturerer 0 % — uden for EU-moms",
-    "noTaxLine": "Du fakturerer 0 % - ingen generel moms ind"
+    "noTaxLine": "Du fakturerer 0 % — land uden generel moms:"
   },
   "footer": {
     "line1": "Dette er et gratis open source-projekt. Det er noget af en udfordring at håndtere alle moms i verden.",

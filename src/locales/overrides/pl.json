@@ -1,0 +1,39 @@
+{
+  "wizard": {
+    "buyerVatHint": "Firma z numerem VAT → zasady B2B. W UE odwrotne obciążenie: wystawiasz fakturę ze stawką 0 %, a kupujący rozlicza VAT sam.",
+    "buyerIndividualHint": "Konsument końcowy — zawsze B2C, musisz doliczyć VAT na fakturze.",
+    "vatIdHint": "W przypadku kupującego z UE stawka 0 % wymaga ważnego numeru VAT. Format jest sprawdzany natychmiast; przycisk Zweryfikuj odpytuje oficjalną bazę VIES.",
+    "viesButton": "Zweryfikuj",
+    "viesInvalid": "VIES: nieprawidłowy numer VAT — wyjaśnij to z kupującym przed wystawieniem faktury na 0 %.",
+    "viesError": "VIES jest obecnie niedostępny — na razie możesz polegać tylko na sprawdzeniu formatu.",
+    "chooseBuyer": "Wybierz kupującego",
+    "choose": "Wybierz…",
+    "what": "Co sprzedajesz?"
+  },
+  "supplyVat": {
+    "rcLine": "Fakturujesz 0 % — kupujący rozlicza VAT sam",
+    "exportLine": "Fakturujesz 0 % — kraj VAT importowego:",
+    "outsideEuLine": "Fakturujesz 0 % — poza unijnym VAT",
+    "noTaxLine": "Fakturujesz 0 % — kraj bez ogólnego VAT:",
+    "calcLine": "Kraj VAT:"
+  },
+  "footer": {
+    "line2": "Jeśli coś jest nie tak, pomóż nam to naprawić."
+  },
+  "vatCheck": {
+    "empty": "Wprowadź numer VAT kupującego."
+  },
+  "result": {
+    "editAria": "Zaproponuj poprawkę — edytuj zasady tego kraju",
+    "netHint": "Kliknij liczbę, aby ją edytować, walutę, aby ją zmienić.",
+    "statePlaceholder": "Wybierz stan…",
+    "rcHint": "W B2B obowiązek podatkowy przechodzi na kupującego: wystawiasz fakturę ze stawką 0 %, a on deklaruje ją według stawki swojego kraju (i zazwyczaj również ją odlicza).",
+    "youInvoice": "Wystawiasz fakturę",
+    "viesZeroWarning": "0 % wymaga ważnego numeru VIES. Bez niego obowiązuje Twoja stawka krajowa.",
+    "thresholdCaveat": "Uwaga: próg dotyczy Twojej całkowitej rocznej sprzedaży B2C w UE, a nie pojedynczej transakcji{{approx}}."
+  },
+  "countrySelect": {
+    "missing": "Nie możesz znaleźć swojego kraju? Daj nam znać",
+    "regionsHint": "Stawka nie jest krajowa, lecz różni się w zależności od stanu/prowincji — otwórz, aby zobaczyć pełną listę."
+  }
+}

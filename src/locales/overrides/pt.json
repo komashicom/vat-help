@@ -1,0 +1,39 @@
+{
+  "wizard": {
+    "buyerVatHint": "Empresa com número de IVA → regras B2B. Na UE, autoliquidação: você fatura a 0 % e o comprador autoliquida.",
+    "buyerIndividualHint": "Consumidor final — sempre B2C, você tem de cobrar IVA na fatura.",
+    "vatIdHint": "Para um comprador da UE, 0 % requer um número de IVA válido. O formato é verificado instantaneamente; o botão Verificar consulta a base de dados oficial VIES.",
+    "viesButton": "Verificar",
+    "viesInvalid": "VIES: número de IVA inválido — esclareça com o comprador antes de faturar a 0 %.",
+    "viesError": "O VIES não está disponível no momento — por enquanto você só pode contar com a verificação do formato.",
+    "chooseBuyer": "Escolha um comprador",
+    "choose": "Escolher…",
+    "what": "O que você está vendendo?"
+  },
+  "supplyVat": {
+    "rcLine": "Você fatura 0 % — o comprador autoliquida",
+    "exportLine": "Você fatura 0 % — país do IVA de importação:",
+    "outsideEuLine": "Você fatura 0 % — fora do IVA da UE",
+    "noTaxLine": "Você fatura 0 % — país sem IVA geral:",
+    "calcLine": "País do IVA:"
+  },
+  "footer": {
+    "line2": "Se algo não estiver correto, ajude-nos a corrigir."
+  },
+  "vatCheck": {
+    "empty": "Digite o número de IVA do comprador."
+  },
+  "result": {
+    "editAria": "Sugira uma correção — edite as regras deste país",
+    "netHint": "Clique no número para editá-lo e na moeda para alterá-la.",
+    "statePlaceholder": "Escolha um estado…",
+    "rcHint": "No B2B a responsabilidade fiscal passa para o comprador: você fatura a 0 % e ele declara à alíquota do próprio país (e normalmente também deduz).",
+    "youInvoice": "Você fatura",
+    "viesZeroWarning": "0 % requer um número VIES válido. Sem ele, aplica-se a sua própria alíquota interna.",
+    "thresholdCaveat": "Observação: o limite aplica-se ao total das suas vendas anuais B2C na UE, não a uma única transação{{approx}}."
+  },
+  "countrySelect": {
+    "missing": "Não encontra o seu país? Avise-nos",
+    "regionsHint": "A taxa não é nacional, mas varia conforme o estado/província — abra para ver a lista completa."
+  }
+}

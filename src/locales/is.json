@@ -75,11 +75,11 @@
     "rcTag": "0% · öfug hleðsla",
     "exportTag": "Flytja út · 0%",
     "outsideTag": "0%",
-    "calcLine": "VSK reiknaður í",
+    "calcLine": "VSK-land:",
     "rcLine": "Þú reikningar 0% - sjálfsreikningar kaupanda",
-    "exportLine": "Þú reikningar 0% — flytur VSK inn",
-    "outsideEuLine": "Þú reikningar 0% — utan ESB VSK",
-    "noTaxLine": "Þú reikningar 0% — enginn almennur VSK inn"
+    "exportLine": "Þú rukkar 0% — land innflutnings-VSK:",
+    "outsideEuLine": "Þú rukkar 0% — utan VSK ESB",
+    "noTaxLine": "Þú rukkar 0% — land án almenns VSK:"
   },
   "footer": {
     "line1": "Þetta er ókeypis, opinn uppspretta verkefni. Það er töluverð áskorun að sjá um allan virðisaukaskatt í heiminum.",

@@ -1,0 +1,39 @@
+{
+  "wizard": {
+    "buyerVatHint": "Podjetje z ID za DDV → pravila B2B. Znotraj EU obrnjena davčna obveznost: fakturiraš po 0 % in kupec obračuna DDV sam.",
+    "buyerIndividualHint": "Končni potrošnik — vedno B2C, na računu moraš obračunati DDV.",
+    "vatIdHint": "Za kupca iz EU 0 % zahteva veljavno ID številko za DDV. Format se takoj preveri; gumb Preveri poizveduje po uradni zbirki VIES.",
+    "viesButton": "Preveri",
+    "viesInvalid": "VIES: neveljavna ID številka za DDV — razjasni s kupcem, preden izdaš račun po 0 %.",
+    "viesError": "VIES trenutno ni na voljo — za zdaj se lahko zaneseš le na preverjanje formata.",
+    "chooseBuyer": "Izberi kupca",
+    "choose": "Izberi…",
+    "what": "Kaj prodajaš?"
+  },
+  "supplyVat": {
+    "rcLine": "Fakturiraš 0 % — kupec obračuna DDV sam",
+    "exportLine": "Fakturiraš 0 % — država uvoznega DDV:",
+    "outsideEuLine": "Fakturiraš 0 % — zunaj DDV EU",
+    "noTaxLine": "Fakturiraš 0 % — država brez splošnega DDV:",
+    "calcLine": "Država DDV:"
+  },
+  "footer": {
+    "line2": "Če kaj ni v redu, nam pomagaj popraviti."
+  },
+  "vatCheck": {
+    "empty": "Vnesi davčno številko kupca."
+  },
+  "result": {
+    "editAria": "Predlagaj popravek — uredi pravila te države",
+    "netHint": "Klikni številko, da jo urediš, in valuto, da jo spremeniš.",
+    "statePlaceholder": "Izberi državo…",
+    "rcHint": "Pri B2B davčna obveznost preide na kupca: ti fakturiraš po 0 %, on jo prijavi po stopnji svoje države (in jo običajno tudi odbije).",
+    "youInvoice": "Ti fakturiraš",
+    "viesZeroWarning": "0 % zahteva veljavno številko VIES. Brez nje velja tvoja domača stopnja.",
+    "thresholdCaveat": "Opomba: prag dejansko velja za tvojo skupno letno prodajo B2C v EU, ne za posamezno transakcijo{{approx}}."
+  },
+  "countrySelect": {
+    "missing": "Ne najdeš svoje države? Sporoči nam",
+    "regionsHint": "Stopnja ni državna, ampak se razlikuje glede na zvezno državo/provinco — odpri za celoten seznam."
+  }
+}

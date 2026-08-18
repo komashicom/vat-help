@@ -28,7 +28,7 @@ export function Hint({ text, className }: { text: ReactNode; className?: string 
 }
 
 export function ChoiceCard({
-  active, onClick, icon, title, desc, badge, hint, tag, footer,
+  active, onClick, icon, title, desc, badge, hint, tag, footer, className,
 }: {
   active: boolean; onClick: () => void; icon?: ReactNode; title: string; desc?: string;
   badge?: ReactNode; hint?: string;
@@ -36,12 +36,15 @@ export function ChoiceCard({
   tag?: ReactNode;
   /** A line under the description, below a faint divider (e.g. "VAT calculated in 🇭🇺 Hungary"). */
   footer?: ReactNode;
+  /** Visibility/layout overrides from the caller (e.g. the mobile "show more" gate). */
+  className?: string;
 }) {
   return (
     <button onClick={onClick}
       className={cn(
-        "flex w-full items-center gap-3 rounded-xl border p-4 text-left transition-colors active:scale-[0.99]",
+        "flex w-full items-center gap-2.5 rounded-xl border p-3 text-left transition-colors active:scale-[0.99] sm:gap-3 sm:p-4",
         active ? "border-primary bg-primary/5 ring-1 ring-primary" : "border-border bg-card hover:bg-accent",
+        className,
       )}>
       {icon && (
         <span className={cn("flex h-10 w-10 shrink-0 items-center justify-center rounded-lg",
@@ -53,7 +56,7 @@ export function ChoiceCard({
         {/* Title + inline badge/hint on the left (wraps if long, e.g. an on-site
             title carrying a country name), with the tag pinned to the top-right. */}
         <span className="flex items-start gap-2">
-          <span className="min-w-0 flex-1 font-semibold text-foreground">
+          <span className="min-w-0 flex-1 text-sm font-semibold leading-snug text-foreground sm:text-base">
             {title}
             {badge && <Badge variant="secondary" className="ml-2 align-middle text-[11px]">{badge}</Badge>}
             {hint && <span className="ml-1 inline-flex translate-y-0.5 align-middle"><Hint text={hint} /></span>}

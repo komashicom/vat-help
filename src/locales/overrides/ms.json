@@ -1,0 +1,7 @@
+{
+  "supplyVat": {
+    "calcLine": "Negara VAT:",
+    "exportLine": "Anda invois 0% — negara VAT import:",
+    "noTaxLine": "Anda invois 0% — negara tanpa VAT am:"
+  }
+}

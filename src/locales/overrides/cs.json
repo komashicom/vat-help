@@ -1,0 +1,39 @@
+{
+  "wizard": {
+    "buyerVatHint": "Firma s DIČ → pravidla B2B. V rámci EU přenesení daňové povinnosti: fakturuješ s 0 % a kupující si daň vypořádá sám.",
+    "buyerIndividualHint": "Konečný spotřebitel — vždy B2C, na faktuře musíš účtovat DPH.",
+    "vatIdHint": "U kupujícího z EU vyžaduje 0 % platné DIČ. Formát se kontroluje okamžitě; tlačítko Ověřit se dotazuje oficiální databáze VIES.",
+    "viesButton": "Ověřit",
+    "viesInvalid": "VIES: neplatné DIČ — vyjasni si to s kupujícím, než budeš fakturovat s 0 %.",
+    "viesError": "VIES je momentálně nedostupný — prozatím se můžeš spolehnout jen na kontrolu formátu.",
+    "chooseBuyer": "Vyber kupujícího",
+    "choose": "Vyber…",
+    "what": "Co prodáváš?"
+  },
+  "supplyVat": {
+    "rcLine": "Fakturuješ 0 % — kupující si daň vypořádá sám",
+    "exportLine": "Fakturuješ 0 % — země dovozní DPH:",
+    "outsideEuLine": "Fakturuješ 0 % — mimo DPH EU",
+    "noTaxLine": "Fakturuješ 0 % — země bez obecné DPH:",
+    "calcLine": "Země DPH:"
+  },
+  "footer": {
+    "line2": "Pokud něco není v pořádku, pomoz nám to opravit."
+  },
+  "vatCheck": {
+    "empty": "Zadej DIČ kupujícího."
+  },
+  "result": {
+    "editAria": "Navrhni opravu — uprav pravidla této země",
+    "netHint": "Klikni na číslo, abys ho upravil, na měnu, abys ji změnil.",
+    "statePlaceholder": "Vyber stát…",
+    "rcHint": "U B2B přechází daňová povinnost na kupujícího: ty fakturuješ s 0 %, on ji přizná podle sazby své země (a obvykle si ji také odečte).",
+    "youInvoice": "Ty fakturuješ",
+    "viesZeroWarning": "0 % vyžaduje platné číslo VIES. Bez něj platí tvoje vlastní tuzemská sazba.",
+    "thresholdCaveat": "Poznámka: limit se ve skutečnosti vztahuje na tvůj celkový roční prodej B2C v EU, ne na jednu transakci{{approx}}."
+  },
+  "countrySelect": {
+    "missing": "Nemůžeš najít svou zemi? Dej nám vědět",
+    "regionsHint": "Sazba není celostátní, ale liší se podle státu/provincie — otevři pro úplný seznam."
+  }
+}

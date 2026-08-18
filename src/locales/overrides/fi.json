@@ -1,0 +1,39 @@
+{
+  "wizard": {
+    "buyerVatHint": "Yritys, jolla on ALV-numero → B2B-säännöt. EU:n sisällä käännetty verovelvollisuus: laskutat 0 % ja ostaja tilittää veron itse.",
+    "buyerIndividualHint": "Loppukuluttaja — aina B2C, sinun on laskutettava ALV laskulla.",
+    "vatIdHint": "EU-ostajalla 0 % edellyttää voimassa olevaa ALV-numeroa. Muoto tarkistetaan välittömästi; Tarkista-painike kysyy virallisesta VIES-tietokannasta.",
+    "viesButton": "Tarkista",
+    "viesInvalid": "VIES: virheellinen ALV-numero — selvitä asia ostajan kanssa ennen kuin laskutat 0 %:lla.",
+    "viesError": "VIES ei ole tällä hetkellä käytettävissä — voit toistaiseksi luottaa vain muodon tarkistukseen.",
+    "chooseBuyer": "Valitse ostaja",
+    "choose": "Valitse…",
+    "what": "Mitä sinä myyt?"
+  },
+  "supplyVat": {
+    "rcLine": "Laskutat 0 % — ostaja tilittää veron itse",
+    "exportLine": "Laskutat 0 % — tuonnin ALV-maa:",
+    "outsideEuLine": "Laskutat 0 % — EU:n ALV:n ulkopuolella",
+    "noTaxLine": "Laskutat 0 % — maa ilman yleistä arvonlisäveroa:",
+    "calcLine": "ALV-maa:"
+  },
+  "footer": {
+    "line2": "Jos jokin ei ole oikein, auta meitä korjaamaan se."
+  },
+  "vatCheck": {
+    "empty": "Syötä ostajan ALV-numero."
+  },
+  "result": {
+    "editAria": "Ehdota korjausta — muokkaa tämän maan sääntöjä",
+    "netHint": "Napsauta numeroa muokataksesi sitä ja valuuttaa vaihtaaksesi sitä.",
+    "statePlaceholder": "Valitse osavaltio…",
+    "rcHint": "B2B:ssä verovelvollisuus siirtyy ostajalle: sinä laskutat 0 %:lla, hän ilmoittaa sen oman maansa verokannalla (ja yleensä myös vähentää sen).",
+    "youInvoice": "Sinä laskutat",
+    "viesZeroWarning": "0 % edellyttää voimassa olevaa VIES-numeroa. Ilman sitä sovelletaan omaa kotimaista verokantaasi.",
+    "thresholdCaveat": "Huomaa: raja koskee koko vuotuista EU:n B2C-myyntiäsi, ei yhtä liiketointa{{approx}}."
+  },
+  "countrySelect": {
+    "missing": "Etkö löydä maatasi? Kerro meille",
+    "regionsHint": "Verokanta ei ole valtakunnallinen, vaan vaihtelee osavaltioittain/provinsseittain — avaa koko luettelo."
+  }
+}
