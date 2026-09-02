@@ -31,8 +31,7 @@
     "std": 20,
     "reduced": [
       14,
-      7,
-      0
+      7
     ],
     "reducedCategories": [
       {
@@ -53,17 +52,6 @@
           "sporting event tickets"
         ],
         "type": {}
-      },
-      {
-        "rate": 0,
-        "items": [
-          "export of goods and services",
-          "exempt supplies under national law"
-        ],
-        "type": {
-          "0": "Zero rate (export)",
-          "903": "Exempt from taxation"
-        }
       }
     ],
     "eu": false,

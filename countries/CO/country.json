@@ -30,8 +30,7 @@
     "flag": "🇨🇴",
     "std": 19,
     "reduced": [
-      5,
-      0
+      5
     ],
     "reducedCategories": [
       {
@@ -43,17 +42,6 @@
           "bicycles and certain electric vehicles"
         ],
         "type": {}
-      },
-      {
-        "rate": 0,
-        "items": [
-          "export of goods and services",
-          "exempt supplies under national law"
-        ],
-        "type": {
-          "exento": "Exempt — 0%, input tax recoverable",
-          "excluido": "Excluded — outside the scope of IVA"
-        }
       }
     ],
     "eu": false,

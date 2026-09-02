@@ -31,8 +31,7 @@
     "std": 20,
     "reduced": [
       14,
-      10,
-      0
+      10
     ],
     "reducedCategories": [
       {
@@ -52,14 +51,6 @@
           "financial and banking services",
           "petroleum products",
           "urban and interurban transport"
-        ],
-        "type": {}
-      },
-      {
-        "rate": 0,
-        "items": [
-          "export of goods and services",
-          "exempt supplies under national law"
         ],
         "type": {}
       }

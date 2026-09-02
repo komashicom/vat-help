@@ -30,8 +30,7 @@
     "flag": "🇲🇽",
     "std": 16,
     "reduced": [
-      8,
-      0
+      8
     ],
     "reducedCategories": [
       {
@@ -42,19 +41,6 @@
           "local services rendered within the border zone"
         ],
         "type": {}
-      },
-      {
-        "rate": 0,
-        "items": [
-          "export of goods and services",
-          "exempt supplies under national law"
-        ],
-        "type": {
-          "01": "Not an object of tax",
-          "04": "Object of tax, but no tax due",
-          "Exento": "Exempt (line-level TipoFactor)",
-          "Tasa 0%": "Zero rate (line-level TipoFactor)"
-        }
       }
     ],
     "eu": false,

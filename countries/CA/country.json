@@ -30,7 +30,6 @@
     "flag": "🇨🇦",
     "std": 5,
     "reduced": [
-      0
     ],
     "eu": false,
     "system": "ca",
@@ -163,18 +162,6 @@
         "name": "Location-bound service — by place of performance",
         "detail": "Real-estate-related / event admission / restaurant / on-site service: taxed where it physically takes place ({{loc}}) — even for B2B, with no reverse charge. Local tax registration is typically required."
       }
-    },
-    "reducedCategories": [
-      {
-        "rate": 0,
-        "items": [
-          "basic groceries",
-          "prescription drugs and medical devices",
-          "exports of goods and services",
-          "exempt supplies (health, education, financial services, residential rent)"
-        ],
-        "type": {}
-      }
-    ]
+    }
   }
 }

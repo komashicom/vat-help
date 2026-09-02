@@ -30,8 +30,7 @@
     "flag": "🇦🇷",
     "std": 21,
     "reduced": [
-      10.5,
-      0
+      10.5
     ],
     "reducedCategories": [
       {
@@ -44,18 +43,6 @@
           "books, newspapers and periodicals"
         ],
         "type": {}
-      },
-      {
-        "rate": 0,
-        "items": [
-          "export of goods and services",
-          "exempt supplies under national law"
-        ],
-        "type": {
-          "3": "Zero rate (0%)",
-          "1": "Not taxed",
-          "2": "Exempt"
-        }
       }
     ],
     "eu": false,

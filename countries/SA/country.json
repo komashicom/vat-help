@@ -30,7 +30,6 @@
     "flag": "🇸🇦",
     "std": 15,
     "reduced": [
-      0
     ],
     "eu": false,
     "system": "vat",
@@ -95,26 +94,6 @@
         "name": "Location-bound service — by place of performance",
         "detail": "Real-estate-related / event admission / restaurant / on-site service: taxed where it physically takes place ({{loc}}) — even for B2B, with no reverse charge. Local tax registration is typically required."
       }
-    },
-    "reducedCategories": [
-      {
-        "rate": 0,
-        "items": [
-          "export of goods and services",
-          "exempt supplies under national law"
-        ],
-        "type": {
-          "VATEX-SA-33": "Export of services",
-          "VATEX-SA-32": "Export of goods",
-          "VATEX-SA-29": "Financial services",
-          "VATEX-SA-29-7": "Life insurance services",
-          "VATEX-SA-30": "Real estate transactions",
-          "VATEX-SA-34-1": "Transport of goods or passengers outside the Kingdom",
-          "VATEX-SA-35": "Medicines and medical equipment",
-          "VATEX-SA-36": "Qualifying metals",
-          "VATEX-SA-OOS": "Out of scope"
-        }
-      }
-    ]
+    }
   }
 }

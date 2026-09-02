@@ -30,8 +30,7 @@
     "flag": "🇯🇵",
     "std": 10,
     "reduced": [
-      8,
-      0
+      8
     ],
     "reducedCategories": [
       {
@@ -42,20 +41,6 @@
           "takeaway and delivery food"
         ],
         "type": {}
-      },
-      {
-        "rate": 0,
-        "items": [
-          "export of goods and services",
-          "exempt supplies under national law"
-        ],
-        "type": {
-          "G": "Export / zero-rated supply to a foreign customer",
-          "O": "Outside the scope of tax",
-          "E": "Exempt supply",
-          "AE": "Reverse charge — tax accounted for by the customer",
-          "Z": "Zero-rated goods"
-        }
       }
     ],
     "eu": false,

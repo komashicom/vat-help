@@ -31,8 +31,7 @@
     "std": 22,
     "reduced": [
       10,
-      5,
-      0
+      5
     ],
     "reducedCategories": [
       {
@@ -54,30 +53,6 @@
           "certain passenger transport"
         ],
         "type": {}
-      },
-      {
-        "rate": 0,
-        "items": [
-          "intra-Community supply of goods",
-          "export of goods outside the EU",
-          "B2B services taxed in the customer's country",
-          "exempt activities (medical, education, financial, insurance, letting)"
-        ],
-        "type": {
-          "N3.2": "Not taxable — intra-Community supply of goods",
-          "N3.1": "Not taxable — export of goods",
-          "N2.1": "Not subject — place of supply outside Italy",
-          "N1": "Excluded from VAT (art. 15)",
-          "N2.2": "Not subject — other cases (flat-rate regime)",
-          "N3.3": "Not taxable — supplies to San Marino",
-          "N3.4": "Not taxable — transactions treated as exports",
-          "N3.5": "Not taxable — under a declaration of intent",
-          "N3.6": "Not taxable — other cases",
-          "N4": "Exempt supply (art. 10)",
-          "N5": "Margin scheme — VAT not shown on the invoice",
-          "N6.1-N6.9": "Domestic reverse charge",
-          "N7": "VAT accounted for in another EU member state (OSS)"
-        }
       }
     ],
     "eu": true,

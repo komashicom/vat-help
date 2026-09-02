@@ -31,8 +31,7 @@
     "std": 13,
     "reduced": [
       9,
-      6,
-      0
+      6
     ],
     "reducedCategories": [
       {
@@ -56,18 +55,6 @@
           "education and medical services"
         ],
         "type": {}
-      },
-      {
-        "rate": 0,
-        "items": [
-          "export of goods and services",
-          "exempt supplies under national law"
-        ],
-        "type": {
-          "免税": "Exempt",
-          "不征税": "Not taxable",
-          "0%": "Zero-rated (export)"
-        }
       }
     ],
     "eu": false,

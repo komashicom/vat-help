@@ -31,8 +31,7 @@
     "std": 8.1,
     "reduced": [
       3.8,
-      2.6,
-      0
+      2.6
     ],
     "reducedCategories": [
       {
@@ -51,14 +50,6 @@
           "books, e-books and newspapers",
           "pharmaceutical products",
           "water supply"
-        ],
-        "type": {}
-      },
-      {
-        "rate": 0,
-        "items": [
-          "export of goods and services",
-          "exempt supplies under national law"
         ],
         "type": {}
       }

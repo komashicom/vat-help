@@ -30,8 +30,7 @@
     "flag": "🇬🇧",
     "std": 20,
     "reduced": [
-      5,
-      0
+      5
     ],
     "reducedCategories": [
       {
@@ -42,19 +41,6 @@
           "energy-saving materials installed in homes",
           "certain residential renovation and conversion works",
           "smoking cessation and nicotine products"
-        ],
-        "type": {}
-      },
-      {
-        "rate": 0,
-        "items": [
-          "most food",
-          "books, newspapers and printed matter",
-          "children's clothing and footwear",
-          "prescription medicines",
-          "public transport",
-          "exports of goods and services",
-          "exempt supplies (financial services, insurance, education, health)"
         ],
         "type": {}
       }

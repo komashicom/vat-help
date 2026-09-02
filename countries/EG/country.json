@@ -30,7 +30,6 @@
     "flag": "🇪🇬",
     "std": 14,
     "reduced": [
-      0
     ],
     "eu": false,
     "system": "vat",
@@ -95,24 +94,6 @@
         "name": "Location-bound service — by place of performance",
         "detail": "Real-estate-related / event admission / restaurant / on-site service: taxed where it physically takes place ({{loc}}) — even for B2B, with no reverse charge. Local tax registration is typically required."
       }
-    },
-    "reducedCategories": [
-      {
-        "rate": 0,
-        "items": [
-          "export of goods and services",
-          "exempt supplies under national law"
-        ],
-        "type": {
-          "V001": "Export",
-          "V002": "Export to free areas and other areas",
-          "V003": "Exempt good or service",
-          "V004": "Non-taxable good or service",
-          "V005": "Diplomatic, consular and embassy exemption",
-          "V006": "Defence and national security exemption",
-          "V007": "Agreement-based exemption"
-        }
-      }
-    ]
+    }
   }
 }

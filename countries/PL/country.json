@@ -31,8 +31,7 @@
     "std": 23,
     "reduced": [
       8,
-      5,
-      0
+      5
     ],
     "reducedCategories": [
       {
@@ -54,24 +53,6 @@
           "children's publications"
         ],
         "type": {}
-      },
-      {
-        "rate": 0,
-        "items": [
-          "intra-Community supply of goods",
-          "export of goods outside the EU",
-          "B2B services taxed in the customer's country",
-          "exempt activities (medical, education, financial, insurance, letting)"
-        ],
-        "type": {
-          "0 WDT": "0% — intra-Community supply of goods",
-          "0 EX": "0% — export of goods",
-          "np II": "Not subject — services reported in the VAT-UE return (art. 100)",
-          "np I": "Not subject — supplies outside Poland, other than art. 100",
-          "0 KR": "0% — domestic, other than intra-Community supply or export",
-          "zw": "Exempt — activity-based or small business",
-          "oo": "Domestic reverse charge"
-        }
       }
     ],
     "eu": true,

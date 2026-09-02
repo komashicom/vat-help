@@ -30,8 +30,7 @@
     "flag": "🇷🇸",
     "std": 20,
     "reduced": [
-      10,
-      0
+      10
     ],
     "reducedCategories": [
       {
@@ -44,23 +43,6 @@
           "public utilities (water, heating)"
         ],
         "type": {}
-      },
-      {
-        "rate": 0,
-        "items": [
-          "export of goods and services",
-          "exempt supplies under national law"
-        ],
-        "type": {
-          "Z": "Exempt with the right to deduct input tax",
-          "AE": "Reverse charge",
-          "E": "Exempt without the right to deduct input tax",
-          "O": "Not subject to VAT",
-          "OE": "Not subject to VAT — paragraph 2",
-          "R": "Small taxpayer, outside the VAT system",
-          "SS": "Special taxation procedures",
-          "N": "Cancellation / not subject to VAT"
-        }
       }
     ],
     "eu": false,

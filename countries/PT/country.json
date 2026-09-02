@@ -31,8 +31,7 @@
     "std": 23,
     "reduced": [
       13,
-      6,
-      0
+      6
     ],
     "reducedCategories": [
       {
@@ -55,26 +54,6 @@
           "children's car seats and diapers"
         ],
         "type": {}
-      },
-      {
-        "rate": 0,
-        "items": [
-          "intra-Community supply of goods",
-          "export of goods outside the EU",
-          "B2B services taxed in the customer's country",
-          "exempt activities (medical, education, financial, insurance, letting)"
-        ],
-        "type": {
-          "M16": "Exempt — intra-Community supply of goods (art. 14 RITI)",
-          "M05": "Exempt — export (art. 14 CIVA)",
-          "M40": "Reverse charge — customer accounts for the tax",
-          "M01": "Outside the scope (art. 16(6)(a)-(d) CIVA)",
-          "M02": "Exempt — Decree-Law 198/90",
-          "M04": "Exempt — importation (art. 13 CIVA)",
-          "M41": "Reverse charge (art. 8(3) RITI)",
-          "M42": "Reverse charge — Decree-Law 21/2007",
-          "M43": "Exempt — Decree-Law 362/99"
-        }
       }
     ],
     "eu": true,

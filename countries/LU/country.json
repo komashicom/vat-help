@@ -30,8 +30,7 @@
     "flag": "🇱🇺",
     "std": 17,
     "reduced": [
-      8,
-      0
+      8
     ],
     "reducedCategories": [
       {
@@ -44,22 +43,6 @@
           "firewood and cut flowers"
         ],
         "type": {}
-      },
-      {
-        "rate": 0,
-        "items": [
-          "intra-Community supply of goods",
-          "export of goods outside the EU",
-          "B2B services taxed in the customer's country",
-          "exempt activities (medical, education, financial, insurance, letting)"
-        ],
-        "type": {
-          "K": "Intra-Community supply of goods",
-          "G": "Export of goods outside the EU",
-          "AE": "Reverse charge — tax accounted for by the customer",
-          "O": "Outside the scope of VAT",
-          "E": "Exempt supply (activity-based or small business)"
-        }
       }
     ],
     "eu": true,

@@ -31,8 +31,7 @@
     "std": 18,
     "reduced": [
       12,
-      5,
-      0
+      5
     ],
     "reducedCategories": [
       {
@@ -54,19 +53,6 @@
           "household consumables (pasta, sauces, snacks)"
         ],
         "type": {}
-      },
-      {
-        "rate": 0,
-        "items": [
-          "export of goods and services",
-          "exempt supplies under national law"
-        ],
-        "type": {
-          "nil-rated": "Nil-rated supply",
-          "exempted": "Exempt supply",
-          "non-GST": "Non-GST supply",
-          "export-LUT": "Export or SEZ supply without payment of tax (under LUT)"
-        }
       }
     ],
     "eu": false,

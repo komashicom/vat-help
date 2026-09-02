@@ -31,8 +31,7 @@
     "std": 20,
     "reduced": [
       12,
-      8,
-      0
+      8
     ],
     "reducedCategories": [
       {
@@ -54,17 +53,6 @@
           "agricultural produce"
         ],
         "type": {}
-      },
-      {
-        "rate": 0,
-        "items": [
-          "export of goods and services",
-          "exempt supplies under national law"
-        ],
-        "type": {
-          "0": "Zero rate",
-          "scutit": "Exempt"
-        }
       }
     ],
     "eu": false,

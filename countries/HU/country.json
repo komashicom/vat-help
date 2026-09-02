@@ -65,19 +65,7 @@
           "exempt activities (education, healthcare, financial services, property letting)"
         ],
         "type": {
-          "KBAET": "Exempt intra-Community supply of goods",
-          "KBAUK": "Exempt intra-Community supply of a new means of transport",
-          "EAM": "Exempt export of goods to a third country",
-          "EUFAD37": "Reverse charge in another member state — general rule",
-          "EUFADE": "Reverse charge in another member state — special place-of-supply rule",
-          "EUE": "Supplied in another member state, not reverse charged",
-          "HO": "Supplied in a third country",
-          "AAM": "Exempt small business — subject-based exemption",
-          "TAM": "Exempt activity — public-interest exemption",
-          "NAM": "Exempt — other international transactions",
-          "ATK": "Outside the scope of VAT",
-          "F.AFA": "Domestic reverse charge",
-          "K.AFA": "Margin scheme"
+          "AAM": "Exempt small business — subject-based exemption"
         }
       }
     ],

@@ -31,8 +31,7 @@
     "std": 23,
     "reduced": [
       13.5,
-      9,
-      0
+      9
     ],
     "reducedCategories": [
       {
@@ -55,26 +54,6 @@
           "hairdressing services"
         ],
         "type": {}
-      },
-      {
-        "rate": 0,
-        "items": [
-          "most food and drink",
-          "children's clothing and footwear",
-          "oral medicines",
-          "books",
-          "intra-Community supply of goods",
-          "export of goods outside the EU",
-          "B2B services taxed in the customer's country",
-          "exempt activities (medical, education, financial, insurance, letting)"
-        ],
-        "type": {
-          "K": "Intra-Community supply of goods",
-          "G": "Export of goods outside the EU",
-          "AE": "Reverse charge — tax accounted for by the customer",
-          "O": "Outside the scope of VAT",
-          "E": "Exempt supply (activity-based or small business)"
-        }
       }
     ],
     "eu": true,

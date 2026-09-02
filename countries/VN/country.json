@@ -30,8 +30,7 @@
     "flag": "🇻🇳",
     "std": 10,
     "reduced": [
-      8,
-      0
+      8
     ],
     "reducedCategories": [
       {
@@ -43,19 +42,6 @@
           "retail goods"
         ],
         "type": {}
-      },
-      {
-        "rate": 0,
-        "items": [
-          "export of goods and services",
-          "exempt supplies under national law"
-        ],
-        "type": {
-          "0%": "Zero-rated (export of goods or services)",
-          "KCT": "Not subject to VAT",
-          "KKKNT": "No declaration or payment required",
-          "KHAC": "Other"
-        }
       }
     ],
     "eu": false,

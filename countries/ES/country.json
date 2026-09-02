@@ -30,8 +30,7 @@
     "flag": "🇪🇸",
     "std": 21,
     "reduced": [
-      10,
-      0
+      10
     ],
     "reducedCategories": [
       {
@@ -44,26 +43,6 @@
           "renovation of private dwellings"
         ],
         "type": {}
-      },
-      {
-        "rate": 0,
-        "items": [
-          "intra-Community supply of goods",
-          "export of goods outside the EU",
-          "B2B services taxed in the customer's country",
-          "exempt activities (medical, education, financial, insurance, letting)"
-        ],
-        "type": {
-          "E5": "Exempt — intra-Community supply (art. 25)",
-          "E2": "Exempt — export (art. 21)",
-          "N2": "Not subject — place of supply outside Spain",
-          "S2": "Subject, reverse charge — customer accounts for the tax",
-          "N1": "Not subject (arts. 7, 14)",
-          "E1": "Exempt — domestic exemptions (art. 20)",
-          "E3": "Exempt — transactions treated as exports (art. 22)",
-          "E4": "Exempt — free zones and customs regimes (arts. 23-24)",
-          "E6": "Exempt — other"
-        }
       }
     ],
     "eu": true,

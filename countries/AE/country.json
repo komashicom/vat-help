@@ -30,23 +30,6 @@
     "flag": "🇦🇪",
     "std": 5,
     "reduced": [
-      0
-    ],
-    "reducedCategories": [
-      {
-        "rate": 0,
-        "items": [
-          "export of goods and services",
-          "exempt supplies under national law"
-        ],
-        "type": {
-          "G": "Export / zero-rated supply to a foreign customer",
-          "O": "Outside the scope of tax",
-          "E": "Exempt supply",
-          "AE": "Reverse charge — tax accounted for by the customer",
-          "Z": "Zero-rated goods"
-        }
-      }
     ],
     "eu": false,
     "system": "vat",
