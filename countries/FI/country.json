@@ -10,6 +10,7 @@
     "The rules section contains the explanations displayed when THIS country has the right to tax the transaction. Review and, where necessary, rewrite the name and detail fields so that they accurately and clearly explain the applicable tax treatment.",
     "Do not remove, rename, translate, or modify the {{from}}, {{to}}, {{loc}}, or {{buyerRate}} placeholders. They are dynamically substituted by the application.",
     "Do NOT change country.code. It must always correspond exactly to the country folder name. The eu and system fields affect the application's tax determination logic. Change these fields ONLY if you have verified that the existing value is genuinely incorrect.",
+    "Verify zeroRates as the codes this country's sellers must put on a 0% / exempt invoice. `system` and `field` name the e-invoicing or reporting regime and the XML element carrying the code. Each entry has `code` (the national code, or the EN 16931 category where there is no national list), `name`, `ref` (the legal provision), `en16931` (the equivalent UNCL5305 category) and `appliesTo` (the rule ids where THIS country is the seller and the code is determined by the relation alone — an empty list means the code depends on seller status or on what is being sold, which the calculator does not ask). Set zeroRates.verified to true only once the list is checked against the official specification.",
     "All material tax information must be checked against reliable and up-to-date sources. Official and primary sources should be used wherever available, including national tax authorities, ministries of finance, official government legislation databases, EU institutions and official EU tax resources, and other competent public authorities.",
     "Secondary sources may be used for interpretation or cross-checking, but they should not replace an available authoritative primary source for key tax rates, thresholds, or rules.",
     "Once the country's data has been fully reviewed and verified, set meta.status to \"reviewed\", fill in meta.reviewedBy and meta.reviewedAt, and add the authoritative sources used during the review to meta.sources.",
@@ -30,7 +31,8 @@
     "std": 25.5,
     "reduced": [
       13.5,
-      10
+      10,
+      0
     ],
     "reducedCategories": [
       {
@@ -40,7 +42,8 @@
           "restaurant and catering services",
           "select agricultural supplies",
           "cut flowers"
-        ]
+        ],
+        "type": {}
       },
       {
         "rate": 10,
@@ -50,7 +53,24 @@
           "books, e-books and newspapers",
           "hotel and holiday accommodation",
           "admission to cultural and sporting events"
-        ]
+        ],
+        "type": {}
+      },
+      {
+        "rate": 0,
+        "items": [
+          "intra-Community supply of goods",
+          "export of goods outside the EU",
+          "B2B services taxed in the customer's country",
+          "exempt activities (medical, education, financial, insurance, letting)"
+        ],
+        "type": {
+          "K": "Intra-Community supply of goods",
+          "G": "Export of goods outside the EU",
+          "AE": "Reverse charge — tax accounted for by the customer",
+          "O": "Outside the scope of VAT",
+          "E": "Exempt supply (activity-based or small business)"
+        }
       }
     ],
     "eu": true,

@@ -86,6 +86,17 @@ export interface Jurisdiction {
   mod: JurisdictionMod | null;
 }
 
+/** The invoice code the SELLER has to put on a 0% line. `code` is what goes
+ *  on the invoice; `label` is the English explanation. Both are read from the
+ *  seller country's `reducedCategories` `rate: 0` → `type` map, so there is
+ *  exactly ONE source of truth. Null when the rate is not 0, when the seller's
+ *  country mandates no code, or when the code cannot be derived from the
+ *  relation alone (seller status / product category). */
+export interface InvoiceCode {
+  code: string;
+  label: string;
+}
+
 /** Note key — in the dictionary: notes.{key}; the view supplies the parameters. */
 export interface ComplianceNote {
   tone: "ok" | "warn" | "info";
@@ -126,6 +137,9 @@ export interface ResultRecord {
 
   /** CODE of the country whose registration threshold is relevant (or null). */
   registrationThreshold: string | null;
+
+  /** Code for the seller's 0% invoice line (see InvoiceCode), or null. */
+  invoiceCode: InvoiceCode | null;
 
   badge: Badge;
   ruleId: string;               // e.g. "S-B2B-EU-EU" — also shown in the UI

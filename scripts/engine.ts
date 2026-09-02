@@ -29,7 +29,7 @@ function localRate(c: Country): Local {
   return { rate: c.std, juris: { country: c.code, mod: null }, federal: null, state: null, sys: false, needsState: false, noTax: false };
 }
 
-export function computeResult(countries: Country[], key: ScenarioKey): ResultRecord {
+function computeBase(countries: Country[], key: ScenarioKey): ResultRecord {
   const p = byCode(countries, key.from);
   const c = byCode(countries, key.to);
   const same = p.code === c.code;
@@ -42,6 +42,7 @@ export function computeResult(countries: Country[], key: ScenarioKey): ResultRec
     reverseCharge: false, oss: false, exportZero: false, outsideScope: false, needsState: false, stateCountry: null,
     federal: null, state: null, buyerRate: null, buyerCountry: null,
     registrationThreshold: (!same && c.threshold) ? c.code : null,
+    invoiceCode: null,
     badge: "domestic", ruleId: "", ruleKey: "", notes,
   };
 
@@ -186,5 +187,49 @@ export function computeResult(countries: Country[], key: ScenarioKey): ResultRec
     applyLocal(p);
     r.badge = "originLocal"; r.ruleId = "S-B2C-GEN-3"; r.ruleKey = "S-B2C-GEN-3";
   }
+  return r;
+}
+
+/* ------------------------------------------------------------------
+ * INVOICE CODE — what the SELLER puts on a 0% line.
+ *
+ * The seller country's catalogue lives in country.json
+ * (reducedCategories, rate 0, `type`: code → English label). This map
+ * says which EN 16931 category belongs to which relation; it is the
+ * same in every country, because it follows from the VAT Directive.
+ * A country that uses the standard letters gets its code here for free.
+ *
+ * Countries with a NATIONAL code list (HU "EUFAD37", IT "N3.2", PL
+ * "0 WDT"…) have no "K"/"G"/"AE"/"O" in their catalogue, so nothing is
+ * attached here — their own countries/{CODE}/engine.ts does it, and
+ * runs after this.
+ * ------------------------------------------------------------------ */
+const EN16931_BY_RULE: Record<string, string> = {
+  "P-B2B-EU-EU": "K",       // intra-Community supply of goods
+  "P-B2B-EU-3": "G",        // export of goods
+  "S-B2B-EU-EU": "AE",      // B2B service, reverse charge
+  "S-B2B-EU-3": "O",        // place of supply outside the EU
+  "S-B2C-DIG-EU-3": "O",    // digital service to a non-EU consumer
+  "S-B2B-3-X": "G",         // non-EU seller's service export
+};
+
+/** The seller's own 0% code catalogue, from country.json. */
+export function zeroCatalogue(seller: Country): Record<string, string> {
+  return seller.reducedCategories?.find((r) => r.rate === 0)?.type ?? {};
+}
+
+function attachEn16931(seller: Country, r: ResultRecord): void {
+  if (r.rate !== 0) return;
+  const code = EN16931_BY_RULE[r.ruleId];
+  if (!code) return;
+  const label = zeroCatalogue(seller)[code];
+  if (!label) return;
+  r.invoiceCode = { code, label };
+}
+
+/** Global engine + the seller-side invoice code. */
+export function computeResult(countries: Country[], key: ScenarioKey): ResultRecord {
+  const r = computeBase(countries, key);
+  attachEn16931(byCode(countries, key.from), r);
   return r;
 }

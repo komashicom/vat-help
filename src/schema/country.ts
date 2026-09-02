@@ -29,6 +29,15 @@ export interface ReducedRateInfo {
   rate: number;
   /** Short, list-style examples (2-6 items) of what this rate applies to. */
   items: string[];
+  /** OPTIONAL. Invoice codes belonging to this rate — the codes a seller in
+   *  this country puts on the line instead of a percentage. Only meaningful
+   *  on the `rate: 0` entry (HU: AAM, TAM, KBAET, EUFAD37…; IT: N3.2, N4…).
+   *  Empty or absent on the ordinary reduced rates, which need no code.
+   *
+   *  Key = the code exactly as it goes on the invoice (never translated),
+   *  value = a short English explanation of what it means:
+   *  `{ "AAM": "Exempt small business — subject-based exemption" }`. */
+  type?: Record<string, string>;
 }
 
 /** A country's full tax profile — every tax type in one place. */
